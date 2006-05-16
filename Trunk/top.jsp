@@ -15,7 +15,7 @@
 		<td align="right">
 			<logic:present scope="session" name="account">
 				<c:set var="account_codename"><judgeos:account parameter="codename"/></c:set>
-
+				<c:out value="${account_codename}" />
 				<bean:message key="top.logged" arg0="${account_codename}"/>
 
 				<html:link action="account/logout.do">
