@@ -1,7 +1,6 @@
 package org.judgeos.model;
 
 import java.io.Serializable;
-import java.util.Hashtable;
 import java.util.HashMap;
 
 /**
@@ -12,35 +11,20 @@ import java.util.HashMap;
  */
 public class Account implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String username;
-	private String password;
+	private HashMap<String,Object> parameters;
 
-	public Account(HashMap<String,Object> data) {
-		for (String field: data.keySet()) {
-			if (field.equals("username")) {
-				this.setUsername((String) data.get(field));
-			}
-			else if (field.equals("password")) {
-				this.setPassword((String) data.get(field));
-			}
-		}
+	public Account(HashMap<String,Object> parameters) {
+		this.parameters = parameters;
 	}
 
-	public String getPassword() {
-		return password;
+	public HashMap<String,Object> getParameters() {
+		return parameters;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public Object getParameter(String key) {
+		return parameters.get(key);
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
 
 	void Save() {
 //		Statement st = DBConnector.getDbh().createStatement();

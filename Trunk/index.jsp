@@ -1,24 +1,23 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="/tags/struts-bean" prefix="bean" %>
-<%@ taglib uri="/tags/struts-html" prefix="html" %>
-<%@ taglib uri="/tags/struts-logic" prefix="logic" %>
+<%@ include file="/headers.jsp"%>
 
 <html:html locale="true">
 	<head>
 		<title>
 			<bean:message key=".title" />
 		</title>
+		<judgeos:base/>
 	</head>
 	<body>
 
-		<%@include file="/header.jsp"%>
+		<%@ include file="/top.jsp"%>
 
-		<html:link page="/profile/">
-			<bean:message key=".profile" />
+		<html:link page="/account/">
+			<bean:message key=".account" />
 		</html:link>
+
 
 	</body>
 </html:html>

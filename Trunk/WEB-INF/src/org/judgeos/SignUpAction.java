@@ -29,12 +29,12 @@ public class SignUpAction extends Action {
 		this.request = request;
 		this.response = response;
 
-		String sql = "INSERT INTO account(username, password) " +
+		String sql = "INSERT INTO account(codename, password) " +
 				"VALUES(?, ?)";
 
 		Connection c = DB.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
-		st.setString(1, request.getParameter("username"));
+		st.setString(1, request.getParameter("codename"));
 		st.setString(2, request.getParameter("password"));
 
 		try {
@@ -42,9 +42,9 @@ public class SignUpAction extends Action {
 		}
 		catch(PSQLException e) {
 			if(e.getServerErrorMessage().equals(
-					"ERROR: duplicate key violates unique constraint \"account_username_idx\""
+					"ERROR: duplicate key violates unique constraint \"account_codename_idx\""
 			)) {
-				ActionMessage msg = new ActionMessage("errors.profile.username_used");
+				ActionMessage msg = new ActionMessage("errors.account.codename_used");
 				processUnsuccessfulSignUp(msg);
 				return mapping.findForward("failure");
 			}
@@ -66,7 +66,7 @@ public class SignUpAction extends Action {
 			msgs = new ActionErrors();
 		}
 
-		msgs.add("username", msg);
+		msgs.add("codename", msg);
 		request.setAttribute(SignUpForm.ERROR_KEY, msgs);
 	}
 }

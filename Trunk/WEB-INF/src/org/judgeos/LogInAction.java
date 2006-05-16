@@ -1,6 +1,8 @@
 package org.judgeos;
 
 import org.apache.struts.action.*;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
 import org.judgeos.model.Account;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,11 +12,8 @@ import java.sql.*;
 import java.util.HashMap;
 
 public class LogInAction extends Action {
-	private ActionMapping mapping;
-	private ActionForm form;
 	private HttpServletRequest request;
-	private HttpServletResponse response;
-	protected static final String ERROR_KEY = "org.judgeos.LogInForm.ERROR_KEY";
+	private Log log = LogFactory.getFactory().getInstance(LogInForm.class.getName());
 
 	public ActionForward execute(
 		ActionMapping mapping,
@@ -22,17 +21,18 @@ public class LogInAction extends Action {
 		HttpServletRequest request,
 		HttpServletResponse response
 	) throws Exception {
-		this.mapping = mapping;
-		this.form = form;
 		this.request = request;
-		this.response = response;
 
-		String username = request.getParameter("username");
-		String sql = "SELECT * FROM account WHERE username = ?";
+		if (request.getParameter("codename") == null) {
+			return mapping.getInputForward();
+		}
+
+		String codename = request.getParameter("codename");
+		String sql = "SELECT * FROM account WHERE codename = ?";
 
 		Connection c = DB.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
-		st.setString(1, username);
+		st.setString(1, codename);
 
 		ResultSet rs = st.executeQuery();
 
@@ -43,16 +43,16 @@ public class LogInAction extends Action {
 				return mapping.findForward("success");
 			}
 			else {
-				ActionMessage msg = new ActionMessage("errors.profile.wrong_password");
+				ActionMessage msg = new ActionMessage("errors.account.wrong_password");
 				getFormErrors().add("password", msg);
-				return mapping.findForward("failure");
 			}
 		}
 		else {
-			ActionMessage msg = new ActionMessage("errors.profile.wrong_username");
-			getFormErrors().add("username", msg);
-			return mapping.findForward("failure");
+			ActionMessage msg = new ActionMessage("errors.account.wrong_codename");
+			getFormErrors().add("codename", msg);
 		}
+
+		return mapping.getInputForward();
 	}
 
 	private void processSuccessfulLogIn(ResultSet rs) throws SQLException {
@@ -67,11 +67,15 @@ public class LogInAction extends Action {
 		request.getSession().setAttribute("account", account);
 	}
 
+	/**
+	 * Looks at request attribute specified by LogInForm.ERROR_KEY key a creates new if necessary.
+	 * @return this.request.getAttribute(LogInForm.ERROR_KEY)
+	 */
 	private ActionMessages getFormErrors() {
-		ActionMessages msgs = (ActionMessages)request.getAttribute(ERROR_KEY);
+		ActionMessages msgs = (ActionMessages)request.getAttribute(LogInForm.ERROR_KEY);
 		if (msgs == null) {
 			msgs = new ActionErrors();
-			request.setAttribute(ERROR_KEY, msgs);
+			request.setAttribute(LogInForm.ERROR_KEY, msgs);
 		}
 		return msgs;
 	}

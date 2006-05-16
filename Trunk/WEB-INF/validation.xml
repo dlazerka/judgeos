@@ -5,44 +5,49 @@
           "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
 
 <form-validation>
-    <global>
+	<global>
 		<constant>
-			<constant-name>username</constant-name>
-			<constant-value>^[a-zA-Z][0-9a-zA-Z]*$</constant-value>
+			<constant-name>codename</constant-name>
+			<constant-value>^[a-zA-Z][0-9a-zA-Z_-]*$</constant-value>
 		</constant>
 	</global>
 
     <formset>
-		<form name="ProfileSignUpForm">
-			<field property="username" depends="required,mask">
-					<arg key="profile.username"/>
-					<var>
-						<var-name>mask</var-name>
-						<var-value>${username}</var-value>
-					</var>
+		<form name="AccountSignUpForm">
+			<field property="dataAttached" depends="required"/>
+			
+			<field property="codename" depends="required,mask">
+				<arg key="account.codename"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${codename}</var-value>
+				</var>
 			</field>
 			<field property="password" depends="required,mask">
-					<arg key="profile.password"/>
-					<var>
-						<var-name>mask</var-name>
-						<var-value>${username}</var-value>
-					</var>
+				<arg key="account.password"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${codename}</var-value>
+				</var>
 			</field>
 		</form>
-		<form name="ProfileLogInForm">
-			<field property="username" depends="required,mask">
-					<arg key="profile.username"/>
-					<var>
-						<var-name>mask</var-name>
-						<var-value>${username}</var-value>
-					</var>
+
+		<form name="AccountLogInForm">
+			<field property="dataAttached" depends="required"/>
+
+			<field property="codename" depends="required,mask">
+				<arg key="account.codename"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${codename}</var-value>
+				</var>
 			</field>
 			<field property="password" depends="required,mask">
-					<arg key="profile.password"/>
-					<var>
-						<var-name>mask</var-name>
-						<var-value>^[0-9a-zA-Z]+$</var-value>
-					</var>
+				<arg key="account.password"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9a-zA-Z]+$</var-value>
+				</var>
 			</field>
 		</form>
     </formset>

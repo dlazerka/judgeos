@@ -22,14 +22,15 @@ INSERT INTO judgeos_role(codename) VALUES('admin');
 CREATE TABLE account (
 	id SERIAL PRIMARY KEY
 	,codename VARCHAR NOT NULL
-	,password VARCHAR NOT NULL
+	,password VARCHAR
 	,first_name VARCHAR NOT NULL
 	,last_name VARCHAR NOT NULL
 	,created_on TIMESTAMP(0) WITH TIME ZONE NOT NULL
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 );
 CREATE UNIQUE INDEX account_codename_idx ON account(codename);
-INSERT INTO account(codename, password, first_name, last_name) VALUES('dlazerka', '', 'Dzmitry', 'Lazerka');
+INSERT INTO account(codename, password, first_name, last_name) VALUES('guest', NULL, 'Anonymous', 'User');
+INSERT INTO account(codename, password, first_name, last_name) VALUES('dlazerka', 'pass', 'Dzmitry', 'Lazerka');
 
 CREATE TABLE judgeos_role2account (
 	judgeos_role INTEGER NOT NULL
@@ -45,7 +46,7 @@ CREATE TABLE contest (
 	,codename VARCHAR NOT NULL
 	,description VARCHAR
 	,owner INTEGER NOT NULL REFERENCES account ON UPDATE CASCADE
-	,public_observe BOOLEAN NOT NULL DEFAULT FALSE
+	-- is or isn't there a contest_member with password=NULL ,public_observe BOOLEAN NOT NULL DEFAULT FALSE
 	,public_participate BOOLEAN NOT NULL DEFAULT TRUE
 	,start_time TIMESTAMP(0) WITH TIME ZONE
 	,stop_time TIMESTAMP(0) WITH TIME ZONE

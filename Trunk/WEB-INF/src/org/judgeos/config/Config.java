@@ -3,6 +3,7 @@ package org.judgeos.config;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -37,7 +38,7 @@ public class Config {
 
 		Pattern comment = Pattern.compile("#.*");
 		Pattern directive = Pattern.compile("^\\s*([\\w\\.]+)[\\s:=]+(.*)$");
-		String s = "";
+		//String s = "";
 		do {
 			String str;
 			try {
@@ -62,19 +63,16 @@ public class Config {
 				continue;
 			}
 
-			s += str;
+			//s += str;
 			m = directive.matcher(str);
 			if (m.matches()) {
-				s = s + " matches";
+			//	s = s + " matches";
 				String key = m.group(1);
 				String value = m.group(2);
 				setAttribute(key, value);
 			}
-			s += "\n";
+			//s += "\n";
 		} while (true);
-		Log log = LogFactory.getFactory().getInstance("KUKU");
-		log.warn(s);
-
 
 		try {
 			reader.close();

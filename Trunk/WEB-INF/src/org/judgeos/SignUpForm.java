@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class SignUpForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
 
-	public String username;
+	public String codename;
 	public String password;
 	
 	private Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
@@ -24,16 +24,16 @@ public class SignUpForm extends ValidatorForm {
 		return errors;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setCodename(String codename) {
+		this.codename = codename;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getCodename() {
+		return codename;
 	}
 
 	public String getPassword() {
