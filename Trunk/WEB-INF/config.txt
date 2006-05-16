@@ -1,0 +1,4 @@
+dbms=postgresql
+pg.url=jdbc:postgresql://localhost:5432/judgeos
+pg.username=judgeos
+pg.password=judgeos

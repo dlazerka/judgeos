@@ -1,0 +1,58 @@
+<project name="judgeos" basedir="." default="all">
+
+
+	<!-- Local system paths -->
+	<property name="servlet.jar"
+		value="/Program Files/Apache Software Foundation/jakarta-tomcat-5/common/lib/servlet-api.jar"
+	/>
+
+
+	<!-- Project settings -->
+	<property name="project.title" value="JudgeOS"/>
+	<property name="project.distname" value="judgeos"/>
+	<property name="project.version" value="0.1"/>
+
+	<property name="path.resources" value="resources"/>
+
+
+	<target name="init">
+	</target>
+
+	<!-- Copy any resource or configuration files -->
+	<target name="resources">
+		<copy todir="classes" includeEmptyDirs="no">
+			<fileset dir="${path.resources}">
+				<patternset>
+					<include name="**/*.conf"/>
+					<include name="**/*.properties"/>
+					<include name="**/*.xml"/>
+				</patternset>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Normal build of application -->
+	<target name="compile" depends="resources">
+		<javac srcdir="src" destdir="classes">
+			<classpath>
+				<fileset dir="lib">
+					<include name="**/*.jar"/>
+				</fileset>
+				<fileset file="${servlet.jar}"/>
+			</classpath>
+		</javac>
+	</target>
+
+
+	<target name="reload" depends="compile">
+		<!-- TODO c write reload-->
+	</target>
+
+
+	<!-- Build entire project -->
+	<target name="project" depends="init,compile,reload"/>
+
+
+	<target name="all" depends="project"/>
+
+</project>

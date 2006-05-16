@@ -1,0 +1,15 @@
+.header_logo {
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+.header_username_label, .header_password_label {
+	font-size: 8pt;
+}
+.header_username_input, header_.password_input {
+	font-size: 8pt;
+}
+
+.header_error_label {
+	color: red;
+}

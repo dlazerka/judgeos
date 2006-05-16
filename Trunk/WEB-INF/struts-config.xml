@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+	"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean
+			name="ProfileSignUpForm"
+			type="org.judgeos.SignUpForm"
+		/>
+		<form-bean
+			name="ProfileLogInForm"
+			type="org.judgeos.LogInForm"
+		/>
+	</form-beans>
+
+
+	<global-exceptions>
+	</global-exceptions>
+
+	<global-forwards>
+		<forward name="root" path="/" />
+	</global-forwards>
+
+
+	<action-mappings>
+		<action
+			path="/profile/signup"
+			type="org.judgeos.SignUpAction"
+			name="ProfileSignUpForm"
+			scope="request"
+			validate="true"
+			input="/profile/index.jsp"
+		>
+			<forward name="success" path="/profile/login.do" redirect="true"/>
+			<forward name="failure" path="/profile/" />
+		</action>
+		<action
+			path="/profile/login"
+			type="org.judgeos.LogInAction"
+			name="ProfileLogInForm"
+			scope="request"
+			validate="true"
+			input="/profile/index.jsp"
+		>
+			<forward name="success" path="/profile/" redirect="true"/>
+			<forward name="failure" path="/profile/" />
+		</action>
+	</action-mappings>
+
+
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+
+	<message-resources parameter="org.judgeos.MessageResources" />
+
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property
+			property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
+		/>
+	</plug-in>
+
+</struts-config>
+
