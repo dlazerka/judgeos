@@ -37,7 +37,7 @@
 			input="/account/signup.jsp"
 		>
 			<forward name="success" path="/account/login.do" redirect="true"/>
-			<forward name="failure" path="/account/" />
+			<forward name="failure" path="/account/signup.jsp" />
 		</action>
 		<action
 			path="/account/login"
@@ -49,6 +49,11 @@
 		>
 			<forward name="success" path="/account/" redirect="true"/>
 			<forward name="failure" path="/account/login.jsp" />
+		</action>
+		<action
+			path="/account/logout"
+			type="org.judgeos.LogOutAction"
+		>
 		</action>
 	</action-mappings>
 

@@ -13,10 +13,7 @@ import java.sql.*;
 import java.util.HashMap;
 
 public class SignUpAction extends Action {
-	private ActionMapping mapping;
-	private ActionForm form;
 	private HttpServletRequest request;
-	private HttpServletResponse response;
 
 	public ActionForward execute(
 		ActionMapping mapping,
@@ -24,34 +21,25 @@ public class SignUpAction extends Action {
 		HttpServletRequest request,
 		HttpServletResponse response
 	) throws Exception {
-		this.mapping = mapping;
-		this.form = form;
 		this.request = request;
-		this.response = response;
 
-		String sql = "INSERT INTO account(codename, password) " +
-				"VALUES(?, ?)";
+		if (Account.codenameExists(request.getParameter("codename"))) {
+			ActionMessage msg = new ActionMessage("errors.account.codenameUsed");
+			processUnsuccessfulSignUp(msg);
+			return mapping.findForward("failure");
+		}
+
+		String sql = "INSERT INTO account(codename, password, firstName, lastName) " +
+				"VALUES(?, ?, ?, ?)";
 
 		Connection c = DB.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, request.getParameter("codename"));
 		st.setString(2, request.getParameter("password"));
+		st.setString(3, request.getParameter("firstName"));
+		st.setString(4, request.getParameter("lastName"));
 
-		try {
-			st.execute();
-		}
-		catch(PSQLException e) {
-			if(e.getServerErrorMessage().equals(
-					"ERROR: duplicate key violates unique constraint \"account_codename_idx\""
-			)) {
-				ActionMessage msg = new ActionMessage("errors.account.codename_used");
-				processUnsuccessfulSignUp(msg);
-				return mapping.findForward("failure");
-			}
-			else {
-				throw e;
-			}
-		}
+		st.execute();
 
 		processSuccessfulSignUp();
 		return mapping.findForward("success");

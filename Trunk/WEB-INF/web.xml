@@ -7,7 +7,7 @@
 <web-app>
 	<display-name>JudgeOS</display-name>
 
-	<!-- Standard Action Servlet Configuration (with debugging) -->
+	<!-- Standard Action Servlet Configuration (without debugging) -->
 	<servlet>
 		<servlet-name>action</servlet-name>
 		<!--<servlet-class>org.judgeos.GateActionServlet</servlet-class>-->
@@ -18,7 +18,7 @@
 		</init-param>
 		<init-param>
 			<param-name>debug</param-name>
-			<param-value>2</param-value>
+			<param-value>0</param-value>
 		</init-param>
 		<init-param>
 			<param-name>detail</param-name>
@@ -70,11 +70,6 @@
 	<taglib>
 		<taglib-uri>/tags/judgeos</taglib-uri>
 		<taglib-location>/WEB-INF/tld/judgeos.tld</taglib-location>
-	</taglib>
-
-	<taglib>
-		<taglib-uri>/tags/c</taglib-uri>
-		<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
 	</taglib>
 
 </web-app>

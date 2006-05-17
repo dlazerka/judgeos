@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class DB {
 	private static Connection dbh;
 
-	static Connection getDbh() throws IncorrectSetupException {
+	public static Connection getDbh() throws IncorrectSetupException {
 		if (dbh == null) {
 			connect();
 		}

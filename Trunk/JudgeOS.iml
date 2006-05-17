@@ -310,7 +310,9 @@
           <root url="jar://$MODULE_DIR$/WEB-INF/lib/standard.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://H:/usr/install/soft/Development/Java/tools/jakarta-taglibs/jakarta-taglibs-src-20060516/jakarta-taglibs/standard/src" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntryProperties />

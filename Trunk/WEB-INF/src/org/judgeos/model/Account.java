@@ -1,7 +1,16 @@
 package org.judgeos.model;
 
+import org.judgeos.DB;
+import org.judgeos.IncorrectSetupException;
+import org.postgresql.util.PSQLException;
+import org.apache.struts.action.ActionMessage;
+
 import java.io.Serializable;
 import java.util.HashMap;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,5 +37,21 @@ public class Account implements Serializable {
 
 	void Save() {
 //		Statement st = DBConnector.getDbh().createStatement();
+	}
+
+	/**
+	 * Searches for given codename in table account.
+	 * @param codename
+	 * @return is codename found
+	 * @throws IncorrectSetupException
+	 * @throws SQLException
+	 */
+	public static boolean codenameExists(String codename) throws IncorrectSetupException, SQLException {
+		String sql = "SELECT NULL FROM account WHERE codename = ?";
+		Connection c = DB.getDbh();
+		PreparedStatement st = c.prepareStatement(sql);
+		st.setString(1, codename);
+		ResultSet rs = st.executeQuery();
+		return rs.next();
 	}
 }

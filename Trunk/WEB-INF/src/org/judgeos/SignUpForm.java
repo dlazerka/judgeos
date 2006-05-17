@@ -11,15 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 public class SignUpForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
 
-	public String codename;
-	public String password;
-	
+	private String codename;
+	private String password;
+	private String firstName;
+	private String lastName;
+	private String dataAttached;
+
 	private Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
 
 	protected static final String ERROR_KEY = "org.judgeos.SignUpForm.ERROR_KEY";
 
 	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
 		ActionErrors errors = super.validate(mapping, request);
+		log.warn(errors);
 		request.setAttribute(ERROR_KEY, errors);
 		return errors;
 	}
@@ -38,5 +42,29 @@ public class SignUpForm extends ValidatorForm {
 
 	public String getPassword() {
 		return password;
+	}
+
+	public void setDataAttached(String dataAttached) {
+		this.dataAttached = dataAttached;
+	}
+
+	public String getDataAttached() {
+		return dataAttached;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 }

@@ -43,12 +43,12 @@ public class LogInAction extends Action {
 				return mapping.findForward("success");
 			}
 			else {
-				ActionMessage msg = new ActionMessage("errors.account.wrong_password");
+				ActionMessage msg = new ActionMessage("errors.account.wrongPassword");
 				getFormErrors().add("password", msg);
 			}
 		}
 		else {
-			ActionMessage msg = new ActionMessage("errors.account.wrong_codename");
+			ActionMessage msg = new ActionMessage("errors.account.wrongCodename");
 			getFormErrors().add("codename", msg);
 		}
 
