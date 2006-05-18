@@ -44,7 +44,7 @@ CREATE TABLE judgeosRole2account (
 CREATE TABLE contest (
 	id SERIAL PRIMARY KEY
 	,codename VARCHAR NOT NULL
-	,description VARCHAR
+	,description VARCHAR NOT NULL DEFAULT ''
 	,owner INTEGER NOT NULL REFERENCES account ON UPDATE CASCADE
 	-- is or isn't there a contestMember with password=NULL ,public_observe BOOLEAN NOT NULL DEFAULT FALSE
 	,public_participate BOOLEAN NOT NULL DEFAULT TRUE

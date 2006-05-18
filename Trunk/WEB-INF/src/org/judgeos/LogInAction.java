@@ -7,7 +7,6 @@ import org.judgeos.model.Account;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.sql.*;
 import java.util.HashMap;
 
@@ -56,14 +55,14 @@ public class LogInAction extends Action {
 	}
 
 	private void processSuccessfulLogIn(ResultSet rs) throws SQLException {
-		HashMap<String, Object> userData = new HashMap<String, Object>();
+		HashMap<String, Object> accountData = new HashMap<String, Object>();
 		ResultSetMetaData meta = rs.getMetaData();
 		for (int i = 1; i <= meta.getColumnCount(); i++) {
 			String field = meta.getColumnName(i);
 			Object value = rs.getObject(i);
-			userData.put(field, value);
+			accountData.put(field, value);
 		}
-		Account account = new Account(userData);
+		Account account = new Account(accountData);
 		request.getSession().setAttribute("account", account);
 	}
 

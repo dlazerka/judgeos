@@ -81,21 +81,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/AccountTag.java" line="29" class="org.judgeos.taglib.AccountTag" package="org.judgeos.taglib">
-        <option name="ENABLED" value="true" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -150,92 +135,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="signup.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account/signup.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="92" selection-start="864" selection-end="865" vertical-scroll-proportion="0.33267328">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="79" selection-start="778" selection-end="779" vertical-scroll-proportion="0.52871287">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageResources.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/resources/org/judgeos/MessageResources.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="794" selection-end="794" vertical-scroll-proportion="0.4039604">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/top.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="43" selection-start="689" selection-end="689" vertical-scroll-proportion="0.76435643">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="25" column="68" selection-start="648" selection-end="704" vertical-scroll-proportion="0.4495238">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="headers.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/headers.jsp">
+      <file leaf-file-name="jspxml2.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/standardSchemas/jspxml2.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="538" column="2" selection-start="17764" selection-end="17764" vertical-scroll-proportion="0.32380953">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account/index.jsp">
+      <file leaf-file-name="Contest.java" pinned="true" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/Contest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="35" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5504762">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/SignUpAction.java">
+      <file leaf-file-name="schema.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="26" selection-start="883" selection-end="883" vertical-scroll-proportion="0.5049505">
+            <state line="46" column="44" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.68">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts-config.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="61" selection-start="899" selection-end="899" vertical-scroll-proportion="0.639604">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7809523">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/validation.xml">
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="64" selection-start="237" selection-end="238" vertical-scroll-proportion="-0.37029704">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6228571">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LastContests.java" pinned="true" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/LastContests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="51" selection-start="840" selection-end="840" vertical-scroll-proportion="0.71238095">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -592,6 +552,36 @@
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF\src" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF\src\org\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF\src\org\judgeos\model" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF\resources" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
@@ -739,7 +729,7 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="8080" />
       <option name="LOCAL" value="true" />
-      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/judgeos/" />
       <option name="COMMON_VM_ARGUMENTS" value="" />
       <J2EE_MODULE DEPLOYMENT_SOURCE_NAME="exploded">
@@ -798,8 +788,8 @@
   <component name="StructuralSearchPlugin" />
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_MODE" value="true" />
-    <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
-    <option name="ACTIVE_ACTIONS" value="VISIBILITY_SORTER,SHOW_INTERFACES,ALPHA_COMPARATOR,SHOW_PROPERTIES,SHOW_INHERITED" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value="SHOW_NON_PUBLIC,VISIBILITY_SORTER,ALPHA_COMPARATOR,SHOW_PROPERTIES" />
   </component>
   <component name="SvnChangesBrowserSettings">
     <option name="USE_AUTHOR_FIELD" value="true" />
@@ -833,9 +823,9 @@
     <layout>
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.26702508" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.19285715" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.22939068" order="1" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.16938776" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.19285715" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.50179213" order="1" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.23061225" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.20609319" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="5" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="3" />
@@ -845,7 +835,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.38172042" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="3" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.5483871" order="3" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.5071685" order="3" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="11" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
@@ -934,107 +924,109 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/Account.java">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/server/lib/catalina.jar!/org/apache/catalina/core/StandardEngineValve.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="22" selection-start="985" selection-end="985" vertical-scroll-proportion="0.5489796">
+        <state line="13" column="26" selection-start="523" selection-end="523" vertical-scroll-proportion="0.41632652">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/SignUpForm.java">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/server/lib/catalina.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="886" selection-end="887" vertical-scroll-proportion="0.33267328">
+        <state line="15" column="21" selection-start="650" selection-end="651" vertical-scroll-proportion="0.27142859">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/LogInAction.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/tld/struts-logic.tld">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="63" selection-start="2057" selection-end="2058" vertical-scroll-proportion="2.0534654">
+        <state line="165" column="43" selection-start="3648" selection-end="3648" vertical-scroll-proportion="0.3102041">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/LogInForm.java">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/common/lib/jsp-api.jar!/javax/servlet/jsp/tagext/TagSupport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="431" selection-end="432" vertical-scroll-proportion="0.2019802">
+        <state line="29" column="28" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.35826772">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/signup.jsp">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/common/lib/jsp-api.jar!/javax/servlet/jsp/tagext/BodyTagSupport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="92" selection-start="864" selection-end="865" vertical-scroll-proportion="0.33267328">
+        <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.24817519">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/login.jsp">
+    <entry file="file://D:/usr/install/soft/Development/Java/tools/Struts/struts-1.2.8-src/src/share/org/apache/struts/taglib/logic/IterateTag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="79" selection-start="778" selection-end="779" vertical-scroll-proportion="0.52871287">
+        <state line="229" column="0" selection-start="6009" selection-end="6009" vertical-scroll-proportion="0.12857144">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/validation.xml">
+    <entry file="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/server/lib/tomcat-http.jar!/org/apache/coyote/http11/Http11Processor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="64" selection-start="237" selection-end="238" vertical-scroll-proportion="-0.37029704">
+        <state line="118" column="21" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.16530612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/DB.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/tld/struts-bean.tld">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="296" selection-end="296" vertical-scroll-proportion="0.43366337">
+        <state line="224" column="0" selection-start="4993" selection-end="4993" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/resources/org/judgeos/MessageResources.properties">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/LastContests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="8" selection-start="794" selection-end="794" vertical-scroll-proportion="0.4039604">
+        <state line="27" column="51" selection-start="840" selection-end="840" vertical-scroll-proportion="0.71238095">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/Contest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="381" selection-end="381" vertical-scroll-proportion="0.5504762">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top.jsp">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="689" selection-end="689" vertical-scroll-proportion="0.76435643">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/headers.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/SignUpAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="26" selection-start="883" selection-end="883" vertical-scroll-proportion="0.5049505">
+        <state line="46" column="44" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.68">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="61" selection-start="899" selection-end="899" vertical-scroll-proportion="0.639604">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7809523">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6228571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/standardSchemas/jspxml2.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="538" column="2" selection-start="17764" selection-end="17764" vertical-scroll-proportion="0.32380953">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="68" selection-start="648" selection-end="704" vertical-scroll-proportion="0.4495238">
           <folding />
         </state>
       </provider>

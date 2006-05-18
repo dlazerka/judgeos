@@ -1,6 +1,15 @@
-.header_logo {
+a, a:visited {
+	text-decoration: underline;
+	color: #00f;
+}
+a.header_logo, a.header_logo:visited {
 	font-weight: bold;
 	font-size: 15pt;
+	text-decoration: none;
+	color: #008;
+}
+a.header_logo:hover {
+	cursor: pointer;
 }
 
 .header_username_label, .header_password_label {
