@@ -38,7 +38,7 @@ public class BaseTag extends TagSupport {
 					request.getServerName(),
 					request.getServerPort(),
 					request.getContextPath()) +
-		"/\" />";
+		"/\">";
 
 		JspWriter out = pageContext.getOut();
 		try {

@@ -1,16 +1,16 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
-<%@ include file="/headers.jsp"%>
+<%@ include file="/headers.jspf"%>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 
 <table width="100%">
 	<tr>
 		<td align="left">
-			<div class="header_logo">
+			<html:link forward="root" styleClass="header_logo">
 				<bean:message key=".logo" />
-			</div>
+			</html:link>
 		</td>
 		<td align="right">
 			<logic:present scope="session" name="account">

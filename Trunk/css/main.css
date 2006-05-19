@@ -2,6 +2,9 @@ body {
 	font-family: verdana, sans-serif;
 	font-size: 10pt;
 }
+div#root {
+	width: 100%;
+}
 td {
 	font-size: 10pt;
 }

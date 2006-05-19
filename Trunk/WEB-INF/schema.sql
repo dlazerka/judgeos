@@ -54,7 +54,9 @@ CREATE TABLE contest (
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 );
 CREATE UNIQUE INDEX contest_codename_idx ON contest(codename);
-INSERT INTO contest(codename, owner) VALUES('mmf2006-05-15', currval('account_id_seq'));
+INSERT INTO contest(codename, name, owner) VALUES('mmf2006-05-15', 'MMF Training 15 May 2006', currval('account_id_seq'));
+INSERT INTO contest(codename, name, owner) VALUES('mmf2006-05-19', 'MMF Training 19 May 2006', currval('account_id_seq'));
+INSERT INTO contest(codename, name, owner) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'));
 
 CREATE TABLE contestMemberRole (
 	id SERIAL PRIMARY KEY
