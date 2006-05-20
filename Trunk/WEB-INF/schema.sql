@@ -49,15 +49,18 @@ CREATE TABLE contest (
 	,owner INTEGER NOT NULL REFERENCES account ON UPDATE CASCADE
 	-- is or isn't there a contestMember with password=NULL ,public_observe BOOLEAN NOT NULL DEFAULT FALSE
 	,public_participate BOOLEAN NOT NULL DEFAULT TRUE
-	,startTime TIMESTAMP(0) WITH TIME ZONE
-	,stopTime TIMESTAMP(0) WITH TIME ZONE
+	,start TIMESTAMP(0) WITH TIME ZONE
+	,stop TIMESTAMP(0) WITH TIME ZONE
 	,createdOn TIMESTAMP(0) WITH TIME ZONE NOT NULL
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 );
 CREATE UNIQUE INDEX contest_codename_idx ON contest(codename);
-INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006-05-15', 'MMF Training 15 May 2006', currval('account_id_seq'), '2006-05-15 15:45:00 UTC', '2006-05-15 19:45:00 UTC');
-INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006-05-19', 'MMF Training 19 May 2006', currval('account_id_seq'), '2006-05-19 15:45:00 UTC', '2006-05-19 19:45:00 UTC');
-INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'), '2006-01-01 00:00:00 UTC', NULL);
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005', 'MMF 2005', currval('account_id_seq'), '2005-01-01 00:00:00 UTC', '2005-12-31 23:59:59 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005-05-15', 'MMF Training 15 May 2005', currval('account_id_seq'), '2005-05-15 15:45:00 UTC', '2005-05-15 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005-05-19', 'MMF Training 19 May 2005', currval('account_id_seq'), '2005-05-19 15:45:00 UTC', '2005-05-19 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'), '2006-01-01 00:00:00 UTC', NULL);
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-15', 'MMF Training 20 May 2006', currval('account_id_seq'), '2006-05-20 15:45:00 UTC', '2006-05-20 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-20', 'MMF Training 23 May 2006', currval('account_id_seq'), '2006-05-23 15:45:00 UTC', '2006-05-23 19:45:00 UTC');
 
 CREATE TABLE contestMemberRole (
 	id SERIAL PRIMARY KEY

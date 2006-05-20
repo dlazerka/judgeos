@@ -5,7 +5,12 @@ body {
 div#root {
 	width: 100%;
 }
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
 td {
 	font-size: 10pt;
 }
+
 

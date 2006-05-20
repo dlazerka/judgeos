@@ -28,7 +28,7 @@
 
 	<tag>
 		<name>useContest</name>
-		<tag-class>org.judgeos.taglib.ContestTag</tag-class>
+		<tag-class>org.judgeos.taglib.UseContestTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<name>var</name>

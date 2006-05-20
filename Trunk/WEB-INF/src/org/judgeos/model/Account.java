@@ -2,28 +2,27 @@ package org.judgeos.model;
 
 import org.judgeos.DB;
 import org.judgeos.IncorrectSetupException;
-import org.postgresql.util.PSQLException;
-import org.apache.struts.action.ActionMessage;
 
 import java.io.Serializable;
+import java.sql.*;
 import java.util.HashMap;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.ResultSet;
 
-/**
- * Created by IntelliJ IDEA.
- * User: uzver
- * Date: 13.05.2006
- * Time: 20:14:57
- */
 public class Account implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String,Object> parameters;
 
 	public Account(HashMap<String,Object> parameters) {
 		this.parameters = parameters;
+	}
+
+	public Account(ResultSet rs) throws SQLException {
+		parameters = new HashMap<String, Object>();
+		ResultSetMetaData meta = rs.getMetaData();
+		for (int i = 1; i <= meta.getColumnCount(); i++) {
+			String field = meta.getColumnName(i);
+			Object value = rs.getObject(i);
+			parameters.put(field, value);
+		}
 	}
 
 	public HashMap<String,Object> getParameters() {

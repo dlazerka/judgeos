@@ -115,4 +115,8 @@
 		</res-auth>
 	</resource-ref>
 
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>org.judgeos.MessageResources</param-value>
+	</context-param>
 </web-app>

@@ -13,10 +13,6 @@
 	<body><div id="root">
 		<%@ include file="/top.jspf"%>
 
-
-
-
-		<%-- todo review accuracy of 'from' attribute --%>
 		<judgeos:useContest var="contest" />
 
 		<table>
