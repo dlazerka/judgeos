@@ -1,7 +1,6 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
-<%@ include file="/headers.jspf"%>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/header.css">
 

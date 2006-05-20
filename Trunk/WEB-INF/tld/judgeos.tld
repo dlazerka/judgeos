@@ -26,4 +26,15 @@
 		<body-content>empty</body-content>
 	</tag>
 
+	<tag>
+		<name>useContest</name>
+		<tag-class>org.judgeos.taglib.ContestTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+
 </taglib>

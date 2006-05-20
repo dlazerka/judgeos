@@ -2,69 +2,99 @@
   Created: 15.05.2006 17:50:59
 --%>
 <%@ include file="/headers.jspf"%>
-
 <html:html locale="true">
 	<head>
 		<title>
 			<bean:message key=".title" />
 		</title>
 		<judgeos:base/>
-	</head>
-	<body><div id="root">
 		<style type="text/css">
 			div.lastContests {
+				width: 450pt;
 				position: absolute;
-				width: 300pt;
 				right: 30pt;
-				border: 1px black solid;
-				padding: 5pt;
 			}
 			div.lastContestsTitle {
-				background-color: #eef;
-				color: #001;
 				padding: 5pt;
 				text-align: center;
 				font-weight: bold;
-				font-size: 20pt;
-			}
-			a.contestCodename {
 				font-size: 15pt;
 			}
+			table.lastContests {
+				width: 100%;
+				border-collapse: collapse;
+				border: 1px black solid;
+			}
+			table.lastContests td, table.lastContests th {
+				font-size: 12pt;
+				border-top: 1px black dashed;
+				border-left: 1px black solid;
+				border-right: 1px black solid;
+				text-align: center;
+			}
+			table.lastContests td.name {
+				text-align: right;
+				padding: 3pt;
+			}
+			table.lastContests tr.hot {
+				height: 40pt;
+				background-color: #faa;
+				padding: 3pt;
+			}
 		</style>
+	</head>
+	<body><div id="root">
 		<%@ include file="/top.jspf"%>
 
-		<html:link page="/account/">
-			<bean:message key=".account" />
-		</html:link>
+		<p>
+		<bean:message key=".welcomeMessage" />
+		</p>
 
-		<sql:setDataSource
-				var="example"
-				driver="org.postgresql.Driver"
-				url="jdbc:postgresql://localhost:5432/judgeos"
-				user="judgeos"
-				password="judgeos"
-		/>
-		<sql:query var="contests" dataSource="${example}" >
-			SELECT * FROM contest
-		</sql:query>
-
-		<c:forEach items="${contests.rows}" var="contest">
-			${contest.codename} <%-- TODO ! contests and hot contests list --%>
-		</c:forEach>
 
 		<div class="lastContests">
 			<div class="lastContestsTitle">
-				<bean:message key=".contests"/>
+				<bean:message key=".lastContests"/>
 			</div>
 
-			<jsp:useBean id="lastContests" class="org.judgeos.model.LastContests" />
-			<table>
-			<c:forEach items="${lastContests.contests}" var="contest">
+			<%-- just for example of sql stl and won't be used again --%>
+			<sql:setDataSource var="judgeos" dataSource="jdbc/judgeosDB"/>
+			<sql:query var="lastContests" dataSource="${judgeos}" >
+				SELECT
+					codename,
+					name,
+					startTime AS startTime,
+					stopTime AS stopTime,
+					CASE WHEN (startTime::DATE = 'now') THEN 'hot' END AS isHot
+				FROM contest
+				ORDER BY startTime DESC
+				LIMIT 10
+			</sql:query>
+
+			<table class="lastContests">
 				<tr>
-					<td>
-						<html:link action="/contest/info?codename=${fn:escapeXml(contest.codename)}" styleClass="contestCodename">
-							${fn:escapeXml(contest.codename)}
+					<th><fmt:message key="contest.name"/></th>
+					<th><fmt:message key="contest.start"/></th>
+					<th><fmt:message key="contest.stop"/></th>
+				</tr>
+			<c:forEach items="${lastContests.rows}" var="contest">
+				<tr class="${contest.isHot}">
+					<td class="name">
+						<html:link href="contest/info.jsp?codename=${fn:escapeXml(contest.codename)}"
+								styleClass="name"
+						>
+							<c:out value="${contest.name}"/>
 						</html:link>
+					</td>
+					<td>
+						<fmt:formatDate value="${contest.startTime}" type="both"
+								timeZone="UTC"
+								pattern="yyyy-MM-dd HH:mm:ss"
+						/>
+					</td>
+					<td>
+						<fmt:formatDate value="${contest.startTime}" type="both"
+							    pattern="yyyy-MM-dd HH:mm:ss"
+						/>
 					</td>
 				</tr>
 			</c:forEach>

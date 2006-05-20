@@ -265,7 +265,9 @@
         <JAVADOC>
           <root url="file://H:/usr/install/soft/Development/Java/doc/jsp-2_1-fr-spec-docs/docs/api" />
         </JAVADOC>
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../install/soft/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr152/src/share" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">

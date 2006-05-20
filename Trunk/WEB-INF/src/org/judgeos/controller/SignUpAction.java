@@ -1,16 +1,12 @@
-package org.judgeos;
+package org.judgeos.controller;
 
 import org.apache.struts.action.*;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.judgeos.model.Account;
-import org.postgresql.util.PSQLException;
+import org.judgeos.DB;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.sql.*;
-import java.util.HashMap;
 
 public class SignUpAction extends Action {
 	private HttpServletRequest request;

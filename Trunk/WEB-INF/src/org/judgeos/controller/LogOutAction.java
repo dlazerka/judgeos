@@ -1,4 +1,4 @@
-package org.judgeos;
+package org.judgeos.controller;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;

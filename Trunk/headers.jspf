@@ -7,6 +7,7 @@
 <%@ taglib uri="/tags/fn" prefix="fn" %>
 <%@ taglib uri="/tags/sql" prefix="sql" %>
 <%@ taglib uri="/tags/x" prefix="x" %>
+<%@ taglib uri="/tags/struts-tiles" prefix="tiles" %>
 
 <%@ taglib uri="/tags/judgeos" prefix="judgeos" %>
 

@@ -1,9 +1,10 @@
-package org.judgeos;
+package org.judgeos.controller;
 
 import org.apache.struts.action.*;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
 import org.judgeos.model.Account;
+import org.judgeos.DB;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

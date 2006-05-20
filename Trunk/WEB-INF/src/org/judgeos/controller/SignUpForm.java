@@ -1,4 +1,4 @@
-package org.judgeos;
+package org.judgeos.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,7 +19,7 @@ public class SignUpForm extends ValidatorForm {
 
 	private Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
 
-	protected static final String ERROR_KEY = "org.judgeos.SignUpForm.ERROR_KEY";
+	protected static final String ERROR_KEY = "org.judgeos.controller.SignUpForm.ERROR_KEY";
 
 	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
 		ActionErrors errors = super.validate(mapping, request);

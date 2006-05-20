@@ -44,6 +44,7 @@ CREATE TABLE judgeosRole2account (
 CREATE TABLE contest (
 	id SERIAL PRIMARY KEY
 	,codename VARCHAR NOT NULL
+	,name VARCHAR NOT NULL
 	,description VARCHAR NOT NULL DEFAULT ''
 	,owner INTEGER NOT NULL REFERENCES account ON UPDATE CASCADE
 	-- is or isn't there a contestMember with password=NULL ,public_observe BOOLEAN NOT NULL DEFAULT FALSE
@@ -54,9 +55,9 @@ CREATE TABLE contest (
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 );
 CREATE UNIQUE INDEX contest_codename_idx ON contest(codename);
-INSERT INTO contest(codename, name, owner) VALUES('mmf2006-05-15', 'MMF Training 15 May 2006', currval('account_id_seq'));
-INSERT INTO contest(codename, name, owner) VALUES('mmf2006-05-19', 'MMF Training 19 May 2006', currval('account_id_seq'));
-INSERT INTO contest(codename, name, owner) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'));
+INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006-05-15', 'MMF Training 15 May 2006', currval('account_id_seq'), '2006-05-15 15:45:00 UTC', '2006-05-15 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006-05-19', 'MMF Training 19 May 2006', currval('account_id_seq'), '2006-05-19 15:45:00 UTC', '2006-05-19 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, startTime, stopTime) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'), '2006-01-01 00:00:00 UTC', NULL);
 
 CREATE TABLE contestMemberRole (
 	id SERIAL PRIMARY KEY

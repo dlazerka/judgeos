@@ -9,11 +9,11 @@
 	<form-beans>
 		<form-bean
 			name="AccountSignUpForm"
-			type="org.judgeos.SignUpForm"
+			type="org.judgeos.controller.SignUpForm"
 		/>
 		<form-bean
 			name="AccountLogInForm"
-			type="org.judgeos.LogInForm"
+			type="org.judgeos.controller.LogInForm"
 		/>
 	</form-beans>
 
@@ -30,7 +30,7 @@
 	<action-mappings>
 		<action
 			path="/account/signup"
-			type="org.judgeos.SignUpAction"
+			type="org.judgeos.controller.SignUpAction"
 			name="AccountSignUpForm"
 			scope="request"
 			validate="true"
@@ -41,7 +41,7 @@
 		</action>
 		<action
 			path="/account/login"
-			type="org.judgeos.LogInAction"
+			type="org.judgeos.controller.LogInAction"
 			name="AccountLogInForm"
 			scope="request"
 			validate="true"
@@ -52,7 +52,7 @@
 		</action>
 		<action
 			path="/account/logout"
-			type="org.judgeos.LogOutAction"
+			type="org.judgeos.controller.LogOutAction"
 		>
 		</action>
 	</action-mappings>

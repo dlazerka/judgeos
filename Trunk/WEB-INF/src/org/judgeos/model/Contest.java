@@ -1,13 +1,25 @@
 package org.judgeos.model;
 
 import java.util.HashMap;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 
 public class Contest {
 	private HashMap<String, Object> parameters;
 
 	public Contest(HashMap<String, Object> parameters) {
-
 		this.parameters = parameters;
+	}
+
+	public Contest(ResultSet rs) throws SQLException {
+		parameters = new HashMap<String, Object>();
+		ResultSetMetaData meta = rs.getMetaData();
+		for (int i = 1; i <= meta.getColumnCount(); i++) {
+			String field = meta.getColumnName(i);
+			Object value = rs.getObject(i);
+			parameters.put(field, value);
+		}
 	}
 
 	public String getDescription() {
