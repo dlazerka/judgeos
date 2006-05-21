@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 /**
  * Connects to DB.
- * TODO must be replaced by configured DataSources.
+ * TODO must be replaced by configured DataSources, or, at least, extend java.sql.Driver class
  */
 public class DBFactory {
 	private static Connection dbh;

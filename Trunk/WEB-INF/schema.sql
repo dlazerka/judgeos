@@ -50,8 +50,8 @@ CREATE TABLE contest (
 	,name VARCHAR NOT NULL
 	,description VARCHAR NOT NULL DEFAULT ''
 	,owner INTEGER NOT NULL
-	-- is or isn't there a contestMember with password=NULL ,public_observe BOOLEAN NOT NULL DEFAULT FALSE
-	,public_participate BOOLEAN NOT NULL DEFAULT TRUE
+	-- is or isn't there a contestMember with password=NULL ,publicObserve BOOLEAN NOT NULL DEFAULT FALSE
+	,publicParticipate BOOLEAN NOT NULL DEFAULT TRUE
 	,start TIMESTAMP(0) WITH TIME ZONE
 	,stop TIMESTAMP(0) WITH TIME ZONE
 	,createdOn TIMESTAMP(0) WITH TIME ZONE NOT NULL
