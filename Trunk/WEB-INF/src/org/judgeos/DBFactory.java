@@ -7,12 +7,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Created by IntelliJ IDEA.
- * User: uzver
- * Date: 13.05.2006
- * Time: 20:20:22
+ * Connects to DB.
+ * TODO must be replaced by configured DataSources.
  */
-public class DB {
+public class DBFactory {
 	private static Connection dbh;
 
 	public static Connection getDbh() throws IncorrectSetupException {

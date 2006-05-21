@@ -9,11 +9,11 @@ import org.judgeos.IncorrectSetupException;
  * Time: 20:53:26
  */
 public class ConfigReadException extends IncorrectSetupException {
-	public ConfigReadException(String message) {
+	ConfigReadException(String message) {
 		super(message);
 	}
 
-	public ConfigReadException(String message, Throwable cause) {
+	ConfigReadException(String message, Throwable cause) {
 		super(message, cause);
 	}
 }

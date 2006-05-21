@@ -7,11 +7,11 @@ package org.judgeos;
  * Time: 21:46:43
  */
 public class IncorrectSetupException extends Exception {
-	protected IncorrectSetupException(String message) {
+	public IncorrectSetupException(String message) {
 		super(message);
 	}
 
-	protected IncorrectSetupException(String message, Throwable cause) {
+	public IncorrectSetupException(String message, Throwable cause) {
 		super(message + "(" + cause + ")", cause);
 	}
 }

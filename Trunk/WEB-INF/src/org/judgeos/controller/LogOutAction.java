@@ -20,6 +20,6 @@ public class LogOutAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 		request.getSession().removeAttribute("account");
-		return mapping.findForward("root");
+		return mapping.findForward("success");
 	}
 }

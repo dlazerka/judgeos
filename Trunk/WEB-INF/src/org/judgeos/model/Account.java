@@ -1,6 +1,6 @@
 package org.judgeos.model;
 
-import org.judgeos.DB;
+import org.judgeos.DBFactory;
 import org.judgeos.IncorrectSetupException;
 
 import java.io.Serializable;
@@ -33,6 +33,9 @@ public class Account implements Serializable {
 		return parameters.get(key);
 	}
 
+	public String getCodename() {
+		return (String) parameters.get("codename");
+	}
 
 	void Save() {
 //		Statement st = DBConnector.getDbh().createStatement();
@@ -47,7 +50,7 @@ public class Account implements Serializable {
 	 */
 	public static boolean codenameExists(String codename) throws IncorrectSetupException, SQLException {
 		String sql = "SELECT NULL FROM account WHERE codename = ?";
-		Connection c = DB.getDbh();
+		Connection c = DBFactory.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, codename);
 		ResultSet rs = st.executeQuery();

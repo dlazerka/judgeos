@@ -6,32 +6,59 @@
 <html:html locale="true">
 	<head>
 		<title>
-			<bean:message key=".title" />:
-			<bean:message key="account.login.title"/>
+			<fmt:message key=".title" />:
+			<fmt:message key="account.login"/>
 		</title>
 		<judgeos:base/>
 	</head>
 	<body>
 		<%@include file="/top.jspf"%>
-		<h3>
-			<bean:message key="account.login" />
-		</h3>
 		<html:form action="/account/login">
 			<html:hidden property="dataAttached" value="true"/>
 
-			<bean:message key="account.codename" />
-			<html:text property="codename" errorKey="account.login.codename"/>
-			<html:errors property="codename" name="org.judgeos.controller.LogInForm.ERROR_KEY"/>
-			<br />
-
-			<bean:message key="account.password" />
-			<html:password property="password"/>
-			<html:errors property="password" name="org.judgeos.controller.LogInForm.ERROR_KEY"/>
-			<br />
-
-			<html:submit>
-				<bean:message key="account.login.submit" />
-			</html:submit>
+			<div align="center">
+				<table style="width: auto;">
+					<tr>
+						<th colspan="3">
+							<h3>
+								<fmt:message key="account.login" />
+							</h3>
+						</th>
+					</tr>
+					<tr>
+						<td class="label">
+							<fmt:message key="account.codename" />
+							*
+						</td>
+						<td>
+							<html:text property="codename"/>
+						</td>
+						<td class="errorLabel">
+							<html:errors property="codename"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="label">
+							<fmt:message key="account.password" />
+							*
+						</td>
+						<td>
+							<html:password property="password"/>
+						</td>
+						<td class="errorLabel">
+							<html:errors property="password"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<br>
+							<html:submit>
+								<fmt:message key="account.login" />
+							</html:submit>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</html:form>
 	</body>
 </html:html>

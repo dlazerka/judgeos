@@ -1,9 +1,13 @@
 package org.judgeos.model;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.util.HashMap;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 public class Contest {
 	private HashMap<String, Object> parameters;
@@ -18,6 +22,8 @@ public class Contest {
 		for (int i = 1; i <= meta.getColumnCount(); i++) {
 			String field = meta.getColumnName(i);
 			Object value = rs.getObject(i);
+			Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
+			log.warn(field + "=" + value + "\n");
 			parameters.put(field, value);
 		}
 	}
@@ -26,23 +32,31 @@ public class Contest {
 		return (String) parameters.get("description");
 	}
 
-	public void setDescription(String description) {
-		parameters.put("description", description);
-	}
-
 	public String getCodename() {
 		return (String) parameters.get("codename");
-	}
-
-	public void setCodename(String codename) {
-		parameters.put("codename", codename);
 	}
 
 	public String getName() {
 		return (String) parameters.get("name");
 	}
 
-	public void setName(String name) {
-		parameters.put("name", name);
+	public Timestamp getStart() {
+		return (Timestamp) parameters.get("start");
+	}
+
+	public Timestamp getStop() {
+		return (Timestamp) parameters.get("stop");
+	}
+
+	public String getOwnerCodename() {
+		return (String) parameters.get("ownercodename");
+	}
+
+	public String getOwnerFirstName() {
+		return (String) parameters.get("ownerfirstname");
+	}
+
+	public String getOwnerLastName() {
+		return (String) parameters.get("ownerlastname");
 	}
 }

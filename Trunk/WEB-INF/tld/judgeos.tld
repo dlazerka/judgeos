@@ -37,4 +37,10 @@
 		</attribute>
 	</tag>
 
+	<tag>
+		<name>guestLogin</name>
+		<tag-class>org.judgeos.taglib.GuestLoginTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
 </taglib>

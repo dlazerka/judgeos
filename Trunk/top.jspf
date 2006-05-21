@@ -1,6 +1,8 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
+<%@ include file="/headers.jspf"%>
+
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/top.css">
 
@@ -8,27 +10,28 @@
 	<tr>
 		<td align="left">
 			<html:link forward="root" styleClass="header_logo">
-				<bean:message key=".logo" />
+				<fmt:message key=".logo" />
 			</html:link>
 		</td>
 		<td align="right">
-			<logic:present scope="session" name="account">
-				<bean:message key="top.welcome"/>
-				<b><judgeos:account parameter="codename"/></b>.
+			<fmt:message key="top.welcome"/>
+			<b><judgeos:account parameter="codename"/></b>.
 
-				<html:link action="account/logout.do">
-					<bean:message key="top.logout"/>
-				</html:link>
-			</logic:present>
-			<logic:notPresent scope="session" name="account">
-				<bean:message key="top.notLogged"/>
+			<c:set var="account" value="${account}" scope="session"/>
+			<c:if test="${account.codename eq 'guest'}">
 				<html:link href="account/login.jsp">
-					<bean:message key="top.login"/>
+					<fmt:message key="top.login"/>
 				</html:link>
 				<html:link href="account/signup.jsp">
-					<bean:message key="top.signup"/>
+					<fmt:message key="top.signup"/>
 				</html:link>
-			</logic:notPresent>
+			</c:if>
+
+			<c:if test="${account.codename ne 'guest'}">
+				<html:link action="account/logout.do">
+					<fmt:message key="top.logout"/>
+				</html:link>
+			</c:if>
 		</td>
 	</tr>
 </table>

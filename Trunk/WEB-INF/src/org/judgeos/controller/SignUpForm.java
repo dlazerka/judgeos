@@ -23,7 +23,6 @@ public class SignUpForm extends ValidatorForm {
 
 	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
 		ActionErrors errors = super.validate(mapping, request);
-		log.warn(errors);
 		request.setAttribute(ERROR_KEY, errors);
 		return errors;
 	}

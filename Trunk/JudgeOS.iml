@@ -61,17 +61,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-validator.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://H:/usr/install/soft/Development/Java/tools/Struts/commons-validator-1.1.4/src/share" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/WEB-INF/lib/jakarta-oro.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -326,6 +315,17 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-validator-1.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../install/soft/Development/Java/tools/Struts/commons-validator-1.3.0-src/src/share" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntryProperties />
     <javadoc-paths>
       <root url="file://D:/usr/install/soft/Development/Java/tools/Struts/struts-1.2.8-src/src/share" />
@@ -445,6 +445,11 @@
       <attribute name="method" value="1" />
       <attribute name="URI" value="/WEB-INF/lib/tomcat-util.jar" />
       <url>jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/server/lib/tomcat-util.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib/commons-validator-1.3.0.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/commons-validator-1.3.0.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />

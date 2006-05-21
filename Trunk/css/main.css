@@ -12,5 +12,12 @@ table {
 td {
 	font-size: 10pt;
 }
+td.label {
+	text-align: right;
+}
+.errorLabel {
+	text-align: left;
+	color: red;
+}
 
 

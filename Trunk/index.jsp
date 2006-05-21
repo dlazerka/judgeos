@@ -29,8 +29,8 @@
 			table.lastContests td, table.lastContests th {
 				font-size: 11pt;
 				border-top: 1px gray dotted;
-				border-left: 1px black solid;
-				border-right: 1px black solid;
+				border-left: 1px gray dotted;
+				border-right: 1px gray dotted;
 				text-align: center;
 			}
 			table.lastContests td.name {
@@ -78,7 +78,7 @@
 						<c:forEach items="${lastContests.rows}" var="contest">
 							<tr class="${contest.isHot}">
 								<td class="name">
-									<html:link href="contest/info.jsp?codename=${fn:escapeXml(contest.codename)}"
+									<html:link href="contest/info.jsp?codename=${contest.codename}"
 											styleClass="name"
 									>
 										<c:out value="${contest.name}"/>

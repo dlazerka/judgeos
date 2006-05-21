@@ -1,16 +1,22 @@
 package org.judgeos.controller;
 
-import org.apache.struts.action.*;
-import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.Globals;
+import org.apache.struts.action.*;
+import org.judgeos.DBFactory;
 import org.judgeos.model.Account;
-import org.judgeos.DB;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
-import java.util.HashMap;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
+/**
+ * Process user login.
+ * todo move authentication checks to some validator.
+ */
 public class LogInAction extends Action {
 	private HttpServletRequest request;
 	private Log log = LogFactory.getFactory().getInstance(LogInForm.class.getName());
@@ -23,14 +29,10 @@ public class LogInAction extends Action {
 	) throws Exception {
 		this.request = request;
 
-		if (request.getParameter("codename") == null) {
-			return mapping.getInputForward();
-		}
-
 		String codename = request.getParameter("codename");
 		String sql = "SELECT * FROM account WHERE codename = ?";
 
-		Connection c = DB.getDbh();
+		Connection c = DBFactory.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, codename);
 
@@ -39,44 +41,39 @@ public class LogInAction extends Action {
 		if (rs.next()) {
 			if (rs.getString("password").equals(request.getParameter("password")))
 			{
-				processSuccessfulLogIn(rs);
+				request.getSession().setAttribute("account", new Account(rs));
 				return mapping.findForward("success");
 			}
 			else {
 				ActionMessage msg = new ActionMessage("errors.account.wrongPassword");
-				getFormErrors().add("password", msg);
+				this.addErrorMessage("password", msg);
 			}
 		}
 		else {
 			ActionMessage msg = new ActionMessage("errors.account.wrongCodename");
-			getFormErrors().add("codename", msg);
+			this.addErrorMessage("codename", msg);
 		}
 
 		return mapping.getInputForward();
 	}
 
-	private void processSuccessfulLogIn(ResultSet rs) throws SQLException {
-		HashMap<String, Object> accountData = new HashMap<String, Object>();
-		ResultSetMetaData meta = rs.getMetaData();
-		for (int i = 1; i <= meta.getColumnCount(); i++) {
-			String field = meta.getColumnName(i);
-			Object value = rs.getObject(i);
-			accountData.put(field, value);
-		}
-		Account account = new Account(accountData);
-		request.getSession().setAttribute("account", account);
-	}
-
 	/**
-	 * Looks at request attribute specified by LogInForm.ERROR_KEY key a creates new if necessary.
-	 * @return this.request.getAttribute(LogInForm.ERROR_KEY)
+	 * Adds the error message to both errors containers: Global and my.
+	 * @param property
+	 * @param msg
 	 */
-	private ActionMessages getFormErrors() {
-		ActionMessages msgs = (ActionMessages)request.getAttribute(LogInForm.ERROR_KEY);
-		if (msgs == null) {
-			msgs = new ActionErrors();
-			request.setAttribute(LogInForm.ERROR_KEY, msgs);
+	private void addErrorMessage(String property, ActionMessage msg) {
+		for (String key: new String[]{LogInForm.ERROR_KEY, Globals.ERROR_KEY}
+		) {
+			ActionMessages msgs = (ActionMessages)request.getAttribute(key);
+			if (msgs == null) {
+				msgs = new ActionErrors();
+				msgs.add(property, msg);
+				request.setAttribute(key, msgs);
+			}
+			else {
+				msgs.add(property, msg);
+			}
 		}
-		return msgs;
 	}
 }

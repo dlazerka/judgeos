@@ -2,13 +2,14 @@
 
 <!DOCTYPE form-validation PUBLIC
           "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
-          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+          "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
 
 <form-validation>
 	<global>
 		<constant>
+			<!-- must be xml clean to raw output as query param -->
 			<constant-name>codename</constant-name>
-			<constant-value>^[a-zA-Z][0-9a-zA-Z_-]*$</constant-value>
+			<constant-value>^[a-zA-Z][0-9a-zA-Z_+-]*$</constant-value>
 		</constant>
 		<constant>
 			<constant-name>password</constant-name>
@@ -16,7 +17,7 @@
 		</constant>
 	</global>
 
-    <formset>
+	<formset>
 		<form name="AccountSignUpForm">
 			<field property="dataAttached" depends="required"/>
 			

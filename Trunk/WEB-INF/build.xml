@@ -49,7 +49,6 @@
 
 
 	<target name="reload" depends="compile">
-		<!-- TODO c write reload-->
 	</target>
 
 

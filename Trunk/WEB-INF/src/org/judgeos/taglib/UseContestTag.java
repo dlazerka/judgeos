@@ -1,9 +1,10 @@
 package org.judgeos.taglib;
 
-import org.judgeos.DB;
+import org.judgeos.DBFactory;
 import org.judgeos.IncorrectSetupException;
 import org.judgeos.model.Contest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
@@ -15,17 +16,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UseContestTag extends SimpleTagSupport {
-	private JspContext jspContext;
 	private String var;
+	private JspContext jspContext;
+
+	public void setJspContext(JspContext jspContext) {
+		this.jspContext = jspContext;
+	}
 
 	private Contest fetchContest(String codename) throws IncorrectSetupException, SQLException {
 		if (codename == null) {
 			return null;
 		}
 		else {
-			Connection c = DB.getDbh();
-			String sql = "SELECT contest.name, contest.start, contest.stop, "+
-					"owner.firstName||' '||owner.lastName AS owner " +
+			Connection c = DBFactory.getDbh();
+			String sql = "SELECT contest.name, start, stop, description, "+
+					"owner.firstName AS ownerFirstName, owner.lastName AS ownerLastName, " +
+					"owner.codename AS ownerCodename " +
 					"FROM contest " +
 					"LEFT JOIN account AS owner ON contest.owner = owner.id " +
 					"WHERE contest.codename = ? ";
@@ -43,18 +49,15 @@ public class UseContestTag extends SimpleTagSupport {
 	}
 
 	public void doTag() throws JspException, IOException {
-		String codename = (String) jspContext.getAttribute("codename", PageContext.REQUEST_SCOPE);
+		HttpServletRequest request = (HttpServletRequest) jspContext.getAttribute(PageContext.REQUEST);
+		String codename = request.getParameter("codename");
 		try {
 			jspContext.setAttribute(var, this.fetchContest(codename), PageContext.PAGE_SCOPE);
 		} catch (IncorrectSetupException e) {
-			throw new JspException(e.getMessage(), e);
+			throw new JspException(e);
 		} catch (SQLException e) {
-			throw new JspException(e.getMessage(), e);
+			throw new JspException(e);
 		}
-	}
-
-	public void setJspContext(JspContext jspContext) {
-		this.jspContext = jspContext;
 	}
 
 	public void setVar(String var) {

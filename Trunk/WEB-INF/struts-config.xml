@@ -54,6 +54,7 @@
 			path="/account/logout"
 			type="org.judgeos.controller.LogOutAction"
 		>
+			<forward name="success" path="/" redirect="true"/>
 		</action>
 	</action-mappings>
 
@@ -75,6 +76,7 @@
 			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
 		/>
 	</plug-in>
+
 
 </struts-config>
 

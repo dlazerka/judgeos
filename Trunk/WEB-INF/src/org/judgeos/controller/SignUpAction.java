@@ -1,13 +1,19 @@
 package org.judgeos.controller;
 
+import org.apache.struts.Globals;
 import org.apache.struts.action.*;
+import org.judgeos.DBFactory;
 import org.judgeos.model.Account;
-import org.judgeos.DB;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
+/**
+ * Process user registration.
+ * todo move authentication checks to some validator.
+ */
 public class SignUpAction extends Action {
 	private HttpServletRequest request;
 
@@ -25,10 +31,11 @@ public class SignUpAction extends Action {
 			return mapping.findForward("failure");
 		}
 
+
+		Connection c = DBFactory.getDbh();
 		String sql = "INSERT INTO account(codename, password, firstName, lastName) " +
 				"VALUES(?, ?, ?, ?)";
 
-		Connection c = DB.getDbh();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, request.getParameter("codename"));
 		st.setString(2, request.getParameter("password"));
@@ -37,20 +44,22 @@ public class SignUpAction extends Action {
 
 		st.execute();
 
-		processSuccessfulSignUp();
 		return mapping.findForward("success");
 	}
 
-	private void processSuccessfulSignUp() {
-	}
-
 	private void processUnsuccessfulSignUp(ActionMessage msg) {
-		ActionMessages msgs = (ActionMessages)request.getAttribute(SignUpForm.ERROR_KEY);
-		if (msgs == null) {
-			msgs = new ActionErrors();
+		for (String key: new String[]{
+				SignUpForm.ERROR_KEY, Globals.ERROR_KEY}
+		) {
+			ActionMessages msgs = (ActionMessages)request.getAttribute(key);
+			if (msgs == null) {
+				msgs = new ActionErrors();
+				msgs.add("codename", msg);
+				request.setAttribute(key, msgs);
+			}
+			else {
+				msgs.add("codename", msg);
+			}
 		}
-
-		msgs.add("codename", msg);
-		request.setAttribute(SignUpForm.ERROR_KEY, msgs);
 	}
 }
