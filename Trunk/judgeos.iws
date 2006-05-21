@@ -160,10 +160,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.sql" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schema.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state line="94" column="26" selection-start="4126" selection-end="4126" vertical-scroll-proportion="-0.45714286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseWork.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/doc/CourseWork.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="68" selection-start="620" selection-end="620" vertical-scroll-proportion="0.6938776">
               <folding />
             </state>
           </provider>
@@ -187,15 +196,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="judgeos.tld" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/tld/judgeos.tld">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="41" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.68367344">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GuestLoginTag.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/GuestLoginTag.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -210,17 +210,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="-0.2489796">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseContestTag.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/UseContestTag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="35" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.722449">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -711,6 +700,28 @@
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\WEB-INF\doc" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="PsiDirectory:C:\usr\webapps\judgeos\META-INF" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
@@ -1148,20 +1159,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/IncorrectSetupException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="248" selection-end="248" vertical-scroll-proportion="0.43762377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="-0.2489796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/GuestLoginTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="51" selection-start="488" selection-end="488" vertical-scroll-proportion="0.06734694">
@@ -1249,6 +1246,20 @@
     <entry file="file://$PROJECT_DIR$/WEB-INF/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="26" selection-start="4126" selection-end="4126" vertical-scroll-proportion="-0.45714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/standardSchemas/xhtml1-transitional.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="489" column="0" selection-start="13490" selection-end="13490" vertical-scroll-proportion="0.33267328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/doc/CourseWork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="68" selection-start="620" selection-end="620" vertical-scroll-proportion="0.6938776">
           <folding />
         </state>
       </provider>
