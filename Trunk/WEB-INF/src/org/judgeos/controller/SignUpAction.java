@@ -3,35 +3,58 @@ package org.judgeos.controller;
 import org.apache.struts.Globals;
 import org.apache.struts.action.*;
 import org.judgeos.DBFactory;
+import org.judgeos.IncorrectSetupException;
 import org.judgeos.model.Account;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  * Process user registration.
- * todo move authentication checks to some validator.
  */
 public class SignUpAction extends Action {
-	private HttpServletRequest request;
 
+
+	/**
+	 * Checks for existence of the same codename in DB and, if so, returns 'failure' forward,
+	 * else adds the record to the 'account' table and returns 'success' forward. Note that
+	 * actions to automatically log the user in must be done on 'success' forward.
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return 'failure' or 'success' forwards
+	 * @throws Exception
+	 */
 	public ActionForward execute(
 		ActionMapping mapping,
 		ActionForm form,
 		HttpServletRequest request,
 		HttpServletResponse response
 	) throws Exception {
-		this.request = request;
 
 		if (Account.codenameExists(request.getParameter("codename"))) {
 			ActionMessage msg = new ActionMessage("errors.account.codenameUsed");
-			processUnsuccessfulSignUp(msg);
+			addErrorMessage(msg, request);
 			return mapping.findForward("failure");
 		}
 
+		addAccount(request);
 
+		return mapping.findForward("success");
+	}
+
+
+	/**
+	 * Inserts account row to the 'account' table basing on request parameters data.
+	 * @param request
+	 * @throws IncorrectSetupException
+	 * @throws SQLException
+	 */
+	private void addAccount(HttpServletRequest request) throws IncorrectSetupException, SQLException {
 		Connection c = DBFactory.getDbh();
 		String sql = "INSERT INTO account(codename, password, firstName, lastName) " +
 				"VALUES(?, ?, ?, ?)";
@@ -43,11 +66,15 @@ public class SignUpAction extends Action {
 		st.setString(4, request.getParameter("lastName"));
 
 		st.execute();
-
-		return mapping.findForward("success");
 	}
 
-	private void processUnsuccessfulSignUp(ActionMessage msg) {
+	
+	/**
+	 * Puts given error to global and SignUpForm errors collections.
+	 * @param msg
+	 * @param request
+	 */
+	private void addErrorMessage(ActionMessage msg, HttpServletRequest request) {
 		for (String key: new String[]{
 				SignUpForm.ERROR_KEY, Globals.ERROR_KEY}
 		) {

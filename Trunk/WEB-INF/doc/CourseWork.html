@@ -283,6 +283,104 @@ JDBC основана на концепции т. н. драйверов, позвол€ющих получать соединение с ба
 		<p>
 			ќсновные сервлеты: JSP и Struts.
 		</p>
+		<p>
+			Ќиже приведен текст контроллера сервлета, выполн€ющего регистрацию пользовател€
+			на сайте (Sign Up). ¬купе с использованием технологии Struts, код выгл€дит простым и пон€тным.
+		</p>
+		<pre>
+package org.judgeos.controller;
+
+import org.apache.struts.Globals;
+import org.apache.struts.action.*;
+import org.judgeos.DBFactory;
+import org.judgeos.IncorrectSetupException;
+import org.judgeos.model.Account;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ * Process user registration.
+ */
+public class SignupAction extends Action {
+
+
+	/**
+	 * Checks for existence of the same codename in DB and, if so, returns 'failure' forward,
+	 * else adds the record to the 'account' table and returns 'success' forward. Note that
+	 * actions to automatically log the user in must be done on 'success' forward.
+	 * @param mapping
+	 * @param form
+	 * @param request
+	 * @param response
+	 * @return 'failure' or 'success' forwards
+	 * @throws Exception
+	 */
+	public ActionForward execute(
+		ActionMapping mapping,
+		ActionForm form,
+		HttpServletRequest request,
+		HttpServletResponse response
+	) throws Exception {
+
+		if (Account.codenameExists(request.getParameter(&quot;codename&quot;))) {
+			ActionMessage msg = new ActionMessage(&quot;errors.account.codenameUsed&quot;);
+			addErrorMessage(msg, request);
+			return mapping.findForward(&quot;failure&quot;);
+		}
+
+		addAccount(request);
+
+		return mapping.findForward(&quot;success&quot;);
+	}
+
+
+	/**
+	 * Inserts account row to the 'account' table basing on request parameters data.
+	 * @param request
+	 * @throws IncorrectSetupException
+	 * @throws SQLException
+	 */
+	private void addAccount(HttpServletRequest request) throws IncorrectSetupException, SQLException {
+		Connection c = DBFactory.getDbh();
+		String sql = &quot;INSERT INTO account(codename, password, firstName, lastName) &quot; +
+				&quot;VALUES(?, ?, ?, ?)&quot;;
+
+		PreparedStatement st = c.prepareStatement(sql);
+		st.setString(1, request.getParameter(&quot;codename&quot;));
+		st.setString(2, request.getParameter(&quot;password&quot;));
+		st.setString(3, request.getParameter(&quot;firstName&quot;));
+		st.setString(4, request.getParameter(&quot;lastName&quot;));
+
+		st.execute();
+	}
+
+
+	/**
+	 * Puts given error to global and SignupForm errors collections.
+	 * @param msg
+	 * @param request
+	 */
+	private void addErrorMessage(ActionMessage msg, HttpServletRequest request) {
+		for (String key: new String[]{
+				SignupForm.ERROR_KEY, Globals.ERROR_KEY}
+		) {
+			ActionMessages msgs = (ActionMessages)request.getAttribute(key);
+			if (msgs == null) {
+				msgs = new ActionErrors();
+				msgs.add(&quot;codename&quot;, msg);
+				request.setAttribute(key, msgs);
+			}
+			else {
+				msgs.add(&quot;codename&quot;, msg);
+			}
+		}
+	}
+}
+		</pre>
 	</li>
 	<li>
 		<h3>Java Server Pages</h3>
@@ -296,6 +394,9 @@ JDBC основана на концепции т. н. драйверов, позвол€ющих получать соединение с ба
 	</li>
 	<li>
 		<h3>Java Standard Tag Library</h3>
+		<p>
+			Jakarta implementation v1.1.2 (JSTL 1.1)
+		</p>
 		<p>
 			јктивно используютс€ теги core (c:*), format (fmt:*), на странице '/index.jsp' как пример
 			реализована работа с тегами sql (sql:*).
@@ -311,6 +412,94 @@ JDBC основана на концепции т. н. драйверов, позвол€ющих получать соединение с ба
 			реализованы через org.apache.action-интерфейс. ¬се формы проход€т валидацию (validation) средствами Struts,
 			все сообщени€, допускающие возможность интернационализации, хран€тс€ в стандартных .property файлах.
 		</p>
+		<p>
+			ќсновной файл дл€ Struts проекта JudgeOS:
+		</p>
+		<pre style="font-weight: bold;">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; ?&gt;
+
+&lt;!DOCTYPE struts-config PUBLIC
+	&quot;-//Apache Software Foundation//DTD Struts Configuration 1.2//EN&quot;
+	&quot;http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd&quot;&gt;
+
+&lt;struts-config&gt;
+
+	&lt;form-beans&gt;
+		&lt;form-bean
+			name=&quot;AccountSignUpForm&quot;
+			type=&quot;org.judgeos.controller.SignUpForm&quot;
+		/&gt;
+		&lt;form-bean
+			name=&quot;AccountLogInForm&quot;
+			type=&quot;org.judgeos.controller.LogInForm&quot;
+		/&gt;
+	&lt;/form-beans&gt;
+
+
+	&lt;global-exceptions&gt;
+	&lt;/global-exceptions&gt;
+
+	&lt;global-forwards&gt;
+		&lt;forward name=&quot;root&quot; path=&quot;/&quot; /&gt;
+		&lt;forward name=&quot;login&quot; path=&quot;/account/login.jsp&quot; /&gt;
+	&lt;/global-forwards&gt;
+
+
+	&lt;action-mappings&gt;
+		&lt;action
+			path=&quot;/account/signup&quot;
+			type=&quot;org.judgeos.controller.SignUpAction&quot;
+			name=&quot;AccountSignUpForm&quot;
+			scope=&quot;request&quot;
+			validate=&quot;true&quot;
+			input=&quot;/account/signup.jsp&quot;
+		&gt;
+			&lt;forward name=&quot;success&quot; path=&quot;/account/login.do&quot;/&gt;
+			&lt;forward name=&quot;failure&quot; path=&quot;/account/signup.jsp&quot; /&gt;
+		&lt;/action&gt;
+		&lt;action
+			path=&quot;/account/login&quot;
+			type=&quot;org.judgeos.controller.LogInAction&quot;
+			name=&quot;AccountLogInForm&quot;
+			scope=&quot;request&quot;
+			validate=&quot;true&quot;
+			input=&quot;/account/login.jsp&quot;
+		&gt;
+			&lt;forward name=&quot;success&quot; path=&quot;/account/&quot; redirect=&quot;true&quot;/&gt;
+			&lt;forward name=&quot;failure&quot; path=&quot;/account/login.jsp&quot; /&gt;
+		&lt;/action&gt;
+		&lt;action
+			path=&quot;/account/logout&quot;
+			type=&quot;org.judgeos.controller.LogOutAction&quot;
+		&gt;
+			&lt;forward name=&quot;success&quot; path=&quot;/&quot; redirect=&quot;true&quot;/&gt;
+		&lt;/action&gt;
+	&lt;/action-mappings&gt;
+
+
+	&lt;controller processorClass=&quot;org.apache.struts.tiles.TilesRequestProcessor&quot;/&gt;
+
+
+	&lt;message-resources parameter=&quot;org.judgeos.MessageResources&quot; /&gt;
+
+
+	&lt;plug-in className=&quot;org.apache.struts.tiles.TilesPlugin&quot; &gt;
+		&lt;set-property
+			property=&quot;definitions-config&quot;
+			value=&quot;/WEB-INF/tiles-defs.xml&quot;
+		/&gt;
+		&lt;set-property property=&quot;moduleAware&quot; value=&quot;true&quot; /&gt;
+	&lt;/plug-in&gt;
+
+	&lt;plug-in className=&quot;org.apache.struts.validator.ValidatorPlugIn&quot;&gt;
+		&lt;set-property
+			property=&quot;pathnames&quot;
+			value=&quot;/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml&quot;
+		/&gt;
+	&lt;/plug-in&gt;
+
+&lt;/struts-config&gt;
+		</pre>
 	</li>
 	<li>
 		<h3>Java DataBase Connectivity</h3>

@@ -50,7 +50,10 @@
 						:
 					</td>
 					<td class="value">
-						<c:out value="${contest.start}"/>
+						<fmt:formatDate value="${contest.start}" type="both"
+								timeZone="UTC"
+								pattern="yyyy-MM-dd HH:mm:ss zzz"
+						/>
 					</td>
 				</tr>
 				<tr>
@@ -59,7 +62,10 @@
 						:
 					</td>
 					<td class="value">
-						<c:out value="${contest.stop}"/>
+						<fmt:formatDate value="${contest.stop}" type="both"
+								timeZone="UTC"
+								pattern="yyyy-MM-dd HH:mm:ss zzz"
+						/>
 					</td>
 				</tr>
 				<tr>

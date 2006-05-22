@@ -98,6 +98,7 @@
 		</taglib>
 	</jsp-config>
 
+	<!-- for initializing of DataSource through JNDI
 	<resource-ref>
 		<description>
 			Resource reference to a factory for java.sql.Connection
@@ -113,8 +114,9 @@
 		<res-auth>
 			Container
 		</res-auth>
-	</resource-ref>
+	</resource-ref-->
 
+	<!-- for <fmt:*> tags from JSTL -->
 	<context-param>
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 		<param-value>org.judgeos.MessageResources</param-value>

@@ -59,7 +59,7 @@
 							<fmt:message key=".lastContests"/>
 						</div>
 
-						<%-- just for example of sql stl and won't be used again --%>
+						<%-- just for example
 						<sql:setDataSource var="judgeosDataSource" dataSource="jdbc/judgeosDB"/>
 						<sql:query var="lastContests" dataSource="${judgeosDataSource}" >
 							SELECT codename, name, start, stop,
@@ -68,15 +68,21 @@
 							ORDER BY start DESC
 							LIMIT 10
 						</sql:query>
+						end of example--%>
 
+						<judgeos:fetchLastContests var="lastContests" limit="10"/>
 						<table class="lastContests">
 							<tr>
 								<th><fmt:message key="contest.name"/></th>
 								<th><fmt:message key="contest.start"/></th>
 								<th><fmt:message key="contest.stop"/></th>
 							</tr>
-						<c:forEach items="${lastContests.rows}" var="contest">
-							<tr class="${contest.isHot}">
+						<c:forEach items="${lastContests}" var="contest">
+							<c:set var="classHot" value=""/>
+							<c:if test="${contest.isHot}">
+								<c:set var="classHot" value="hot"/>
+							</c:if>
+							<tr class="${classHot}">
 								<td class="name">
 									<html:link href="contest/info.jsp?codename=${contest.codename}"
 											styleClass="name"

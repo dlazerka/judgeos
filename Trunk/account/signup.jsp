@@ -26,7 +26,10 @@
 						</th>
 					</tr>
 					<tr>
-						<td class="label"><fmt:message key="account.codename" /> *</td>
+						<td class="label">
+							<fmt:message key="account.codename" />
+							*
+						</td>
 						<td>
 							<html:text property="codename"/>
 						</td>

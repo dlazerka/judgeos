@@ -65,8 +65,8 @@ INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005', 'MMF 2
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005-05-15', 'MMF Training 15 May 2005', currval('account_id_seq'), '2005-05-15 15:45:00 UTC', '2005-05-15 19:45:00 UTC');
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005-05-19', 'MMF Training 19 May 2005', currval('account_id_seq'), '2005-05-19 15:45:00 UTC', '2005-05-19 19:45:00 UTC');
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006', 'MMF 2006', currval('account_id_seq'), '2006-01-01 00:00:00 UTC', NULL);
-INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-15', 'MMF Training 21 May 2006', currval('account_id_seq'), '2006-05-21 15:45:00 UTC', '2006-05-20 19:45:00 UTC');
-INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-23', 'MMF Training 23 May 2006', currval('account_id_seq'), '2006-05-23 15:45:00 UTC', '2006-05-23 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-22', 'MMF Training 21 May 2006', currval('account_id_seq'), '2006-05-22 15:45:00 UTC', '2006-05-22 19:45:00 UTC');
+INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-05-23', 'MMF Training 22-23 May 2006', currval('account_id_seq'), '2006-05-22 15:45:00 UTC', '2006-05-23 19:45:00 UTC');
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2006-06-20', 'MMF Training 20 June 2006', currval('account_id_seq'), '2006-06-20 15:45:00 UTC', '2006-06-20 19:45:00 UTC');
 
 CREATE TABLE contestMemberRole (

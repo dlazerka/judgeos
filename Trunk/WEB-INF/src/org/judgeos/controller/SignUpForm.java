@@ -1,7 +1,5 @@
 package org.judgeos.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.validator.ValidatorForm;
@@ -16,8 +14,6 @@ public class SignUpForm extends ValidatorForm {
 	private String firstName;
 	private String lastName;
 	private String dataAttached;
-
-	private Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
 
 	protected static final String ERROR_KEY = "org.judgeos.controller.SignUpForm.ERROR_KEY";
 

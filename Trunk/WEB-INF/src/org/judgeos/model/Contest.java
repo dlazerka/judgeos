@@ -22,8 +22,8 @@ public class Contest {
 		for (int i = 1; i <= meta.getColumnCount(); i++) {
 			String field = meta.getColumnName(i);
 			Object value = rs.getObject(i);
-			Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
-			log.warn(field + "=" + value + "\n");
+			//Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
+			//log.warn(field + "=" + value + "\n");
 			parameters.put(field, value);
 		}
 	}
@@ -59,4 +59,9 @@ public class Contest {
 	public String getOwnerLastName() {
 		return (String) parameters.get("ownerlastname");
 	}
+
+	public Boolean getIsHot() {
+		return (Boolean) parameters.get("ishot");
+	}
+
 }
