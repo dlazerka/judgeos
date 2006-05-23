@@ -17,6 +17,9 @@
 		img {
 			float: right;
 		}
+		pre {
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body>
@@ -35,17 +38,19 @@
 	Технологии J2EE.<br>
 	Разработка системы управления ACM-ICPC олимпиадами.
 </h1>
+
+<hr>
+
 <h2>Содержание.</h2>
 <ul>
 	<li><a href="#intro">Введение</a></li>
 	<li><a href="#chapterServlet">Глава 1. Java Servlet.</a></li>
-	<li><a href="#chapterJsp">Глава 2. Технология Java Server Pages.</a></li>
-	<li><a href="#chapterJstl">Глава 3. Java Server Pages Standart Tag Library.</a></li>
-	<li><a href="#chapterStruts">Глава 4. Struts Action Framework.</a></li>
-	<li><a href="#chapterJdbc">Глава 5. Java DataBase Connectivity.</a></li>
-	<li><a href="#chapterPostgresql">Глава 6. PostgreSQL</a></li>
-	<li><a href="#chapterUse">Глава 7. Использование этих инструментов в процессе разработки.</a></li>
-	<li><a href="#chapterForever">Глава 8. Дальнейшее развитие проекта.</a></li>
+	<li><a href="#chapterJsp">Глава 2. Технологии Java Server Pages и Java Server Pages Standart Tag Library.</a></li>
+	<li><a href="#chapterStruts">Глава 3. Struts Action Framework.</a></li>
+	<li><a href="#chapterJdbc">Глава 4. Java DataBase Connectivity.</a></li>
+	<li><a href="#chapterPostgresql">Глава 5. PostgreSQL</a></li>
+	<li><a href="#chapterUse">Глава 6. Использование этих инструментов в процессе разработки.</a></li>
+	<li><a href="#chapterForever">Глава 7. Дальнейшее развитие проекта.</a></li>
 	<li><a href="#chapterSummary">Заключение</a></li>
 	<li><a href="#enclosureCode">Приложение A: Исходный код проекта JudgeOS.</a></li>
 </ul>
@@ -137,7 +142,9 @@
 </p>
 
 <h2>
-	<a name="chapterJsp">Глава 2. Технология Java Server Pages.</a>
+	<a name="chapterJsp">
+		Глава 2. Технологии Java Server Pages и Java Server Pages Standart Tag Library
+	</a>
 </h2>
 <p>
 	<a href="http://java.sun.com/products/jsp">JSP (Java Server Pages)</a> -- технология, позволяющая веб-разработчикам
@@ -150,9 +157,6 @@
 <p>
 	JSP -- одна из высокопроизводительных технологий, т. к. весь код страницы транслируется в java-код сервлета с помощью компилятора JSP страниц Jasper, и затем компилируется в байт-код виртуальной машины java (JVM). Сервлет-контейнеры (Tomcat), способные исполнять JSP страницы, написаны на платформонезависимом языке Java, который может работать под различными операционными системами и на компьютерах с разной архитектурой, от персональных компьютеров до высокопроизводительных серверов. Сервлет-контейнеры могут работать как полноценные самостоятельные веб-серверы, работать поставщиком страниц для другого веб-сервера или интегрироваться в J2EE сервер приложений.
 </p>
-<h2>
-	<a name="chapterJstl">Глава 3. Java Server Pages Standart Tag Library.</a>
-</h2>
 <p>
 	<a href="http://java.sun.com/products/jsp/jstl/">JSTL</a> (Java Server Pages Standart Tag Library -- библиотека стандартных тегов JSP) -- это часть платформы разработки
 	Java EE web-приложения. Она расширяет JSP-спецификацию, добавляя библиотеку тегов для частых задач, таких как обработка XML,
@@ -164,7 +168,7 @@
 	и дает возможность разделения подходов к разработке кода приложения и пользовательского интерфейса.
 </p>
 <h2>
-	<a name="chapterStruts">Глава 4. Struts Action Framework.</a>
+	<a name="chapterStruts">Глава 3. Struts Action Framework.</a>
 </h2>
 <img src="outsideImages/J2eeLayers2.gif" alt="J2EE Layers" title="J2EE Layers">
 <p>
@@ -192,7 +196,7 @@
 	</li>
 </ul>
 <h2>
-	<a name="chapterJdbc">Глава 5. Java DataBase Connectivity.</a>
+	<a name="chapterJdbc">Глава 4. Java DataBase Connectivity.</a>
 </h2>
 <p>
 <a href="http://java.sun.com/products/jdbc/">Java DataBase Connectivity</a>, сокращенно JDBC — Соединение с Базой Данных на Java — API для языка Java, который определяет методы, с помощью которых клиентское приложение на Java осуществляет доступ к базе данных. Если быть точным, то JDBC является торговой маркой, а не аббревиатурой.
@@ -222,7 +226,7 @@ JDBC основана на концепции т. н. драйверов, позволяющих получать соединение с ба
 	</li>
 </ul>
 <h2>
-	<a name="chapterPostgresql">Глава 6. PostgreSQL</a>
+	<a name="chapterPostgresql">Глава 5. PostgreSQL</a>
 </h2>
 <img src="outsideImages/postgresql.gif" alt="postgresql logo" title="postgresql logo">
 <p>
@@ -254,7 +258,7 @@ JDBC основана на концепции т. н. драйверов, позволяющих получать соединение с ба
 	Поскольку СУБД PostgreSQL выпускается под либеральной лицензией, её можно бесплатно использовать, модифицировать и распространять для любых целей, включая личные, коммерческие или академические.
 </p>
 <h2>
-	<a name="chapterUse">Глава 7. Использование этих инструментов в процессе разработки.</a>
+	<a name="chapterUse">Глава 6. Использование этих инструментов в процессе разработки.</a>
 </h2>
 <p>
 	Проект разрабатывается с использованием
@@ -383,24 +387,59 @@ public class SignupAction extends Action {
 		</pre>
 	</li>
 	<li>
-		<h3>Java Server Pages</h3>
+		<h3>Java Server Pages и Java Standard Tag Library</h3>
 		<p>
-			Версия: 2.0.
+			Версия: JSP v2.0, standart-lib: Jakarta implementation v1.1.2 (JSTL 1.1)
 		</p>
 		<p>
 			Любые страницы, включая статические, реализованы JSP-страницами.
 			Активно используется возможность определения "custom" тегов, все теги собираются в библиотеку judgeos.tld
 		</p>
-	</li>
-	<li>
-		<h3>Java Standard Tag Library</h3>
 		<p>
-			Jakarta implementation v1.1.2 (JSTL 1.1)
+			Активно используются теги core (c:*), format (fmt:*).
 		</p>
 		<p>
-			Активно используются теги core (c:*), format (fmt:*), на странице '/index.jsp' как пример
-			реализована работа с тегами sql (sql:*).
+			На примере первой строкой идет собственный тег &lt;judgeos:fetchLastContests&gt;,
+			остальные строки генерируют таблицу, построенную на данных, которые этот тег занес
+			в переменную текущего scope с именем, переданном в var.
 		</p>
+		<pre>
+&lt;judgeos:fetchLastContests var=&quot;lastContests&quot; limit=&quot;10&quot;/&gt;
+&lt;table class=&quot;lastContests&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;&lt;fmt:message key=&quot;contest.name&quot;/&gt;&lt;/th&gt;
+		&lt;th&gt;&lt;fmt:message key=&quot;contest.start&quot;/&gt;&lt;/th&gt;
+		&lt;th&gt;&lt;fmt:message key=&quot;contest.stop&quot;/&gt;&lt;/th&gt;
+	&lt;/tr&gt;
+&lt;c:forEach items=&quot;${lastContests}&quot; var=&quot;contest&quot;&gt;
+	&lt;c:set var=&quot;classHot&quot; value=&quot;&quot;/&gt;
+	&lt;c:if test=&quot;${contest.isHot}&quot;&gt;
+		&lt;c:set var=&quot;classHot&quot; value=&quot;hot&quot;/&gt;
+	&lt;/c:if&gt;
+	&lt;tr class=&quot;${classHot}&quot;&gt;
+		&lt;td class=&quot;name&quot;&gt;
+			&lt;html:link href=&quot;contest/info.jsp?codename=${contest.codename}&quot;
+					styleClass=&quot;name&quot;
+			&gt;
+				&lt;c:out value=&quot;${contest.name}&quot;/&gt;
+			&lt;/html:link&gt;
+		&lt;/td&gt;
+		&lt;td&gt;
+			&lt;fmt:formatDate value=&quot;${contest.start}&quot; type=&quot;both&quot;
+					timeZone=&quot;UTC&quot;
+					pattern=&quot;yyyy-MM-dd HH:mm:ss&quot;
+			/&gt;
+		&lt;/td&gt;
+		&lt;td&gt;
+			&lt;fmt:formatDate value=&quot;${contest.stop}&quot; type=&quot;both&quot;
+					timeZone=&quot;UTC&quot;
+					pattern=&quot;yyyy-MM-dd HH:mm:ss&quot;
+			/&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/c:forEach&gt;
+&lt;/table&gt;
+		</pre>
 	</li>
 	<li>
 		<h3>Struts Action Framework</h3>
@@ -415,7 +454,7 @@ public class SignupAction extends Action {
 		<p>
 			Основной файл для Struts проекта JudgeOS:
 		</p>
-		<pre style="font-weight: bold;">
+		<pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; ?&gt;
 
 &lt;!DOCTYPE struts-config PUBLIC
@@ -517,7 +556,7 @@ public class SignupAction extends Action {
 			Версия: 8.1
 		</p>
 		<p>
-			Схема структуры базы данных, in-development версия:
+			Схема структуры базы данных, in-development версия (см рисунок):
 		</p>
 			<img style="float: none;" src="schema.PNG" alt="DB Schema"/>
 		<p>
@@ -543,7 +582,7 @@ public class SignupAction extends Action {
 	</li>
 </ul>
 <h2>
-	<a name="chapterForever">Глава 8. Дальнейшее развитие проекта.</a>
+	<a name="chapterForever">Глава 7. Дальнейшее развитие проекта.</a>
 </h2>
 <p>
 	В процессе дальнейшей разработки планируется воспользоваться возможностями

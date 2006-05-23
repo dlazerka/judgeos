@@ -59,17 +59,6 @@
 							<fmt:message key=".lastContests"/>
 						</div>
 
-						<%-- just for example
-						<sql:setDataSource var="judgeosDataSource" dataSource="jdbc/judgeosDB"/>
-						<sql:query var="lastContests" dataSource="${judgeosDataSource}" >
-							SELECT codename, name, start, stop,
-								CASE WHEN (start::DATE = 'now') THEN 'hot' END AS isHot
-							FROM contest
-							ORDER BY start DESC
-							LIMIT 10
-						</sql:query>
-						end of example--%>
-
 						<judgeos:fetchLastContests var="lastContests" limit="10"/>
 						<table class="lastContests">
 							<tr>
