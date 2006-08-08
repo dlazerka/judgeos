@@ -18,15 +18,15 @@
 		</title>
 		<judgeos:base/>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/top.css">
+		<tiles:insert attribute="head"/>
 	</head>
 	<body><div id="root">
 
-		<tiles:insert attribute="header" flush="true"/>
+		<tiles:insert attribute="header"/>
 
 		<hr>
 
-		<tiles:insert attribute="body-content" flush="true"/>
+		<tiles:insert attribute="body-content"/>
 
 	</div></body>
 </html:html>
