@@ -3,6 +3,7 @@
 --%>
 <%@ include file="/taglibs.jspf"%>
 
+<link rel="stylesheet" type="text/css" href="css/top.css">
 
 <table width="100%">
 	<tr>
