@@ -121,4 +121,15 @@
 		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
 		<param-value>org.judgeos.MessageResources</param-value>
 	</context-param>
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Tiles JSPs</web-resource-name>
+			<url-pattern>/layout.jsp</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+		</auth-constraint>
+	</security-constraint>
+
 </web-app>

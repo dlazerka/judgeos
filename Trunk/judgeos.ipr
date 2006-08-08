@@ -205,6 +205,12 @@
     <option name="GENERATE_IIOP_STUBS" value="false" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
+  <component name="StrutspluginConfiguration">
+    <option name="strutsAvailable" value="true" />
+    <option name="propertiesSupport" value="false" />
+    <option name="strutsIcons" value="false" />
+    <option name="dispatchActionDefaultNames" value="create,delete,prepare,save,refresh,update" />
+  </component>
   <component name="libraryTable" />
   <component name="uidesigner-configuration">
     <option name="INSTRUMENT_CLASSES" value="true" />

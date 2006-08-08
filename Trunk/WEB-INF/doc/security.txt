@@ -1,0 +1,13 @@
+Runs are not allowed to: 
+access the network;
+work with any files except those explicitly specified in the problem statement;
+attack system security;
+execute other programs and create new processes;
+change file system permissions;
+work with subdirectories;
+create or manipulate any GUI items (windows, dialog boxes, etc);
+work with external devices (sound, printer, etc);
+do anything else that can stir the evaluating process and the contest.
+The contest software uses different methods to reveal violations of the above restrictions.
+
+http://neerc.ifmo.ru/information/contest-rules.html

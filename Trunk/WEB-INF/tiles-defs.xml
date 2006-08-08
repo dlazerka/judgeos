@@ -36,9 +36,7 @@
 
     end samples -->
 
-<definition name="templateDefinition" path="/layout.jsp">
-  <put name="title"  value="Title with specified Type." type="string" />
-  <put name="header" value="header.jsp" type="page" />
-  <put name="body"   value="body.jsp" type="page" />
+<definition name="base.dfn" path="/layout.jsp">
+  <put name="header" value="/top.jsp" type="page" />
 </definition>
 </tiles-definitions>

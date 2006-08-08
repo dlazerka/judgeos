@@ -22,7 +22,7 @@
 	</global-exceptions>
 
 	<global-forwards>
-		<forward name="root" path="/" />
+		<forward name="root" path="/index.jsp" />
 		<forward name="login" path="/account/login.jsp" />
 	</global-forwards>
 
@@ -54,7 +54,7 @@
 			path="/account/logout"
 			type="org.judgeos.controller.LogOutAction"
 		>
-			<forward name="success" path="/" redirect="true"/>
+			<forward name="success" path="/index.jsp" redirect="true"/>
 		</action>
 	</action-mappings>
 
