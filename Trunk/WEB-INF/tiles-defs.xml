@@ -36,7 +36,7 @@
 
     end samples -->
 
-<definition name="base.dfn" path="/layout.jsp">
-  <put name="header" value="/top.jsp" type="page" />
+<definition name="base.dfn" path="/layout.jspf">
+  <put name="header" value="/top.jspf" type="page" />
 </definition>
 </tiles-definitions>

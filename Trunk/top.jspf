@@ -1,0 +1,35 @@
+<%--
+  Created: 15.05.2006 17:50:59
+--%>
+<%@ include file="/taglibs.jspf"%>
+
+
+<table width="100%">
+	<tr>
+		<td align="left">
+			<html:link forward="root" styleClass="header_logo">
+				<fmt:message key=".logo" />
+			</html:link>
+		</td>
+		<td align="right">
+			<fmt:message key="top.welcome"/>
+			<b><judgeos:account parameter="codename"/></b>.
+
+			<c:set var="account" value="${account}" scope="session"/>
+			<c:if test="${account.codename eq 'guest'}">
+				<html:link href="account/login.jsp">
+					<fmt:message key="top.login"/>
+				</html:link>
+				<html:link href="account/signup.jsp">
+					<fmt:message key="top.signup"/>
+				</html:link>
+			</c:if>
+
+			<c:if test="${account.codename ne 'guest'}">
+				<html:link action="account/logout.do">
+					<fmt:message key="top.logout"/>
+				</html:link>
+			</c:if>
+		</td>
+	</tr>
+</table>

@@ -5,12 +5,54 @@
      xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
      version="2.4">
 
+
 	<display-name>JudgeOS</display-name>
 
-	<!-- Standard Action Servlet Configuration (without debugging) -->
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>jsp</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+		<init-param>
+			<param-name>fork</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<init-param>
+			<param-name>xpoweredBy</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jsp</servlet-name>
+		<url-pattern>*.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jsp</servlet-name>
+		<url-pattern>*.jspf</url-pattern>
+	</servlet-mapping>
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>jspf</web-resource-name>
+			<description>
+				JSPs Fragments should not be accessed directly.
+			</description>
+			<url-pattern>*.jspf</url-pattern>
+		</web-resource-collection>
+		<auth-constraint></auth-constraint>
+	</security-constraint>
+
+	<!-- Struts Action Servlet -->
 	<servlet>
 		<servlet-name>action</servlet-name>
-		<!--<servlet-class>org.judgeos.GateActionServlet</servlet-class>-->
 		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
 		<init-param>
 			<param-name>config</param-name>
@@ -26,21 +68,19 @@
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
-
-
-	<!-- Standard Action Servlet Mapping -->
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
-	<!-- The Usual Welcome File List -->
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+
+	<!-- for <fmt:*> tags from JSTL -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>org.judgeos.MessageResources</param-value>
+	</context-param>
 
 
-	<!-- Struts Tag Library Descriptors -->
 	<jsp-config>
 		<taglib>
 			<taglib-uri>/tags/struts-bean</taglib-uri>
@@ -98,6 +138,7 @@
 		</taglib>
 	</jsp-config>
 
+
 	<!-- for initializing of DataSource through JNDI
 	<resource-ref>
 		<description>
@@ -116,20 +157,5 @@
 		</res-auth>
 	</resource-ref-->
 
-	<!-- for <fmt:*> tags from JSTL -->
-	<context-param>
-		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
-		<param-value>org.judgeos.MessageResources</param-value>
-	</context-param>
-
-
-	<security-constraint>
-		<web-resource-collection>
-			<web-resource-name>Tiles JSPs</web-resource-name>
-			<url-pattern>/layout.jsp</url-pattern>
-		</web-resource-collection>
-		<auth-constraint>
-		</auth-constraint>
-	</security-constraint>
-
+	
 </web-app>

@@ -1,0 +1,13 @@
+<%@ taglib uri="/tags/struts-bean" prefix="bean" %>
+<%@ taglib uri="/tags/struts-html" prefix="html" %>
+<%@ taglib uri="/tags/struts-logic" prefix="logic" %>
+<%@ taglib uri="/tags/struts-nested" prefix="nested" %>
+<%@ taglib uri="/tags/c" prefix="c" %>
+<%@ taglib uri="/tags/fmt" prefix="fmt" %>
+<%@ taglib uri="/tags/fn" prefix="fn" %>
+<%@ taglib uri="/tags/sql" prefix="sql" %>
+<%@ taglib uri="/tags/x" prefix="x" %>
+<%@ taglib uri="/tags/struts-tiles" prefix="tiles" %>
+
+<%@ taglib uri="/tags/judgeos" prefix="judgeos" %>
+
