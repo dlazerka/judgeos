@@ -10,11 +10,21 @@
 		<form-bean
 			name="AccountSignUpForm"
 			type="org.judgeos.controller.SignUpForm"
-		/>
+		>
+			<form-property name="dataAttached" type="java.lang.String" />
+			<form-property name="firstName" type="java.lang.String" />
+			<form-property name="lastName" type="java.lang.String" />
+			<form-property name="codename" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+		</form-bean>
 		<form-bean
 			name="AccountLogInForm"
 			type="org.judgeos.controller.LogInForm"
-		/>
+		>
+			<form-property name="dataAttached" type="java.lang.String" />
+			<form-property name="codename" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+		</form-bean>
 	</form-beans>
 
 
@@ -56,6 +66,14 @@
 		>
 			<forward name="success" path="/index.jsp" redirect="true"/>
 		</action>
+		<action
+			path="/account"
+			forward="/account/profile.jsp"
+		/>
+		<action
+			path="/contest"
+			forward="/contest/info.jsp"
+		/>
 	</action-mappings>
 
 

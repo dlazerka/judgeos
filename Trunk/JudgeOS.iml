@@ -142,7 +142,9 @@
           <root url="jar://C:/Program Files/Apache Software Foundation/jakarta-tomcat-5/server/lib/catalina-ant.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-tomcat-catalina/catalina/src/share" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">

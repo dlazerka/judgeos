@@ -1,14 +1,12 @@
-<%--
-  Created: 15.05.2006 17:50:59
---%>
-<%@ include file="/headers.jspf"%>
-<html:html locale="true">
-	<head>
-		<title>
-			<fmt:message key=".title" />:
-			<fmt:message key="contest.contestInfo" />
-		</title>
-		<judgeos:base/>
+<%@ include file="/taglibs.jspf"%>
+
+
+<tiles:insert definition="base.dfn">
+	<tiles:put name="title" type="string">
+		<fmt:message key=".title" />:
+		<fmt:message key="contest.contestInfo" />
+	</tiles:put>
+	<tiles:put name="head" type="string">
 		<style type="text/css">
 			table.contestInfo {
 				width: auto;
@@ -20,11 +18,8 @@
 				text-align: left;
 			}
 		</style>
-	</head>
-
-	<body><div id="root">
-		<%@ include file="/header.jspf"%>
-
+	</tiles:put>
+	<tiles:put name="body" type="string">
 		<judgeos:useContest var="contest" />
 		<div align="center">
 			<table class="contestInfo">
@@ -73,7 +68,7 @@
 						Created By:
 					</td>
 					<td class="value">
-						<html:link href="account/info.jsp?codename=${contest.ownerCodename}">
+						<html:link action="/account?codename=${contest.ownerCodename}">
 							<c:out value="${contest.ownerFirstName}"/>
 							<c:out value="${contest.ownerLastName}"/>
 						</html:link>
@@ -81,5 +76,6 @@
 				</tr>
 			</table>
 		</div>
-	</div></body>
-</html:html>
+	</tiles:put>
+</tiles:insert>
+

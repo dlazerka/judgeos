@@ -1,22 +1,24 @@
 <project name="judgeos" basedir="." default="all">
 
-
-	<!-- Local system paths -->
-	<property name="servlet-api.jar"
-		value="/Program Files/Apache Software Foundation/jakarta-tomcat-5/common/lib/servlet-api.jar"
-	/>
-	<property name="jsp-api.jar"
-		value="/Program Files/Apache Software Foundation/jakarta-tomcat-5/common/lib/jsp-api.jar"
-	/>
-
-
 	<!-- Project settings -->
 	<property name="project.title" value="JudgeOS"/>
 	<property name="project.distname" value="judgeos"/>
 	<property name="project.version" value="0.1"/>
 
-	<property name="path.resources" value="resources"/>
+	<!-- Local system paths -->
+	<property name="path.appserver"
+		value="/Program Files/Apache Software Foundation/jakarta-tomcat-5"/>
+	<property name="path.servlet-api.jar"
+		value="${path.appserver}/common/lib/servlet-api.jar"/>
+	<property name="path.jsp-api.jar"
+		value="${path.appserver}/common/lib/jsp-api.jar"/>
 
+	<property name="tomcat.manager.url" value="http://localhost:8080/manager"/>
+	<property name="tomcat.manager.username" value="uzver"/>
+	<property name="tomcat.manager.password" value="pass"/>
+
+	<property name="path.resources" value="resources"/>
+	<property name="path.deploydir" value="."/>
 
 	<target name="init">
 	</target>
@@ -41,21 +43,40 @@
 				<fileset dir="lib">
 					<include name="**/*.jar"/>
 				</fileset>
-				<fileset file="${servlet-api.jar}"/>
-				<fileset file="${jsp-api.jar}"/>
+				<fileset file="${path.servlet-api.jar}"/>
+				<fileset file="${path.jsp-api.jar}"/>
 			</classpath>
 		</javac>
 	</target>
 
 
-	<target name="reload" depends="compile">
+	<target name="deploy" depends="compile">
 	</target>
 
-
-	<!-- Build entire project -->
-	<target name="project" depends="init,compile,reload"/>
+	<target name="build" depends="init,compile,deploy"/>
 
 
-	<target name="all" depends="project"/>
+	<target name="deploywar" depends="build">
+		<war webxml="web.xml" destfile="${project.distname}.war">
+			<fileset dir="..">
+				<include name="**/*.*"/>
+			</fileset>
+		</war>
+	</target>
+
+		<taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
+				<classpath>
+						<path location="${path.appserver}/server/lib/catalina-ant.jar"/>
+				</classpath>
+		</taskdef>
+		<target name="reload" description="Reload application in Tomcat">
+			<reload
+				url="${tomcat.manager.url}"
+				username="${tomcat.manager.username}"
+				password="${tomcat.manager.password}"
+				path="/${project.distname}"/>
+		</target>
+
+	<target name="all" depends="build,reload"/>
 
 </project>
