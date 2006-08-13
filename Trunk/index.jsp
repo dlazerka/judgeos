@@ -1,13 +1,11 @@
-<%--
-  Created: 15.05.2006 17:50:59
---%>
 <%@ include file="/taglibs.jspf"%>
-<html:html locale="true">
-	<head>
-		<title>
-			<fmt:message key=".title" />
-		</title>
-		<judgeos:base/>
+
+
+<tiles:insert definition="base.dfn">
+	<tiles:put name="title" type="string">
+		<fmt:message key=".title"/>
+	</tiles:put>
+	<tiles:put name="head" type="string">
 		<style type="text/css">
 			p.welcome {
 				text-align: center;
@@ -43,10 +41,8 @@
 				padding: 3pt;
 			}
 		</style>
-	</head>
-	<body><div id="root">
-		<%@ include file="/top.jspf"%>
-
+	</tiles:put>
+	<tiles:put name="body" type="string">
 		<p class="welcome">
 			<fmt:message key=".welcomeMessage" />
 		</p>
@@ -98,5 +94,5 @@
 				</td>
 			</tr>
 		</table>
-	</div></body>
-</html:html>
+	</tiles:put>
+</tiles:insert>

@@ -38,6 +38,6 @@
 
 <definition name="base.dfn" path="/layout.jspf">
 	<put name="head" value="" type="string" />
-	<put name="header" value="/top.jspf" type="page" />
+	<put name="header" value="/header.jspf" type="page" />
 </definition>
 </tiles-definitions>

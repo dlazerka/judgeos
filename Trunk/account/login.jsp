@@ -1,18 +1,12 @@
-<%--
-  Created: 15.05.2006 17:50:59
---%>
-<%@ include file="/headers.jspf"%>
+<%@ include file="/taglibs.jspf"%>
 
-<html:html locale="true">
-	<head>
-		<title>
-			<fmt:message key=".title" />:
-			<fmt:message key="account.login"/>
-		</title>
-		<judgeos:base/>
-	</head>
-	<body>
-		<%@include file="/top.jspf"%>
+
+<tiles:insert definition="base.dfn">
+	<tiles:put name="title" type="string">
+		<fmt:message key=".title" />:
+		<fmt:message key="account.login"/>
+	</tiles:put>
+	<tiles:put name="body" type="string">
 		<html:form action="/account/login">
 			<html:hidden property="dataAttached" value="true"/>
 
@@ -60,5 +54,5 @@
 				</table>
 			</div>
 		</html:form>
-	</body>
-</html:html>
+	</tiles:put>
+</tiles:insert>

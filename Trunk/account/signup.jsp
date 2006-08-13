@@ -12,7 +12,7 @@
 		<judgeos:base/>
 	</head>
 	<body>
-		<%@include file="/top.jspf"%>
+		<%@include file="/header.jspf"%>
 		<html:form action="/account/signup">
 			<html:hidden property="dataAttached" value="true"/>
 

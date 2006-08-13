@@ -1,3 +1,6 @@
+/**
+ * COMMON
+ */
 body {
 	font-family: verdana, sans-serif;
 	font-size: 10pt;
@@ -19,5 +22,37 @@ td.label {
 	text-align: left;
 	color: red;
 }
+.underConstruction {
+	text-align: center;
+	font-size: 11pt;
+	font-weight: bold;
+}
 
 
+/**
+ * HEADER
+ */
+a, a:visited {
+	text-decoration: underline;
+	color: #00f;
+}
+a.header_logo, a.header_logo:visited {
+	font-weight: bold;
+	font-size: 15pt;
+	text-decoration: none;
+	color: #008;
+}
+a.header_logo:hover {
+	cursor: pointer;
+}
+
+.header_username_label, .header_password_label {
+	font-size: 8pt;
+}
+.header_username_input, header_.password_input {
+	font-size: 8pt;
+}
+
+.header_error_label {
+	color: red;
+}

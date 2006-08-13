@@ -3,7 +3,6 @@
 --%>
 <%@ include file="/taglibs.jspf"%>
 
-<link rel="stylesheet" type="text/css" href="css/top.css">
 
 <table width="100%">
 	<tr>
@@ -27,7 +26,10 @@
 			</c:if>
 
 			<c:if test="${account.codename ne 'guest'}">
-				<html:link action="account/logout.do">
+				<html:link href="account/profile.jsp">
+					<fmt:message key="account.profile"/>
+				</html:link>
+				<html:link action="/account/logout">
 					<fmt:message key="top.logout"/>
 				</html:link>
 			</c:if>

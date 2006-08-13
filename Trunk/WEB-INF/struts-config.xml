@@ -47,7 +47,7 @@
 			validate="true"
 			input="/account/login.jsp"
 		>
-			<forward name="success" path="/account/" redirect="true"/>
+			<forward name="success" path="/account/profile.jsp" redirect="true"/>
 			<forward name="failure" path="/account/login.jsp" />
 		</action>
 		<action

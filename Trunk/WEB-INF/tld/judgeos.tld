@@ -9,10 +9,6 @@
 	<short-name>judgeos</short-name>
 	<uri>judgeos</uri>
 
-	<!--
-	 c todo consider creation of dyna-attribute tag like <judgeos:fetch var="contest" contest="codename, name, owner", owner="codename, firstName"/>
-	-->
-
 	<tag>
 		<name>account</name>
 		<tag-class>org.judgeos.taglib.AccountTag</tag-class>

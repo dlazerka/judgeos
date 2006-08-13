@@ -23,7 +23,7 @@
 	</head>
 
 	<body><div id="root">
-		<%@ include file="/top.jspf"%>
+		<%@ include file="/header.jspf"%>
 
 		<judgeos:useContest var="contest" />
 		<div align="center">

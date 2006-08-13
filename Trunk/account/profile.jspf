@@ -1,0 +1,5 @@
+<div align="center">
+	<h3>
+		<fmt:message key="underConstruction"/>
+	</h3>
+</div>

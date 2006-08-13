@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class LogInForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
-	protected static final String ERROR_KEY = "org.judgeos.controller.LogInForm.ERROR_KEY";
+	protected static final String ERROR_KEY = LogInForm.class.getName()+".ERROR_KEY";
 	private String dataAttached;
 	private String codename;
 	private String password;
