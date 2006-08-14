@@ -1,24 +1,5 @@
 <project name="judgeos" basedir="." default="all">
-
-	<!-- Project settings -->
-	<property name="project.title" value="JudgeOS"/>
-	<property name="project.distname" value="judgeos"/>
-	<property name="project.version" value="0.1"/>
-
-	<!-- Local system paths -->
-	<property name="path.appserver"
-		value="/Program Files/Apache Software Foundation/jakarta-tomcat-5"/>
-	<property name="path.servlet-api.jar"
-		value="${path.appserver}/common/lib/servlet-api.jar"/>
-	<property name="path.jsp-api.jar"
-		value="${path.appserver}/common/lib/jsp-api.jar"/>
-
-	<property name="tomcat.manager.url" value="http://localhost:8080/manager"/>
-	<property name="tomcat.manager.username" value="uzver"/>
-	<property name="tomcat.manager.password" value="pass"/>
-
-	<property name="path.resources" value="resources"/>
-	<property name="path.deploydir" value="."/>
+	<property file="build.properties"/>
 
 	<target name="init">
 	</target>

@@ -1,0 +1,26 @@
+http://acm.uva.es/problemset/ isn't downloadable
+http://spoj.sphere.pl/ isn't downloadable
+http://acm.sgu.ru/ isn't downloadable
+http://acmicpc-live-archive.uva.es/nuevoportal/ isn't downloadable
+http://acm.mipt.ru/ isn't downloadable
+http://acm.timus.ru/ isn't downloadable
+http://acm.fzu.edu.cn/ isn't downloadable
+http://acm.pku.edu.cn/JudgeOnline/ free, but dirty and isn't open
+http://rabbit.eng.miami.edu/contest/ isn't downloadable
+http://cs.tju.edu.cn/acm/ isn't downloadable
+http://www.programming-challenges.com/ isn't downloadable
+
+
+http://www.osix.net/modules/geek/ isn't programming contests
+http://mathschallenge.net/index.php?section=project isn't programming contests
+http://www.pythonchallenge.com/
+
+
+http://ace.delos.com/usacogate
+http://neerc.ifmo.ru/online/
+
+acm.timus.ru
+neerc.ifmo.ru
+acm.uva.es
+ace.deloc.com
+acm.sgu.ru

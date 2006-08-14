@@ -330,6 +330,17 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/spring.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../install/Development/Java/tools/Spring/spring-framework-2.0-rc2-with-dependencies-build.69-20060701/spring-framework-2.0-rc2/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntryProperties />
     <javadoc-paths>
       <root url="file://D:/usr/install/soft/Development/Java/tools/Struts/struts-1.2.8-src/src/share" />
@@ -464,6 +475,11 @@
       <attribute name="method" value="1" />
       <attribute name="URI" value="/WEB-INF/lib/postgresql-8.1-404.jdbc3.jar" />
       <url>jar://$MODULE_DIR$/WEB-INF/lib/postgresql-8.1-404.jdbc3.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib/spring.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/spring.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
