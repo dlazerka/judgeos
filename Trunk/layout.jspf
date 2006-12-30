@@ -1,16 +1,16 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
-<%@ include file="/taglibs.jspf"%>
+<%@ include file="/taglibs.jspf" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <logic:notPresent name="account" scope="session">
-	<judgeos:guestLogin />
+	<judgeos:guestLogin/>
 </logic:notPresent>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <html:html locale="true">
 	<head>
 		<title>
@@ -24,13 +24,14 @@
 		<tiles:insert attribute="head"/>
 
 	</head>
+
 	<body>
-		<div id="root">
+	<div id="root">
 
 		<tiles:insert attribute="header"/>
 		<hr>
 		<tiles:insert attribute="body"/>
 
-		</div>
+	</div>
 	</body>
 </html:html>

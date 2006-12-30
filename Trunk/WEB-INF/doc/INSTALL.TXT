@@ -1,0 +1,1 @@
+1. Copy "/WEB-INF/lib/postgresql-8.1-404.jdbc3.jar" file to "<TOMCAT_HOME>/common/endorsed/".

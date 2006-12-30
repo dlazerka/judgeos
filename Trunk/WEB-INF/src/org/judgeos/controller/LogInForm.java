@@ -1,16 +1,16 @@
 package org.judgeos.controller;
 
-import org.apache.struts.validator.ValidatorForm;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.validator.ValidatorForm;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class LogInForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
-	protected static final String ERROR_KEY = LogInForm.class.getName()+".ERROR_KEY";
+	protected static final String ERROR_KEY = LogInForm.class.getName() + ".ERROR_KEY";
 	private String dataAttached;
 	private String codename;
 	private String password;

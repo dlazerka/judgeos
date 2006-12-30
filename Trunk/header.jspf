@@ -1,14 +1,14 @@
 <%--
   Created: 15.05.2006 17:50:59
 --%>
-<%@ include file="/taglibs.jspf"%>
+<%@ include file="/taglibs.jspf" %>
 
 
 <table width="100%">
 	<tr>
 		<td align="left">
 			<html:link forward="root" styleClass="header_logo">
-				<fmt:message key=".logo" />
+				<fmt:message key=".logo"/>
 			</html:link>
 		</td>
 		<td align="right">

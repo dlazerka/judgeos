@@ -1,4 +1,4 @@
-<%@ include file="/taglibs.jspf"%>
+<%@ include file="/taglibs.jspf" %>
 
 
 <tiles:insert definition="base.dfn">

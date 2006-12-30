@@ -1,7 +1,6 @@
 package org.judgeos.taglib;
 
-import org.judgeos.DBFactory;
-import org.judgeos.IncorrectSetupException;
+import org.judgeos.ConnectionFactory;
 import org.judgeos.model.Account;
 
 import javax.servlet.http.HttpSession;
@@ -13,7 +12,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class GuestLoginTag extends SimpleTagSupport {
 	private JspContext jspContext;
@@ -28,7 +26,7 @@ public class GuestLoginTag extends SimpleTagSupport {
 		String sql = "SELECT * FROM account WHERE codename = ?";
 
 		try {
-			Connection c = DBFactory.getDbh();
+			Connection c = ConnectionFactory.getConnection();
 			PreparedStatement st = c.prepareStatement(sql);
 
 			// TODO place "guest" somewhere in config
@@ -38,13 +36,10 @@ public class GuestLoginTag extends SimpleTagSupport {
 
 			if (rs.next()) {
 				session.setAttribute("account", new Account(rs));
+			} else {
+				throw new IllegalStateException("Cannot find account \"guest\"");
 			}
-			else {
-				throw new IncorrectSetupException("Cannot find account \"guest\"");
-			}
-		} catch (IncorrectSetupException e) {
-			throw new JspException(e);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			throw new JspException(e);
 		}
 	}

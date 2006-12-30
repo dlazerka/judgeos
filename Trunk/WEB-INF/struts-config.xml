@@ -10,20 +10,20 @@
 		<form-bean
 			name="AccountSignUpForm"
 			type="org.judgeos.controller.SignUpForm"
-		>
-			<form-property name="dataAttached" type="java.lang.String" />
-			<form-property name="firstName" type="java.lang.String" />
-			<form-property name="lastName" type="java.lang.String" />
-			<form-property name="codename" type="java.lang.String" />
-			<form-property name="password" type="java.lang.String" />
+			>
+			<form-property name="dataAttached" type="java.lang.String"/>
+			<form-property name="firstName" type="java.lang.String"/>
+			<form-property name="lastName" type="java.lang.String"/>
+			<form-property name="codename" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
 		</form-bean>
 		<form-bean
 			name="AccountLogInForm"
 			type="org.judgeos.controller.LogInForm"
-		>
-			<form-property name="dataAttached" type="java.lang.String" />
-			<form-property name="codename" type="java.lang.String" />
-			<form-property name="password" type="java.lang.String" />
+			>
+			<form-property name="dataAttached" type="java.lang.String"/>
+			<form-property name="codename" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
 		</form-bean>
 	</form-beans>
 
@@ -32,8 +32,8 @@
 	</global-exceptions>
 
 	<global-forwards>
-		<forward name="root" path="/index.jsp" />
-		<forward name="login" path="/account/login.jsp" />
+		<forward name="root" path="/index.jsp"/>
+		<forward name="login" path="/account/login.jsp"/>
 	</global-forwards>
 
 
@@ -45,9 +45,9 @@
 			scope="request"
 			validate="true"
 			input="/account/signup.jsp"
-		>
+			>
 			<forward name="success" path="/account/login.do"/>
-			<forward name="failure" path="/account/signup.jsp" />
+			<forward name="failure" path="/account/signup.jsp"/>
 		</action>
 		<action
 			path="/account/login"
@@ -56,43 +56,43 @@
 			scope="request"
 			validate="true"
 			input="/account/login.jsp"
-		>
+			>
 			<forward name="success" path="/account/profile.jsp" redirect="true"/>
-			<forward name="failure" path="/account/login.jsp" />
+			<forward name="failure" path="/account/login.jsp"/>
 		</action>
 		<action
 			path="/account/logout"
 			type="org.judgeos.controller.LogOutAction"
-		>
+			>
 			<forward name="success" path="/index.jsp" redirect="true"/>
 		</action>
 		<action
 			path="/account"
 			forward="/account/profile.jsp"
-		/>
+			/>
 		<action
 			path="/contest"
 			forward="/contest/info.jsp"
-		/>
+			/>
 	</action-mappings>
 
 
 	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 
 
-	<message-resources parameter="org.judgeos.MessageResources" />
+	<message-resources parameter="org.judgeos.MessageResources"/>
 
 
-	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
-		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
-		<set-property property="moduleAware" value="true" />
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+		<set-property property="moduleAware" value="true"/>
 	</plug-in>
 
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
 		<set-property
 			property="pathnames"
 			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
-		/>
+			/>
 	</plug-in>
 
 </struts-config>

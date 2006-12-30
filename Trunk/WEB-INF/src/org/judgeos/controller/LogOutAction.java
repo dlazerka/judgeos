@@ -12,6 +12,7 @@ public class LogOutAction extends Action {
 
 	/**
 	 * Removes session[account].
+	 *
 	 * @param mapping
 	 * @param form
 	 * @param request

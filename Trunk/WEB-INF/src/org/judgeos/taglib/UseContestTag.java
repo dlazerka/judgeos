@@ -1,7 +1,6 @@
 package org.judgeos.taglib;
 
-import org.judgeos.DBFactory;
-import org.judgeos.IncorrectSetupException;
+import org.judgeos.ConnectionFactory;
 import org.judgeos.model.Contest;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,12 +8,16 @@ import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
+import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.springframework.web.servlet.ModelAndView;
+
+/**
+ * A single contenst entry.
+ */
 public class UseContestTag extends SimpleTagSupport {
 	private String var;
 	private JspContext jspContext;
@@ -23,26 +26,24 @@ public class UseContestTag extends SimpleTagSupport {
 		this.jspContext = jspContext;
 	}
 
-	private Contest fetchContest(String codename) throws IncorrectSetupException, SQLException {
+	private Contest fetchContest(String codename) throws SQLException, NamingException {
 		if (codename == null) {
 			return null;
-		}
-		else {
-			Connection c = DBFactory.getDbh();
-			String sql = "SELECT contest.name, start, stop, description, "+
-					"owner.firstName AS ownerFirstName, owner.lastName AS ownerLastName, " +
-					"owner.codename AS ownerCodename " +
-					"FROM contest " +
-					"LEFT JOIN account AS owner ON contest.owner = owner.id " +
-					"WHERE contest.codename = ? ";
+		} else {
+			Connection c = ConnectionFactory.getConnection();
+			String sql = "SELECT contest.name, start, stop, description, " +
+				"owner.firstName AS ownerFirstName, owner.lastName AS ownerLastName, " +
+				"owner.codename AS ownerCodename " +
+				"FROM contest " +
+				"LEFT JOIN account AS owner ON contest.owner = owner.id " +
+				"WHERE contest.codename = ? ";
 			PreparedStatement st = c.prepareStatement(sql);
 			st.setString(1, codename);
 			ResultSet rs = st.executeQuery();
 
 			if (!rs.next()) {
 				return null;
-			}
-			else {
+			} else {
 				return new Contest(rs);
 			}
 		}
@@ -53,9 +54,7 @@ public class UseContestTag extends SimpleTagSupport {
 		String codename = request.getParameter("codename");
 		try {
 			jspContext.setAttribute(var, this.fetchContest(codename), PageContext.PAGE_SCOPE);
-		} catch (IncorrectSetupException e) {
-			throw new JspException(e);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			throw new JspException(e);
 		}
 	}

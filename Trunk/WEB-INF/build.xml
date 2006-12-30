@@ -1,12 +1,13 @@
 <project name="judgeos" basedir="." default="all">
 	<property file="build.properties"/>
 
-	<target name="init">
+	<target name="clear" description="Pre-build tasks.">
+		<delete dir="${path.classes}"/>
+		<mkdir dir="${path.classes}"/>
 	</target>
 
-	<!-- Copy any resource or configuration files -->
-	<target name="resources">
-		<copy todir="classes" includeEmptyDirs="no">
+	<target name="resources" depends="" description="Copy resource files">
+		<copy todir="${path.classes}" includeEmptyDirs="no">
 			<fileset dir="${path.resources}">
 				<patternset>
 					<include name="**/*.conf"/>
@@ -17,9 +18,8 @@
 		</copy>
 	</target>
 
-	<!-- Normal build of application -->
-	<target name="compile" depends="resources">
-		<javac srcdir="src" destdir="classes">
+	<target name="compile" depends="resources" description="Compile classes">
+		<javac srcdir="${path.src}" destdir="${path.classes}">
 			<classpath>
 				<fileset dir="lib">
 					<include name="**/*.jar"/>
@@ -34,7 +34,7 @@
 	<target name="deploy" depends="compile">
 	</target>
 
-	<target name="build" depends="init,compile,deploy"/>
+	<target name="build" depends="compile,deploy"/>
 
 
 	<target name="deploywar" depends="build">
@@ -45,19 +45,20 @@
 		</war>
 	</target>
 
-		<taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
-				<classpath>
-						<path location="${path.appserver}/server/lib/catalina-ant.jar"/>
-				</classpath>
-		</taskdef>
-		<target name="reload" description="Reload application in Tomcat">
-			<reload
-				url="${tomcat.manager.url}"
-				username="${tomcat.manager.username}"
-				password="${tomcat.manager.password}"
-				path="/${project.distname}"/>
-		</target>
+	<taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
+		<classpath>
+			<path location="${path.appserver}/server/lib/catalina-ant.jar"/>
+		</classpath>
+	</taskdef>
 
-	<target name="all" depends="build,reload"/>
+	<target name="reload" depends="compile" description="Reload application in Tomcat">
+		<reload
+			url="${tomcat.manager.url}"
+			username="${tomcat.manager.username}"
+			password="${tomcat.manager.password}"
+			path="/${project.distname}"/>
+	</target>
+
+	<target name="all" depends="clear,build,reload"/>
 
 </project>

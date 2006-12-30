@@ -14,7 +14,7 @@ public class SignUpForm extends ValidatorForm {
 	private String firstName;
 	private String lastName;
 	private String dataAttached;
-	protected static final String ERROR_KEY = SignUpForm.class.getName()+".ERROR_KEY";
+	protected static final String ERROR_KEY = SignUpForm.class.getName() + ".ERROR_KEY";
 
 	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
 		ActionErrors errors = super.validate(mapping, request);

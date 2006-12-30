@@ -1,9 +1,9 @@
-<%@ include file="/taglibs.jspf"%>
+<%@ include file="/taglibs.jspf" %>
 
 
 <tiles:insert definition="base.dfn">
 	<tiles:put name="title" type="string">
-		<fmt:message key=".title" />:
+		<fmt:message key=".title"/>:
 		<fmt:message key="account.signup"/>
 	</tiles:put>
 	<tiles:put name="body" type="string">
@@ -16,13 +16,13 @@
 					<tr>
 						<th colspan="3">
 							<h3>
-								<fmt:message key="account.signup" />
+								<fmt:message key="account.signup"/>
 							</h3>
 						</th>
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.codename" />
+							<fmt:message key="account.codename"/>
 							*
 						</td>
 						<td>
@@ -35,7 +35,7 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.password" />
+							<fmt:message key="account.password"/>
 							*
 						</td>
 						<td>
@@ -47,7 +47,7 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.firstName" />
+							<fmt:message key="account.firstName"/>
 							*
 						</td>
 						<td>
@@ -59,7 +59,7 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.lastName" />
+							<fmt:message key="account.lastName"/>
 							*
 						</td>
 						<td>
@@ -73,7 +73,7 @@
 						<td colspan="3">
 							<br>
 							<html:submit>
-								<fmt:message key="account.signup" />
+								<fmt:message key="account.signup"/>
 							</html:submit>
 						</td>
 					</tr>

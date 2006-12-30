@@ -1,14 +1,13 @@
 package org.judgeos.taglib;
 
-import org.judgeos.DBFactory;
-import org.judgeos.IncorrectSetupException;
+import org.judgeos.ConnectionFactory;
 import org.judgeos.model.Contest;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
+import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,25 +27,31 @@ public class FetchLastContests extends SimpleTagSupport {
 		this.jspContext = jspContext;
 	}
 
-	private Contest[] fetchContests() throws IncorrectSetupException, SQLException {
-		Connection c = DBFactory.getDbh();
+	private Contest[] fetchContests() throws SQLException, NamingException {
+		Connection c = ConnectionFactory.getConnection();
 		String sql = "SELECT contest.codename" +
-				",contest.name" +
-				",description" +
-				",owner.firstName AS ownerFirstName" +
-				",owner.lastName AS ownerLastName" +
-				",owner.codename AS ownerCodename" +
-				",publicParticipate" +
-				",start" +
-				",stop" +
-				",contest.createdOn" +
-				",CASE WHEN start <= 'now' AND stop >= 'now' THEN true ELSE false END AS isHot " +
-				"FROM contest " +
-				"LEFT JOIN account AS owner ON contest.owner = owner.id " +
-				"ORDER BY start DESC " +
-				"LIMIT ?";
+			",contest.name" +
+			",description" +
+			",owner.firstName AS ownerFirstName" +
+			",owner.lastName AS ownerLastName" +
+			",owner.codename AS ownerCodename" +
+			",publicParticipate" +
+			",start" +
+			",stop" +
+			",contest.createdOn" +
+			",CASE" +
+			"   WHEN (start <= 'now' OR start IS NULL) AND (stop >= 'now' OR stop IS NULL)" +
+			"   THEN true" +
+			"   ELSE false" +
+			" END AS isHot " +
+			"FROM contest " +
+			"LEFT JOIN account AS owner ON contest.owner = owner.id " +
+			"ORDER BY start DESC " +
+			"LIMIT ?";
 		PreparedStatement st = c.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
 		st.setInt(1, limit);
+
 		ResultSet rs = st.executeQuery();
 
 		rs.last();
@@ -63,9 +68,7 @@ public class FetchLastContests extends SimpleTagSupport {
 	public void doTag() throws JspException, IOException {
 		try {
 			jspContext.setAttribute(var, this.fetchContests(), PageContext.PAGE_SCOPE);
-		} catch (IncorrectSetupException e) {
-			throw new JspException(e);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			throw new JspException(e);
 		}
 	}

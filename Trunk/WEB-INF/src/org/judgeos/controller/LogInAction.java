@@ -4,7 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.Globals;
 import org.apache.struts.action.*;
-import org.judgeos.DBFactory;
+import org.judgeos.ConnectionFactory;
 import org.judgeos.model.Account;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,30 +26,28 @@ public class LogInAction extends Action {
 		ActionForm form,
 		HttpServletRequest request,
 		HttpServletResponse response
-	) throws Exception {
+	) throws Exception
+	{
 		this.request = request;
 
 		String codename = request.getParameter("codename");
 		String sql = "SELECT * FROM account WHERE codename = ?";
 
-		Connection c = DBFactory.getDbh();
+		Connection c = ConnectionFactory.getConnection();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, codename);
 
 		ResultSet rs = st.executeQuery();
 
 		if (rs.next()) {
-			if (rs.getString("password").equals(request.getParameter("password")))
-			{
+			if (rs.getString("password").equals(request.getParameter("password"))) {
 				request.getSession().setAttribute("account", new Account(rs));
 				return mapping.findForward("success");
-			}
-			else {
+			} else {
 				ActionMessage msg = new ActionMessage("errors.account.wrongPassword");
 				this.addErrorMessage("password", msg);
 			}
-		}
-		else {
+		} else {
 			ActionMessage msg = new ActionMessage("errors.account.wrongCodename");
 			this.addErrorMessage("codename", msg);
 		}
@@ -59,19 +57,20 @@ public class LogInAction extends Action {
 
 	/**
 	 * Adds the error message to both errors containers: Global and my.
+	 *
 	 * @param property
 	 * @param msg
 	 */
 	private void addErrorMessage(String property, ActionMessage msg) {
-		for (String key: new String[]{LogInForm.ERROR_KEY, Globals.ERROR_KEY}
-		) {
-			ActionMessages msgs = (ActionMessages)request.getAttribute(key);
+		for (String key : new String[]{LogInForm.ERROR_KEY, Globals.ERROR_KEY}
+			)
+		{
+			ActionMessages msgs = (ActionMessages) request.getAttribute(key);
 			if (msgs == null) {
 				msgs = new ActionErrors();
 				msgs.add(property, msg);
 				request.setAttribute(key, msgs);
-			}
-			else {
+			} else {
 				msgs.add(property, msg);
 			}
 		}

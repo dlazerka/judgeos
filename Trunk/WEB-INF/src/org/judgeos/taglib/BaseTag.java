@@ -25,6 +25,7 @@ public class BaseTag extends TagSupport {
 	/**
 	 * Produces something like "&lt;base href="http://mydomain/judgeos/" to refer to
 	 * the root of current request context.
+	 *
 	 * @return EVAL_BODY_INCLUDE
 	 * @throws JspException
 	 */
@@ -34,11 +35,11 @@ public class BaseTag extends TagSupport {
 
 		String tag = "<base href=\"" +
 			RequestUtils.createServerUriStringBuffer(
-					request.getScheme(),
-					request.getServerName(),
-					request.getServerPort(),
-					request.getContextPath()) +
-		"/\">";
+				request.getScheme(),
+				request.getServerName(),
+				request.getServerPort(),
+				request.getContextPath()) +
+			"/\">";
 
 		JspWriter out = pageContext.getOut();
 		try {

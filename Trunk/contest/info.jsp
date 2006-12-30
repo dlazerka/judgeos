@@ -1,32 +1,34 @@
-<%@ include file="/taglibs.jspf"%>
+<%@ include file="/taglibs.jspf" %>
 
 
 <tiles:insert definition="base.dfn">
 	<tiles:put name="title" type="string">
-		<fmt:message key=".title" />:
-		<fmt:message key="contest.contestInfo" />
+		<fmt:message key=".title"/>:
+		<fmt:message key="contest.contestInfo"/>
 	</tiles:put>
 	<tiles:put name="head" type="string">
 		<style type="text/css">
 			table.contestInfo {
 				width: auto;
 			}
+
 			td.label {
 				padding-right: 1em;
 			}
+
 			td.value {
 				text-align: left;
 			}
 		</style>
 	</tiles:put>
 	<tiles:put name="body" type="string">
-		<judgeos:useContest var="contest" />
+		<judgeos:useContest var="contest"/>
 		<div align="center">
 			<table class="contestInfo">
 				<tr>
 					<th colspan="2">
 						<h3>
-							<fmt:message key="contest.contestInfo" />
+							<fmt:message key="contest.contestInfo"/>
 						</h3>
 					</th>
 				</tr>
@@ -46,9 +48,9 @@
 					</td>
 					<td class="value">
 						<fmt:formatDate value="${contest.start}" type="both"
-								timeZone="UTC"
-								pattern="yyyy-MM-dd HH:mm:ss zzz"
-						/>
+						                timeZone="UTC"
+						                pattern="yyyy-MM-dd HH:mm:ss zzz"
+							/>
 					</td>
 				</tr>
 				<tr>
@@ -58,9 +60,9 @@
 					</td>
 					<td class="value">
 						<fmt:formatDate value="${contest.stop}" type="both"
-								timeZone="UTC"
-								pattern="yyyy-MM-dd HH:mm:ss zzz"
-						/>
+						                timeZone="UTC"
+						                pattern="yyyy-MM-dd HH:mm:ss zzz"
+							/>
 					</td>
 				</tr>
 				<tr>

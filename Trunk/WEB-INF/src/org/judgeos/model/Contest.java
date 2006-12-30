@@ -1,13 +1,10 @@
 package org.judgeos.model;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import java.util.HashMap;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.HashMap;
 
 public class Contest {
 	private HashMap<String, Object> parameters;
@@ -63,5 +60,4 @@ public class Contest {
 	public Boolean getIsHot() {
 		return (Boolean) parameters.get("ishot");
 	}
-
 }
