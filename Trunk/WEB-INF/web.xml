@@ -45,6 +45,7 @@
 				JSPs Fragments should not be accessed directly.
 			</description>
 			<url-pattern>*.jspf</url-pattern>
+			<url-pattern>*.jspxf</url-pattern>
 		</web-resource-collection>
 		<auth-constraint></auth-constraint>
 	</security-constraint>

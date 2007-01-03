@@ -1,10 +1,13 @@
 <%@ include file="/taglibs.jspf" %>
 
-
 <tiles:insert definition="base.dfn">
+
+
 	<tiles:put name="title" type="string">
 		<fmt:message key=".title"/>
 	</tiles:put>
+
+
 	<tiles:put name="head" type="string">
 		<style type="text/css">
 			p.welcome {
@@ -14,20 +17,20 @@
 				color: #004;
 			}
 
-			div.lastContestsTitle {
+			div.contestsTitle {
 				padding: 5pt;
 				text-align: center;
 				font-weight: bold;
 				font-size: 15pt;
 			}
 
-			table.lastContests {
+			table.contests {
 				font-size: 11pt;
 				width: 40em;
 				border: 1px black solid;
 			}
 
-			table.lastContests td, table.lastContests th {
+			table.contests td, table.contests th {
 				font-size: 11pt;
 				border-top: 1px gray dotted;
 				border-left: 1px gray dotted;
@@ -35,18 +38,20 @@
 				text-align: center;
 			}
 
-			table.lastContests td.name {
+			table.contests td.name {
 				text-align: right;
 				padding: 3pt;
 			}
 
-			table.lastContests tr.hot {
+			table.contests tr.hot {
 				height: 40pt;
 				background-color: #faa;
 				padding: 3pt;
 			}
 		</style>
 	</tiles:put>
+
+
 	<tiles:put name="body" type="string">
 		<p class="welcome">
 			<fmt:message key=".welcomeMessage"/>
@@ -56,44 +61,47 @@
 			<tr>
 				<td align="center">
 					<div>
-						<div class="lastContestsTitle">
-							<fmt:message key=".lastContests"/>
+						<div class="contestsTitle">
+							<fmt:message key=".contests"/>
 						</div>
 
-						<judgeos:fetchLastContests var="lastContests" limit="10"/>
-						<table class="lastContests">
+						<judgeos:listContests var="contests" limit="1"/>
+						<table class="contests">
 							<tr>
 								<th><fmt:message key="contest.name"/></th>
 								<th><fmt:message key="contest.start"/></th>
 								<th><fmt:message key="contest.stop"/></th>
 							</tr>
-							<c:forEach items="${lastContests}" var="contest">
+							<c:forEach items="${contests}" var="contest">
 								<c:set var="classHot" value=""/>
-								<c:if test="${contest.isHot}">
-									<c:set var="classHot" value="hot"/>
-								</c:if>
+
+								<!--todo-->
+								<%--<c:set var="now" value="new Date()"/>--%>
+								<%--<c:if test="${contest.isHot}">--%>
+								<%--<c:set var="classHot" value="hot"/>--%>
+								<%--</c:if>--%>
 								<tr class="${classHot}">
 									<td class="name">
 										<html:link href="contest/info.jsp?codename=${contest.codename}"
-										           styleClass="name"
+												   styleClass="name"
 											>
 											<c:out value="${contest.name}"/>
 										</html:link>
 									</td>
+
+
 									<td>
-										<fmt:formatDate value="${contest.start}" type="both"
-										                timeZone="UTC"
-										                pattern="yyyy-MM-dd HH:mm:ss"
-											/>
+										<judgeos:formatDate value="${contest.start}"/>
 									</td>
 									<td>
-										<c:if test="${contest.stop==null}">
-											&lt;present&gt;
-										</c:if>
-										<fmt:formatDate value="${contest.stop}" type="both"
-										                timeZone="UTC"
-										                pattern="yyyy-MM-dd HH:mm:ss"
-											/>
+										<c:choose>
+											<c:when test="${contest.stop==null}">
+												&lt;present&gt;
+											</c:when>
+											<c:otherwise>
+												<judgeos:formatDate value="${contest.start}"/>
+											</c:otherwise>
+										</c:choose>
 									</td>
 								</tr>
 							</c:forEach>
@@ -103,4 +111,6 @@
 			</tr>
 		</table>
 	</tiles:put>
+
+
 </tiles:insert>

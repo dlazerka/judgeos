@@ -2,8 +2,8 @@ package org.judgeos.controller;
 
 import org.apache.struts.Globals;
 import org.apache.struts.action.*;
-import org.judgeos.ConnectionFactory;
-import org.judgeos.model.Account;
+import org.judgeos.model.ConnectionFactory;
+import org.judgeos.model.AccountOld;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,7 +38,7 @@ public class SignUpAction extends Action {
 	) throws Exception
 	{
 
-		if (Account.codenameExists(request.getParameter("codename"))) {
+		if (AccountOld.codenameExists(request.getParameter("codename"))) {
 			ActionMessage msg = new ActionMessage("errors.account.codenameUsed");
 			addErrorMessage(msg, request);
 			return mapping.findForward("failure");

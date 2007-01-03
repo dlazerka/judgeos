@@ -15,22 +15,24 @@ CREATE TABLE judgeosRole (
 	id SERIAL PRIMARY KEY
 	,codename VARCHAR NOT NULL
 );
+ALTER TABLE judgeosRole OWNER TO judgeos;
 CREATE UNIQUE INDEX judgeosRole_codename_idx ON judgeosRole(codename);
 INSERT INTO judgeosRole(codename) VALUES('admin');
 
-
+-- TODO: passwords should be encrypted. 
 CREATE TABLE account (
 	id SERIAL
 	,codename VARCHAR NOT NULL
-	,password VARCHAR
+	,password VARCHAR NOT NULL
 	,firstName VARCHAR NOT NULL
 	,lastName VARCHAR NOT NULL
 	,createdOn TIMESTAMP(0) WITH TIME ZONE NOT NULL
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 	,PRIMARY KEY(id)
 );
+ALTER TABLE account OWNER TO judgeos;
 CREATE UNIQUE INDEX account_codename_idx ON account(codename);
-INSERT INTO account(codename, password, firstName, lastName) VALUES('guest', NULL, 'Anonymous', 'User');
+INSERT INTO account(codename, password, firstName, lastName) VALUES('guest', '', 'Anonymous', 'User');
 INSERT INTO account(codename, password, firstName, lastName) VALUES('dlazerka', 'pass', 'Dzmitry', 'Lazerka');
 
 CREATE TABLE judgeosRole2account (
@@ -43,6 +45,7 @@ CREATE TABLE judgeosRole2account (
 	,FOREIGN KEY(judgeosRole) REFERENCES judgeosRole ON UPDATE CASCADE ON DELETE CASCADE
 	,FOREIGN KEY(account) REFERENCES account ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER TABLE judgeosRole2account OWNER TO judgeos;
 
 CREATE TABLE contest (
 	id SERIAL
@@ -60,6 +63,7 @@ CREATE TABLE contest (
 	,PRIMARY KEY(id)
 	,FOREIGN KEY(owner) REFERENCES account ON UPDATE CASCADE
 );
+ALTER TABLE contest OWNER TO judgeos;
 CREATE UNIQUE INDEX contest_codename_idx ON contest(codename);
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005', 'MMF 2005', currval('account_id_seq'), '2005-01-01 00:00:00 UTC', '2005-12-31 23:59:59 UTC');
 INSERT INTO contest(codename, name, owner, start, stop) VALUES('mmf2005-05-15', 'MMF Training 15 May 2005', currval('account_id_seq'), '2005-05-15 15:45:00 UTC', '2005-05-15 19:45:00 UTC');
@@ -74,6 +78,7 @@ CREATE TABLE contestMemberRole (
 	,codename VARCHAR NOT NULL
 	,PRIMARY KEY(id)
 );
+ALTER TABLE contestMemberRole OWNER TO judgeos;
 CREATE UNIQUE INDEX contestMemberRole_codename_idx ON contestMemberRole(codename);
 INSERT INTO contestMemberRole(codename) VALUES('jury');
 INSERT INTO contestMemberRole(codename) VALUES('participator');
@@ -94,6 +99,7 @@ CREATE TABLE contestMember (
 	,FOREIGN KEY(role) REFERENCES contestMemberRole ON UPDATE CASCADE
 	,FOREIGN KEY(createdBy) REFERENCES account ON UPDATE CASCADE
 );
+ALTER TABLE contestMember OWNER TO judgeos;
 CREATE UNIQUE INDEX contestMember_codename_idx ON contestMember(codename);
 
 CREATE TABLE contestMember2account (
@@ -104,6 +110,7 @@ CREATE TABLE contestMember2account (
 	,FOREIGN KEY(contestMember) REFERENCES contestMember ON UPDATE CASCADE ON DELETE CASCADE
 	,FOREIGN KEY(account) REFERENCES account ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER TABLE contestMember2account OWNER TO judgeos;
 
 CREATE TABLE problem (
 	id SERIAL
@@ -117,6 +124,7 @@ CREATE TABLE problem (
 	,PRIMARY KEY(id)
 	,FOREIGN KEY(contest) REFERENCES contest ON UPDATE CASCADE ON DELETE CASCADE
 );
+ALTER TABLE problem OWNER TO judgeos;
 CREATE UNIQUE INDEX problem_contest_codename_idx ON problem(contest, codename);
 
 CREATE TABLE judgeosSetting (
@@ -125,6 +133,7 @@ CREATE TABLE judgeosSetting (
 	,value VARCHAR
 	,PRIMARY KEY(id)
 );
+ALTER TABLE judgeosSetting OWNER TO judgeos;
 CREATE UNIQUE INDEX judgeosSetting_key_idx ON judgeosSetting(key);
 INSERT INTO judgeosSetting(key, value) VALUES('hotContest', '1');
 COMMIT;

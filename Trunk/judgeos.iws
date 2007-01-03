@@ -82,21 +82,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/ConnectionFactory.java" line="34" class="org.judgeos.ConnectionFactory" package="org.judgeos">
-        <option name="ENABLED" value="true" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -138,9 +123,9 @@
   </component>
   <component name="FavoritesViewImpl">
     <favorites_list name="judgeos">
-      <favorite_root url="file://$PROJECT_DIR$/WEB-INF/struts-config.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      <favorite_root url="file://$PROJECT_DIR$/META-INF/context.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
       <favorite_root url="file://$PROJECT_DIR$/WEB-INF/web.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/META-INF/context.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/WEB-INF/struts-config.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
       <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
       <option name="IS_SHOW_MEMBERS" value="false" />
       <option name="IS_STRUCTURE_VIEW" value="false" />
@@ -157,52 +142,16 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="40" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.086687304">
+            <state line="113" column="0" selection-start="77" selection-end="2469" vertical-scroll-proportion="0.5709779">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="judgeos.tld" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/tld/judgeos.tld">
+      <file leaf-file-name="layout.jspf" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout.jspf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="47" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.6408669">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FetchLastContests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/FetchLastContests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="74" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0061919503">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionFactory.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/ConnectionFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="863" selection-end="1042" vertical-scroll-proportion="0.5263158">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServletContext.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/usr/install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr154/src/share/javax/servlet/ServletContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="555" column="18" selection-start="18512" selection-end="18512" vertical-scroll-proportion="0.5356037">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicDataSource.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory-dbcp.jar!/org/apache/tomcat/dbcp/dbcp/BasicDataSource.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.21052632">
+            <state line="16" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="0.21451104">
               <folding />
             </state>
           </provider>
@@ -211,25 +160,70 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="20" selection-start="3943" selection-end="3943" vertical-scroll-proportion="0.7708978">
+            <state line="47" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.7066246">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
+      <file leaf-file-name="LogInAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/controller/LogInAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="31" column="0" selection-start="846" selection-end="846" vertical-scroll-proportion="0.34700316">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FormatDateSupport.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/usr/install/Development/Java/tools/jakarta-taglibs/jakarta-taglibs-src-20060516/jakarta-taglibs/standard/src/org/apache/taglibs/standard/tag/common/fmt/FormatDateSupport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="22" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.05362776">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="judgeos.tld" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/tld/judgeos.tld">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="42" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.6309148">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListContests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/ListContests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="12" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.018927446">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="context.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="10" selection-start="65" selection-end="65" vertical-scroll-proportion="0.10059172">
+            <state line="2" column="24" selection-start="97" selection-end="97" vertical-scroll-proportion="0.10240964">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContestOld.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/ContestOld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="972" selection-end="972" vertical-scroll-proportion="1.7160883">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UseContestTag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/UseContestTag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="12" selection-start="748" selection-end="748" vertical-scroll-proportion="0.21451104">
               <folding />
             </state>
           </provider>
@@ -269,6 +263,62 @@
       <PATH_ELEMENT>
         <option name="myItemId" value="JudgeOS" />
         <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="WEB-INF" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="WEB-INF" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="src" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="org" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="WEB-INF" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="doc" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
     <PATH>
@@ -443,7 +493,71 @@
         <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="model" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="WEB-INF" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="src" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="org" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="controller" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="WEB-INF" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="doc" />
         <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -467,6 +581,64 @@
       <PATH_ELEMENT>
         <option name="myItemId" value="META-INF" />
         <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="css" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="account" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.DirectoryNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.nodes.J2EEProjectNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Web Modules" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleHolderNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.j2ee.module.view.web.nodes.WebModuleNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
     <PATH>
@@ -521,7 +693,43 @@
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="taglib" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="org.judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="model" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="org.judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="controller" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
       </PATH_ELEMENT>
     </PATH>
@@ -580,6 +788,256 @@
         <option name="myItemId" value="JudgeOS" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun\util" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun\util" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun\util\calendar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\sun" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java\util" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java\text" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Libraries" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="&lt; 1.5 &gt;" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\Program Files\Java\jdk1.5.0_10\jre\lib\rt.jar!\java\lang" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -631,15 +1089,59 @@
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\resources" />
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\src" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\resources\org" />
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\src\org\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\resources\org\judgeos" />
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\src" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\src\org\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\WEB-INF\src\org\judgeos\model" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="judgeos.ipr" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="JudgeOS" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PsiDirectory:C:\usr\work\self\judgeos\META-INF" />
         <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
       </PATH_ELEMENT>
     </PATH>
@@ -657,11 +1159,12 @@
       <abbreviatePackageNames />
       <showStructure PackagesPane="false" ProjectPane="false" J2EEPane="false" />
       <autoscrollToSource />
-      <autoscrollFromSource J2EEPane="true" />
-      <sortByType />
+      <autoscrollFromSource ProjectPane="true" J2EEPane="true" />
+      <sortByType ProjectPane="true" />
     </navigator>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -678,14 +1181,51 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="org.judgeos.controller" />
       <recent name="org.judgeos.model" />
+      <recent name="org.judgeos.controller" />
       <recent name="org.judgeos.config" />
     </key>
   </component>
   <component name="RestoreUpdateTree" />
   <component name="RunManager">
-    <activeType name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+    <activeType name="Application" />
+    <configuration selected="false" default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration selected="false" default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="" />
+    </configuration>
+    <configuration selected="false" default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration selected="false" default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8080" />
+      <option name="LOCAL" value="true" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+    </configuration>
     <configuration selected="false" default="true" type="JUnit" factoryName="JUnit">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -701,43 +1241,6 @@
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="wholeProject" />
       </option>
-    </configuration>
-    <configuration selected="false" default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration selected="false" default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration selected="false" default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="" />
-    </configuration>
-    <configuration selected="false" default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <option name="WORKING_DIRECTORY" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8080" />
-      <option name="LOCAL" value="true" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
     </configuration>
     <configuration selected="true" default="false" name="/judgeos/" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat">
       <option name="WORKING_DIRECTORY" />
@@ -789,6 +1292,23 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
     </configuration>
+    <configuration selected="true" default="false" name="Test" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.judgeos.Test" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <module name="JudgeOS" />
+      <RunnerSettings RunnerId="Run" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1055" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+    </configuration>
   </component>
   <component name="SelectInManager" />
   <component name="StarteamConfiguration">
@@ -804,7 +1324,7 @@
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_MODE" value="true" />
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
-    <option name="ACTIVE_ACTIONS" value="VISIBILITY_SORTER,SHOW_INTERFACES,ALPHA_COMPARATOR,SHOW_INHERITED,SHOW_PROPERTIES" />
+    <option name="ACTIVE_ACTIONS" value="SHOW_NON_PUBLIC,VISIBILITY_SORTER,SHOW_INTERFACES,ALPHA_COMPARATOR,SHOW_INHERITED,SHOW_PROPERTIES" />
   </component>
   <component name="SvnChangesBrowserSettings">
     <option name="USE_AUTHOR_FIELD" value="true" />
@@ -838,20 +1358,20 @@
     <editor active="true" />
     <layout>
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.24829932" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.23809524" order="1" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.25918368" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.30612245" order="9" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.41666666" order="7" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.24081632" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.33333334" order="1" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.26938775" order="1" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.3180272" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.4" order="5" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="3" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="2" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="10" />
-      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.113265306" order="3" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.1377551" order="1" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.38172042" order="2" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
-      <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="3" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.32312927" order="3" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.113265306" order="3" />
+      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.22619048" order="12" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.14455782" order="2" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="true" internal_type="sliding" type="sliding" visible="false" weight="0.24923392" order="1" x="390" y="142" width="244" height="423" />
+      <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="4" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.32312927" order="3" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="sliding" type="sliding" visible="false" weight="0.4" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.48028675" order="11" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="2" />
@@ -944,107 +1464,107 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/usr/install/Development/Java/tools/jakarta-taglibs/jakarta-taglibs-src-20060516/jakarta-taglibs/standard/src/javax/servlet/jsp/jstl/core/ConditionalTagSupport.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/resources.jar!/standardSchemas/web-jsptaglibrary_2_0.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="2006" selection-end="2006" vertical-scroll-proportion="0.32072073">
+        <state line="534" column="2" selection-start="15043" selection-end="15043" vertical-scroll-proportion="0.043037973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/usr/install/Development/Java/tools/jakarta-taglibs/jakarta-taglibs-src-20060516/jakarta-taglibs/standard/src/org/apache/taglibs/standard/tag/rt/core/IfTag.java">
+    <entry file="file://C:/usr/install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr152/src/share/javax/servlet/jsp/tagext/SimpleTagSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.45945945">
+        <state line="101" column="16" selection-start="3342" selection-end="3342" vertical-scroll-proportion="0.043037973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/tld/c.tld">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/BaseTag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="61" selection-start="1909" selection-end="1909" vertical-scroll-proportion="0.5407407">
+        <state line="17" column="31" selection-start="495" selection-end="495" vertical-scroll-proportion="0.043037973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/usr/install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-tomcat-jasper/jasper2/src/share/org/apache/jasper/servlet/JspServlet.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/JudgeosConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.33333334">
+        <state line="12" column="24" selection-start="414" selection-end="414" vertical-scroll-proportion="0.3131579">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/FormatDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="20" selection-start="3943" selection-end="3943" vertical-scroll-proportion="0.7708978">
+        <state line="30" column="0" selection-start="818" selection-end="818" vertical-scroll-proportion="0.6687697">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/struts-config.xml">
+    <entry file="file://C:/usr/install/Development/Java/tools/jakarta-taglibs/jakarta-taglibs-src-20060516/jakarta-taglibs/standard/src/org/apache/taglibs/standard/tag/common/fmt/FormatDateSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="65" selection-end="65" vertical-scroll-proportion="0.10059172">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory-dbcp.jar!/org/apache/tomcat/dbcp/dbcp/BasicDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.21052632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina.jar!/org/apache/catalina/core/ApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.3326923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/controller/LogInAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="85" selection-start="609" selection-end="690" vertical-scroll-proportion="0.317757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/usr/install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr154/src/share/javax/servlet/ServletContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="555" column="18" selection-start="18512" selection-end="18512" vertical-scroll-proportion="0.5356037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="40" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.086687304">
+        <state line="40" column="22" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.05362776">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/tld/judgeos.tld">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="47" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.6408669">
+        <state line="47" column="42" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.6309148">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/FetchLastContests.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/controller/LogInAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="74" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0061919503">
+        <state line="31" column="0" selection-start="846" selection-end="846" vertical-scroll-proportion="0.34700316">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/ConnectionFactory.java">
+    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="863" selection-end="1042" vertical-scroll-proportion="0.5263158">
+        <state line="47" column="31" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.7066246">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="0.21451104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/UseContestTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="748" selection-end="748" vertical-scroll-proportion="0.21451104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/model/ContestOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="972" selection-end="972" vertical-scroll-proportion="1.7160883">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="77" selection-end="2469" vertical-scroll-proportion="0.5709779">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/src/org/judgeos/taglib/ListContests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="12" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.018927446">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="97" selection-end="97" vertical-scroll-proportion="0.10240964">
           <folding />
         </state>
       </provider>

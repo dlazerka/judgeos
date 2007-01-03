@@ -1,7 +1,7 @@
 package org.judgeos.taglib;
 
-import org.judgeos.ConnectionFactory;
-import org.judgeos.model.Contest;
+import org.judgeos.model.ConnectionFactory;
+import org.judgeos.model.ContestOld;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspContext;
@@ -26,7 +26,7 @@ public class UseContestTag extends SimpleTagSupport {
 		this.jspContext = jspContext;
 	}
 
-	private Contest fetchContest(String codename) throws SQLException, NamingException {
+	private ContestOld fetchContest(String codename) throws SQLException, NamingException {
 		if (codename == null) {
 			return null;
 		} else {
@@ -44,7 +44,7 @@ public class UseContestTag extends SimpleTagSupport {
 			if (!rs.next()) {
 				return null;
 			} else {
-				return new Contest(rs);
+				return new ContestOld(rs);
 			}
 		}
 	}

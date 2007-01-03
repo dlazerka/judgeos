@@ -1,4 +1,4 @@
-package org.judgeos;
+package org.judgeos.model;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -31,7 +31,7 @@ public class ConnectionFactory {
 	private static void connect() throws SQLException, NamingException {
 		DataSource dataSource;
 		Context initContext = new InitialContext();
-		Context envContext = (Context) initContext.lookup("java:comp/env");
+		Context envContext = (Context) initContext.lookup("java:/comp/env");
 		dataSource = (DataSource) envContext.lookup("jdbc/judgeos");
 
 		connection = dataSource.getConnection();

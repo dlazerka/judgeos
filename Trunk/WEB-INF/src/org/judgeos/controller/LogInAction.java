@@ -4,14 +4,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.Globals;
 import org.apache.struts.action.*;
-import org.judgeos.ConnectionFactory;
-import org.judgeos.model.Account;
+import org.judgeos.model.AccountOld;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 
 /**
  * Process user login.
@@ -28,12 +28,16 @@ public class LogInAction extends Action {
 		HttpServletResponse response
 	) throws Exception
 	{
+
+
 		this.request = request;
 
 		String codename = request.getParameter("codename");
 		String sql = "SELECT * FROM account WHERE codename = ?";
 
-		Connection c = ConnectionFactory.getConnection();
+		DataSource dataSource = getDataSource(request);
+		Connection c = dataSource.getConnection();
+//		Connection c = ConnectionFactory.getConnection();
 		PreparedStatement st = c.prepareStatement(sql);
 		st.setString(1, codename);
 
@@ -41,7 +45,7 @@ public class LogInAction extends Action {
 
 		if (rs.next()) {
 			if (rs.getString("password").equals(request.getParameter("password"))) {
-				request.getSession().setAttribute("account", new Account(rs));
+				request.getSession().setAttribute("account", new AccountOld(rs));
 				return mapping.findForward("success");
 			} else {
 				ActionMessage msg = new ActionMessage("errors.account.wrongPassword");

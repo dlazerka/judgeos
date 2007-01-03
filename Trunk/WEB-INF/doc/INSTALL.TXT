@@ -1,1 +1,3 @@
 1. Copy "/WEB-INF/lib/postgresql-8.1-404.jdbc3.jar" file to "<TOMCAT_HOME>/common/endorsed/".
+2. Create DB user "judgeos".
+3. Create database "judgeos", and execute /WEB-INF/schema.sql here.

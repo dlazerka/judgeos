@@ -1,63 +1,90 @@
 package org.judgeos.model;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.HashMap;
+import java.util.Date;
+import java.io.Serializable;
 
-public class Contest {
-	private HashMap<String, Object> parameters;
+public class Contest implements Serializable {
+	private Integer id;
+	private String codename;
+	private String name;
+	private String description;
+	private Account owner;
+	private Boolean publicParticipate;
+	private Date start;
+	private Date stop;
+	private Date createdOn;
 
-	public Contest(HashMap<String, Object> parameters) {
-		this.parameters = parameters;
+	public Contest() {}
+
+	public Integer getId() {
+		return id;
 	}
 
-	public Contest(ResultSet rs) throws SQLException {
-		parameters = new HashMap<String, Object>();
-		ResultSetMetaData meta = rs.getMetaData();
-		for (int i = 1; i <= meta.getColumnCount(); i++) {
-			String field = meta.getColumnName(i);
-			Object value = rs.getObject(i);
-			//Log log = LogFactory.getFactory().getInstance(this.getClass().getName());
-			//log.warn(field + "=" + value + "\n");
-			parameters.put(field, value);
-		}
-	}
-
-	public String getDescription() {
-		return (String) parameters.get("description");
+	private void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getCodename() {
-		return (String) parameters.get("codename");
+		return codename;
+	}
+
+	public void setCodename(String codename) {
+		this.codename = codename;
 	}
 
 	public String getName() {
-		return (String) parameters.get("name");
+		return name;
 	}
 
-	public Timestamp getStart() {
-		return (Timestamp) parameters.get("start");
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public Timestamp getStop() {
-		return (Timestamp) parameters.get("stop");
+	public String getDescription() {
+		return description;
 	}
 
-	public String getOwnerCodename() {
-		return (String) parameters.get("ownercodename");
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getOwnerFirstName() {
-		return (String) parameters.get("ownerfirstname");
+	public Account getOwner() {
+		return owner;
 	}
 
-	public String getOwnerLastName() {
-		return (String) parameters.get("ownerlastname");
+	public void setOwner(Account owner) {
+		this.owner = owner;
 	}
 
-	public Boolean getIsHot() {
-		return (Boolean) parameters.get("ishot");
+	public Boolean getPublicParticipate() {
+		return publicParticipate;
+	}
+
+	public void setPublicParticipate(Boolean publicParticipate) {
+		this.publicParticipate = publicParticipate;
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public void setStart(Date start) {
+		this.start = start;
+	}
+
+	public Date getStop() {
+		return stop;
+	}
+
+	public void setStop(Date stop) {
+		this.stop = stop;
+	}
+
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+
+	private void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
 	}
 }

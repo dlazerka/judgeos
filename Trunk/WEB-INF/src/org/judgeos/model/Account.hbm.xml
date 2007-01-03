@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.judgeos.model.Account" table="account">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="codename" not-null="true" unique="true"/>
+		<property name="password"/>
+		<property name="firstName" not-null="true"/>
+		<property name="lastName" not-null="true"/>
+		<property name="createdOn" not-null="true" type="timestamp"/>
+
+		<!--many-to-one name="contest" column="id" class="org.judgeos.model.Contest"/-->
+	</class>
+</hibernate-mapping>

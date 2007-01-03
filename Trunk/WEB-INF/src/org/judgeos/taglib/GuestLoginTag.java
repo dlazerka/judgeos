@@ -1,7 +1,7 @@
 package org.judgeos.taglib;
 
-import org.judgeos.ConnectionFactory;
-import org.judgeos.model.Account;
+import org.judgeos.model.ConnectionFactory;
+import org.judgeos.model.AccountOld;
 
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.JspContext;
@@ -35,7 +35,7 @@ public class GuestLoginTag extends SimpleTagSupport {
 			ResultSet rs = st.executeQuery();
 
 			if (rs.next()) {
-				session.setAttribute("account", new Account(rs));
+				session.setAttribute("account", new AccountOld(rs));
 			} else {
 				throw new IllegalStateException("Cannot find account \"guest\"");
 			}

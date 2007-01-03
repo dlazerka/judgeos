@@ -44,8 +44,8 @@
 	</tag>
 
 	<tag>
-		<name>fetchLastContests</name>
-		<tag-class>org.judgeos.taglib.FetchLastContests</tag-class>
+		<name>listContests</name>
+		<tag-class>org.judgeos.taglib.ListContests</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<name>var</name>
@@ -56,6 +56,18 @@
 			<name>limit</name>
 			<required>true</required>
 			<type>java.lang.Integer</type>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>formatDate</name>
+		<tag-class>org.judgeos.taglib.FormatDate</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.util.Date</type>
 		</attribute>
 	</tag>
 

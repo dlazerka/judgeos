@@ -1,59 +1,80 @@
 package org.judgeos.model;
 
-import org.judgeos.ConnectionFactory;
-
-import javax.naming.NamingException;
+import java.util.Date;
 import java.io.Serializable;
-import java.sql.*;
-import java.util.HashMap;
 
+
+/**
+ * Represents an registered (signed up) user for the whole system.
+ * Todo: consider making id, createdOn final.
+ */
 public class Account implements Serializable {
-	private static final long serialVersionUID = 1L;
-	private HashMap<String, Object> parameters;
+	private Integer id;
+	private String codename;
+	private String password;
+	private String firstName;
+	private String lastName;
+	private Date createdOn;
 
-	public Account(HashMap<String, Object> parameters) {
-		this.parameters = parameters;
-	}
+	public Account() {}
 
-	public Account(ResultSet rs) throws SQLException {
-		parameters = new HashMap<String, Object>();
-		ResultSetMetaData meta = rs.getMetaData();
-		for (int i = 1; i <= meta.getColumnCount(); i++) {
-			String field = meta.getColumnName(i);
-			Object value = rs.getObject(i);
-			parameters.put(field, value);
-		}
-	}
-
-	public HashMap<String, Object> getParameters() {
-		return parameters;
-	}
-
-	public Object getParameter(String key) {
-		return parameters.get(key);
-	}
-
-	public String getCodename() {
-		return (String) parameters.get("codename");
-	}
-
-	void Save() {
-//		Statement st = DBConnector.getConnection().createStatement();
+	public Integer getId() {
+		return id;
 	}
 
 	/**
-	 * Searches for given codename in table account.
-	 *
-	 * @param codename
-	 * @return is codename found
-	 * @throws SQLException
+	 * id is final
+	 * @param id
 	 */
-	public static boolean codenameExists(String codename) throws SQLException, NamingException {
-		String sql = "SELECT NULL FROM account WHERE codename = ?";
-		Connection c = ConnectionFactory.getConnection();
-		PreparedStatement st = c.prepareStatement(sql);
-		st.setString(1, codename);
-		ResultSet rs = st.executeQuery();
-		return rs.next();
+	private void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getCodename() {
+		return codename;
+	}
+
+	public void setCodename(String codename) {
+		this.codename = codename;
+	}
+
+	/**
+	 * No one needed the password.
+	 * @return password
+	 */
+	private String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+
+	/**
+	 * createdOn is final
+	 * @param createdOn
+	 */
+	private void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
 	}
 }

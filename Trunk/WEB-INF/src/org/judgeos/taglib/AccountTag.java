@@ -1,6 +1,6 @@
 package org.judgeos.taglib;
 
-import org.judgeos.model.Account;
+import org.judgeos.model.AccountOld;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
@@ -17,7 +17,7 @@ public class AccountTag extends SimpleTagSupport {
 	private String parameter;
 
 	public void doTag() throws JspException, IOException {
-		Account a = (Account) getJspContext().getAttribute("account", PageContext.SESSION_SCOPE);
+		AccountOld a = (AccountOld) getJspContext().getAttribute("account", PageContext.SESSION_SCOPE);
 		if (a == null) {
 			throw new JspException("Session scope does not have property \"account\"");
 		}
