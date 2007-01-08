@@ -10,6 +10,13 @@
       <properties />
     </buildFile>
   </component>
+  <component name="BuildJarProjectSettings">
+    <option name="BUILD_JARS_ON_MAKE" value="false" />
+  </component>
+  <component name="CodeStyleProjectProfileManger">
+    <option name="PROJECT_PROFILE" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+  </component>
   <component name="CodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
       <value>
@@ -42,7 +49,6 @@
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
     <option name="DEPLOY_AFTER_MAKE" value="0" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
@@ -69,11 +75,542 @@
       <entry name="?*.jpg" />
     </wildcardResourcePatterns>
   </component>
-  <component name="DataSourceManagerImpl" />
+  <component name="DataSourceManagerImpl">
+    <DataSource DataSourceSourceName="LOCAL">
+      <option name="DRIVER_CLASS" value="org.postgresql.Driver" />
+      <option name="DATABASE_URL" value="jdbc:postgresql://localhost:5432/judgeos" />
+      <option name="DRIVER_PATH" />
+      <option name="DATBASE_USERNAME" value="judgeos" />
+      <option name="ENCODED_DATABASE_PASSWORD" value="dfc0dfdfdfcedfcddfcfdfc5dfd9" />
+      <option name="DEFAULT_SCHEMA_NAME" value="" />
+      <option name="NAME" value="jdbc/judgeos" />
+      <TABLE_DATA>
+        <option name="NAME" value="account" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="password" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="firstname" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="lastname" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="createdon" />
+          <option name="JDBC_TYPE" value="93" />
+          <option name="TYPE" value="java.sql.Timestamp" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="8" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="contest" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="name" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="description" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="owner" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="publicparticipate" />
+          <option name="JDBC_TYPE" value="-7" />
+          <option name="TYPE" value="java.lang.Boolean" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="1" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="start" />
+          <option name="JDBC_TYPE" value="93" />
+          <option name="TYPE" value="java.sql.Timestamp" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="8" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="stop" />
+          <option name="JDBC_TYPE" value="93" />
+          <option name="TYPE" value="java.sql.Timestamp" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="8" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="createdon" />
+          <option name="JDBC_TYPE" value="93" />
+          <option name="TYPE" value="java.sql.Timestamp" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="8" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="account" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="owner" />
+          <option name="CASCADE_REMOVE" value="false" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="contestmember" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="contest" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="password" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="name" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="role" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="createdby" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="createdon" />
+          <option name="JDBC_TYPE" value="93" />
+          <option name="TYPE" value="java.sql.Timestamp" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="8" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="account" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="createdby" />
+          <option name="CASCADE_REMOVE" value="false" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="contestmemberrole" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="role" />
+          <option name="CASCADE_REMOVE" value="false" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="contestmember2account" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="contestmember" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="account" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="account" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="account" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="contestmember" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="contestmember" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="contestmemberrole" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="judgeosrole" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="judgeosrole2account" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="judgeosrole" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="account" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="account" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="account" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="account" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="account" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="judgeosrole" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="judgeosrole" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="judgeosrole" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="judgeosrole" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="judgeossetting" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="key" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="value" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+      </TABLE_DATA>
+      <TABLE_DATA>
+        <option name="NAME" value="problem" />
+        <option name="SCHEMA" value="public" />
+        <option name="CATALOG" />
+        <FIELD_ELEMENT>
+          <option name="NAME" value="id" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="true" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="contest" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="codename" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="situations" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="inputfile" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="outputfile" />
+          <option name="JDBC_TYPE" value="12" />
+          <option name="TYPE" value="java.lang.String" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="0" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="false" />
+        </FIELD_ELEMENT>
+        <FIELD_ELEMENT>
+          <option name="NAME" value="testtime" />
+          <option name="JDBC_TYPE" value="4" />
+          <option name="TYPE" value="java.lang.Integer" />
+          <option name="PRIMARY" value="false" />
+          <option name="LENGTH" value="4" />
+          <option name="PRECISION" value="0" />
+          <option name="NULLABLE" value="true" />
+        </FIELD_ELEMENT>
+        <RELATIONSHIP_ELEMENT>
+          <option name="TARGET_TABLE" value="contest" />
+          <option name="TARGET_SCHEMA" value="public" />
+          <option name="TARGET_CATALOG" />
+          <option name="TARGET_COLUMN" value="id" />
+          <option name="SOURCE_COLUMN" value="contest" />
+          <option name="CASCADE_REMOVE" value="true" />
+          <option name="CASCADE_UPDATE" value="true" />
+        </RELATIONSHIP_ELEMENT>
+      </TABLE_DATA>
+      <libraries>
+        <library name="tomcat" level="application" />
+      </libraries>
+    </DataSource>
+  </component>
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
   </component>
   <component name="DependencyValidationManager" />
+  <component name="EclipseCompilerSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+  </component>
+  <component name="EclipseEmbeddedCompilerSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points />
   </component>
@@ -83,6 +620,36 @@
     <option name="OUTPUT_DIRECTORY" />
   </component>
   <component name="GUI Designer component loader factory" />
+  <component name="IdProvider" IDEtalkID="68E2DB79DA263DAA0215C49FF3D798E5" />
+  <component name="InspectionProjectProfileManager">
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <scopes />
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+        <used_levels>
+          <error>
+            <option name="myName" value="ERROR" />
+            <option name="myVal" value="400" />
+          </error>
+          <warning>
+            <option name="myName" value="WARNING" />
+            <option name="myVal" value="300" />
+          </warning>
+          <information>
+            <option name="myName" value="INFO" />
+            <option name="myVal" value="200" />
+          </information>
+          <server>
+            <option name="myName" value="SERVER PROBLEM" />
+            <option name="myVal" value="100" />
+          </server>
+        </used_levels>
+      </profile>
+    </profiles>
+  </component>
   <component name="JavacSettings">
     <option name="DEBUGGING_INFO" value="true" />
     <option name="GENERATE_NO_WARNINGS" value="false" />
@@ -104,6 +671,7 @@
     <option name="OPTION_DEPRECATED_LIST" value="true" />
     <option name="OTHER_OPTIONS" value="" />
     <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
   <component name="JikesSettings">
@@ -114,107 +682,130 @@
     <option name="IS_EMACS_ERRORS_MODE" value="true" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
+  <component name="LogConsolePreferences">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="Palette2">
     <group name="Swing">
-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
       </item>
-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false">
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
       </item>
-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false">
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
       </item>
-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false">
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
         <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
       </item>
-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false">
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
         <initial-values>
           <property name="text" value="Button" />
         </initial-values>
       </item>
-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false">
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
         <initial-values>
           <property name="text" value="RadioButton" />
         </initial-values>
       </item>
-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false">
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
         <initial-values>
           <property name="text" value="CheckBox" />
         </initial-values>
       </item>
-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false">
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
         <initial-values>
           <property name="text" value="Label" />
         </initial-values>
       </item>
-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false">
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
           <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false">
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
           <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false">
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
           <preferred-size width="150" height="-1" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false">
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false">
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false">
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false">
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
       </item>
-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false">
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false">
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false">
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
           <preferred-size width="150" height="50" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false">
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
           <preferred-size width="200" height="200" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false">
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
           <preferred-size width="200" height="200" />
         </default-constraints>
       </item>
-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false">
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
       </item>
-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false">
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
         <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
       </item>
     </group>
   </component>
@@ -224,6 +815,7 @@
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" />
+  <component name="ProjectRunConfigurationManager" />
   <component name="RmicSettings">
     <option name="IS_EANABLED" value="false" />
     <option name="DEBUGGING_INFO" value="true" />
@@ -231,16 +823,26 @@
     <option name="GENERATE_IIOP_STUBS" value="false" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
+  <component name="StarteamVcsAdapter" />
   <component name="StrutspluginConfiguration">
     <option name="strutsAvailable" value="true" />
     <option name="propertiesSupport" value="false" />
     <option name="strutsIcons" value="false" />
     <option name="dispatchActionDefaultNames" value="create,delete,prepare,save,refresh,update" />
   </component>
+  <component name="VssVcs" />
+  <component name="com.intellij.jsf.UserDefinedFacesConfigs">
+    <option name="USER_DEFINED_CONFIGS">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+  </component>
   <component name="libraryTable" />
   <component name="uidesigner-configuration">
     <option name="INSTRUMENT_CLASSES" value="true" />
     <option name="COPY_FORMS_RUNTIME_TO_OUTPUT" value="true" />
+    <option name="DEFAULT_LAYOUT_MANAGER" value="GridLayoutManager" />
   </component>
   <UsedPathMacros />
 </project>

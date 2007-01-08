@@ -26,7 +26,7 @@ public class Account implements Serializable {
 	 * id is final
 	 * @param id
 	 */
-	private void setId(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -42,7 +42,7 @@ public class Account implements Serializable {
 	 * No one needed the password.
 	 * @return password
 	 */
-	private String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
@@ -74,7 +74,7 @@ public class Account implements Serializable {
 	 * createdOn is final
 	 * @param createdOn
 	 */
-	private void setCreatedOn(Date createdOn) {
+	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 }

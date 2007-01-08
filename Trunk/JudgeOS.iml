@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4" relativePaths="true" type="J2EE_WEB_MODULE" j2ee-integration="Tomcat Server">
+  <component name="AppServerSpecificValidatorsManager" />
   <component name="ModuleRootManager" />
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/WEB-INF/classes" />
     <exclude-output />
     <exploded url="file://$MODULE_DIR$" />
@@ -108,212 +109,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-runtime.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-tomcat-jasper/jasper2/src/share" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-compiler.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-tomcat-jasper/jasper2/src/share" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jsp-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr152/src/share" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/commons-el.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-resources.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-compiler-jdt.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory-dbcp.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/servlet-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../install/Development/Java/tools/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr154/src/share" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-ajp.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-util.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-storeconfig.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-coyote.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/commons-modeler.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-cluster.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-default.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-webdav.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-ant.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-invoker.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-optional.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-http.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="Tomcat" level="application_server_libraries" />
     <orderEntry type="module-library">
       <library>
@@ -337,6 +132,64 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/cglib-2.2_beta1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../../install/Development/Java/tools/cglib/cglib-src-2.2_beta1/src/proxy" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/jta.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/commons-collections-3.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/asm-2.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../install/Development/Java/tools/asm/asm-2.2.3-bin/asm-2.2.3/src.zip!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WEB-INF/lib/asm-util-2.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntryProperties />
   </component>
   <component name="WebModuleBuildComponent">
@@ -345,114 +198,50 @@
     <setting name="JAR_URL" value="file://" />
     <setting name="JAR_ENABLED" value="false" />
     <setting name="SYNC_EXPLODED_DIR" value="true" />
-    <setting name="BUILD_ON_FRAME_DEACTIVATION" value="false" />
+    <setting name="BUILD_MODULE_ON_FRAME_DEACTIVATION" value="false" />
+    <setting name="BUILD_EXTERNAL_DEPENDENCIES" value="false" />
     <setting name="RUN_JASPER_VALIDATION" value="false" />
   </component>
   <component name="WebModuleProperties">
     <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/commons-el.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/commons-el.jar!/</url>
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/antlr.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/antlr.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/asm-2.2.3.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/asm-2.2.3.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/jasper-compiler-jdt.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-compiler-jdt.jar!/</url>
+      <attribute name="URI" value="/WEB-INF/lib/asm-util-2.2.3.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/asm-util-2.2.3.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/jasper-compiler.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-compiler.jar!/</url>
+      <attribute name="URI" value="/WEB-INF/lib/cglib-2.2_beta1.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/cglib-2.2_beta1.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/commons-beanutils.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/commons-beanutils.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/jasper-runtime.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jasper-runtime.jar!/</url>
+      <attribute name="URI" value="/WEB-INF/lib/commons-collections-3.2.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/commons-collections-3.2.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/jsp-api.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/jsp-api.jar!/</url>
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/commons-digester.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/commons-digester.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/naming-factory-dbcp.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory-dbcp.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/naming-factory.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-factory.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/naming-resources.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/common/lib/naming-resources.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/catalina-ant.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-ant.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/catalina-cluster.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-cluster.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/catalina-optional.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-optional.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/catalina-storeconfig.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina-storeconfig.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/catalina.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/catalina.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/commons-modeler.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/commons-modeler.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/servlets-default.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-default.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/servlets-invoker.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-invoker.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/servlets-webdav.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/servlets-webdav.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/tomcat-ajp.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-ajp.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/tomcat-coyote.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-coyote.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/tomcat-http.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-http.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="1" />
-      <attribute name="URI" value="/WEB-INF/lib/tomcat-util.jar" />
-      <url>jar://C:/Program Files/Apache Software Foundation/Tomcat5/server/lib/tomcat-util.jar!/</url>
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/commons-fileupload.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/commons-fileupload.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
@@ -466,13 +255,28 @@
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib/dom4j-1.6.1.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/dom4j-1.6.1.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="1" />
       <attribute name="URI" value="/WEB-INF/lib/hibernate3.jar" />
       <url>jar://$MODULE_DIR$/WEB-INF/lib/hibernate3.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/jakarta-oro.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/jakarta-oro.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
       <attribute name="URI" value="/WEB-INF/lib/jstl.jar" />
       <url>jar://$MODULE_DIR$/WEB-INF/lib/jstl.jar!/</url>
+    </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="1" />
+      <attribute name="URI" value="/WEB-INF/lib/jta.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/jta.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="1" />
@@ -484,6 +288,15 @@
       <attribute name="URI" value="/WEB-INF/lib/standard.jar" />
       <url>jar://$MODULE_DIR$/WEB-INF/lib/standard.jar!/</url>
     </containerElement>
+    <containerElement type="library" level="module">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="/WEB-INF/lib/struts.jar" />
+      <url>jar://$MODULE_DIR$/WEB-INF/lib/struts.jar!/</url>
+    </containerElement>
+    <containerElement type="library" name="Tomcat" level="application_server_libraries">
+      <attribute name="method" value="0" />
+      <attribute name="URI" value="&lt;N/A&gt;" />
+    </containerElement>
     <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WEB-INF/web.xml" optional="false" version="2.2" />
     <deploymentDescriptor name="context.xml" url="file://$MODULE_DIR$/META-INF/context.xml" optional="false" version="5.x" />
     <webroots>
@@ -491,8 +304,6 @@
       <root url="file://$MODULE_DIR$/WEB-INF" relative="/WEB-INF" />
     </webroots>
   </component>
-  <component name="WeblogicWebModuleProperties">
-    <option name="IS_RUN_APPC" value="false" />
-  </component>
+  <component name="WeblogicWebModuleProperties" />
 </module>
 

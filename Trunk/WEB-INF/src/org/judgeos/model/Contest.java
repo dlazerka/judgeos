@@ -20,7 +20,7 @@ public class Contest implements Serializable {
 		return id;
 	}
 
-	private void setId(Integer id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -84,7 +84,7 @@ public class Contest implements Serializable {
 		return createdOn;
 	}
 
-	private void setCreatedOn(Date createdOn) {
+	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 }

@@ -1,5 +1,9 @@
 <%@ include file="/taglibs.jspf" %>
 
+<%--<jsp:useBean id="lastContests" scope="request" type="java.util.List"/>--%>
+<bean:define id="lastContests" name="lastContests" scope="request"/>
+
+
 <tiles:insert definition="base.dfn">
 
 
@@ -65,14 +69,14 @@
 							<fmt:message key=".contests"/>
 						</div>
 
-						<judgeos:listContests var="contests" limit="1"/>
 						<table class="contests">
 							<tr>
 								<th><fmt:message key="contest.name"/></th>
 								<th><fmt:message key="contest.start"/></th>
 								<th><fmt:message key="contest.stop"/></th>
 							</tr>
-							<c:forEach items="${contests}" var="contest">
+
+							<c:forEach items="${lastContests}" var="contest">
 								<c:set var="classHot" value=""/>
 
 								<!--todo-->
@@ -99,7 +103,7 @@
 												&lt;present&gt;
 											</c:when>
 											<c:otherwise>
-												<judgeos:formatDate value="${contest.start}"/>
+												<judgeos:formatDate value="${contest.stop}"/>
 											</c:otherwise>
 										</c:choose>
 									</td>

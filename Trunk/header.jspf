@@ -4,6 +4,9 @@
 <%@ include file="/taglibs.jspf" %>
 
 
+<bean:define id="account" name="account" scope="session" type="org.judgeos.model.Account"/>
+
+
 <table width="100%">
 	<tr>
 		<td align="left">
@@ -13,20 +16,19 @@
 		</td>
 		<td align="right">
 			<fmt:message key="top.welcome"/>
-			<b><judgeos:account parameter="codename"/></b>.
+			<b>${account.codename}</b>.
 
-			<c:set var="account" value="${account}" scope="session"/>
 			<c:if test="${account.codename eq 'guest'}">
-				<html:link href="account/login.jsp">
+				<html:link action="/account/login">
 					<fmt:message key="top.login"/>
 				</html:link>
-				<html:link href="account/signup.jsp">
+				<html:link action="/account/signup">
 					<fmt:message key="top.signup"/>
 				</html:link>
 			</c:if>
 
 			<c:if test="${account.codename ne 'guest'}">
-				<html:link href="account/profile.jsp">
+				<html:link action="/account">
 					<fmt:message key="account.profile"/>
 				</html:link>
 				<html:link action="/account/logout">

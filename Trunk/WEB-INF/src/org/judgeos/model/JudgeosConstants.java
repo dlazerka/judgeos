@@ -9,12 +9,12 @@ import java.util.TimeZone;
 
 public abstract class JudgeosConstants {
 	public static final Locale defaultLocale = Locale.US;
-	public static final TimeZone defaultTimeZone = TimeZone.getTimeZone("Etc/UTC");
+	public static final TimeZone defaultTimeZone = TimeZone.getTimeZone("Etc/GMT");
 	public static final DateFormat defaultDateTimeFormat;
 	public static final DecimalFormat defaultNumberFormat = new DecimalFormat("0.##;", new DecimalFormatSymbols(defaultLocale));
 
 	static {
-		if (defaultTimeZone.equals(TimeZone.getTimeZone("Etc/UTC"))) {
+		if (defaultTimeZone.hasSameRules(TimeZone.getTimeZone("Etc/UTC"))) {
 			defaultDateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		}
 		else {
@@ -22,4 +22,6 @@ public abstract class JudgeosConstants {
 		}
 		defaultDateTimeFormat.setTimeZone(defaultTimeZone);
 	}
+
+	public static final String guestCodename = "guest";
 }

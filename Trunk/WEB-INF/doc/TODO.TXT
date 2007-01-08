@@ -1,7 +1,1 @@
 TODO:
-
-* attach Logging
-* refactor to use Hibernate
-
-*
-Странная штука: иногда 

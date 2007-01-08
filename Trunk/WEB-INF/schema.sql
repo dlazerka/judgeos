@@ -19,7 +19,7 @@ ALTER TABLE judgeosRole OWNER TO judgeos;
 CREATE UNIQUE INDEX judgeosRole_codename_idx ON judgeosRole(codename);
 INSERT INTO judgeosRole(codename) VALUES('admin');
 
--- TODO: passwords should be encrypted. 
+-- TODO: passwords should be encrypted.
 CREATE TABLE account (
 	id SERIAL
 	,codename VARCHAR NOT NULL
@@ -137,3 +137,4 @@ ALTER TABLE judgeosSetting OWNER TO judgeos;
 CREATE UNIQUE INDEX judgeosSetting_key_idx ON judgeosSetting(key);
 INSERT INTO judgeosSetting(key, value) VALUES('hotContest', '1');
 COMMIT;
+
