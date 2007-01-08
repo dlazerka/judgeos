@@ -15,7 +15,7 @@ import java.sql.SQLException;
 /**
  * Process user registration.
  */
-public class SignUpAction extends Action {
+public class SignUpAction extends JudgeosAction {
 
 
 	/**
@@ -37,6 +37,8 @@ public class SignUpAction extends Action {
 		HttpServletResponse response
 	) throws Exception
 	{
+		if (true) throw new IllegalStateException("sdf");
+
 
 		if (AccountOld.codenameExists(request.getParameter("codename"))) {
 			ActionMessage msg = new ActionMessage("errors.account.codenameUsed");
@@ -55,6 +57,7 @@ public class SignUpAction extends Action {
 	 *
 	 * @param request
 	 * @throws SQLException
+	 * @throws javax.naming.NamingException
 	 */
 	private void addAccount(HttpServletRequest request) throws SQLException, NamingException {
 		Connection c = ConnectionFactory.getConnection();
@@ -79,7 +82,7 @@ public class SignUpAction extends Action {
 	 */
 	private void addErrorMessage(ActionMessage msg, HttpServletRequest request) {
 		for (String key : new String[]{
-			SignUpForm.ERROR_KEY, Globals.ERROR_KEY}
+			Globals.ERROR_KEY}
 			)
 		{
 			ActionMessages msgs = (ActionMessages) request.getAttribute(key);

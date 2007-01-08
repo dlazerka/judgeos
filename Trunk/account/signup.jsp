@@ -22,15 +22,15 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.codename"/>
+							<fmt:message key="account.email"/>
 							*
 						</td>
 						<td>
-							<html:text property="codename"/>
+							<html:text property="email"/>
 						</td>
 						<td class="errorLabel">
-							<html:messages id="codename"/>
-							<html:errors property="codename"/>
+							<html:messages id="email"/>
+							<html:errors property="email"/>
 						</td>
 					</tr>
 					<tr>
@@ -47,26 +47,15 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.firstName"/>
+							<fmt:message key="account.fullName"/>
 							*
 						</td>
 						<td>
-							<html:text property="firstName"/>
+							<html:text property="fullName"/><br>
+							<span class="underField">e.g. John Smith</span>
 						</td>
 						<td class="errorLabel">
-							<html:errors property="firstName"/>
-						</td>
-					</tr>
-					<tr>
-						<td class="label">
-							<fmt:message key="account.lastName"/>
-							*
-						</td>
-						<td>
-							<html:text property="lastName"/>
-						</td>
-						<td class="errorLabel">
-							<html:errors property="lastName"/>
+							<html:errors property="fullName"/>
 						</td>
 					</tr>
 					<tr>

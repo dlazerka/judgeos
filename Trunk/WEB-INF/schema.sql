@@ -22,18 +22,17 @@ INSERT INTO judgeosRole(codename) VALUES('admin');
 -- TODO: passwords should be encrypted.
 CREATE TABLE account (
 	id SERIAL
-	,codename VARCHAR NOT NULL
+	,email VARCHAR NOT NULL
 	,password VARCHAR NOT NULL
-	,firstName VARCHAR NOT NULL
-	,lastName VARCHAR NOT NULL
+	,fullName VARCHAR NOT NULL
 	,createdOn TIMESTAMP(0) WITH TIME ZONE NOT NULL
 		DEFAULT ('now'::TEXT)::TIMESTAMP(0) WITH TIME ZONE
 	,PRIMARY KEY(id)
 );
 ALTER TABLE account OWNER TO judgeos;
-CREATE UNIQUE INDEX account_codename_idx ON account(codename);
-INSERT INTO account(codename, password, firstName, lastName) VALUES('guest', '', 'Anonymous', 'User');
-INSERT INTO account(codename, password, firstName, lastName) VALUES('dlazerka', 'pass', 'Dzmitry', 'Lazerka');
+CREATE UNIQUE INDEX account_email_idx ON account(email);
+INSERT INTO account(email, password, fullName) VALUES('guest@judgeos.org', '', 'Anonymous Guest');
+INSERT INTO account(email, password, fullName) VALUES('dlazerka@gmail.com', 'pass', 'Dzmitry Lazerka');
 
 CREATE TABLE judgeosRole2account (
 	judgeosRole INTEGER NOT NULL

@@ -12,7 +12,7 @@ public class LogInForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
 	protected static final String ERROR_KEY = LogInForm.class.getName() + ".ERROR_KEY";
 	private String dataAttached;
-	private String codename;
+	private String email;
 	private String password;
 	private Log log = LogFactory.getFactory().getInstance(LogInForm.class.getName());
 
@@ -24,16 +24,16 @@ public class LogInForm extends ValidatorForm {
 	}
 
 
-	public void setCodename(String codename) {
-		this.codename = codename;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getCodename() {
-		return codename;
+	public String getEmail() {
+		return email;
 	}
 
 	public String getPassword() {

@@ -1,6 +1,5 @@
 <%@ include file="/taglibs.jspf" %>
 
-<%--<jsp:useBean id="lastContests" scope="request" type="java.util.List"/>--%>
 <bean:define id="lastContests" name="lastContests" scope="request"/>
 
 
@@ -46,12 +45,6 @@
 				text-align: right;
 				padding: 3pt;
 			}
-
-			table.contests tr.hot {
-				height: 40pt;
-				background-color: #faa;
-				padding: 3pt;
-			}
 		</style>
 	</tiles:put>
 
@@ -77,14 +70,7 @@
 							</tr>
 
 							<c:forEach items="${lastContests}" var="contest">
-								<c:set var="classHot" value=""/>
-
-								<!--todo-->
-								<%--<c:set var="now" value="new Date()"/>--%>
-								<%--<c:if test="${contest.isHot}">--%>
-								<%--<c:set var="classHot" value="hot"/>--%>
-								<%--</c:if>--%>
-								<tr class="${classHot}">
+								<tr>
 									<td class="name">
 										<html:link href="contest/info.jsp?codename=${contest.codename}"
 												   styleClass="name"

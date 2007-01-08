@@ -7,13 +7,8 @@
 <form-validation>
 	<global>
 		<constant>
-			<!-- must be xml clean to raw output as query param -->
-			<constant-name>codename</constant-name>
-			<constant-value>^[a-zA-Z][0-9a-zA-Z_+-]*$</constant-value>
-		</constant>
-		<constant>
 			<constant-name>password</constant-name>
-			<constant-value>^[a-zA-Z][0-9a-zA-Z_-]*$</constant-value>
+			<constant-value>^[\x21-\x79]*$</constant-value>
 		</constant>
 	</global>
 
@@ -21,12 +16,12 @@
 		<form name="AccountSignUpForm">
 			<field property="dataAttached" depends="required"/>
 
-			<field property="codename" depends="required,mask">
-				<arg key="account.codename"/>
+			<field property="email" depends="required,email,query">
 				<var>
-					<var-name>mask</var-name>
-					<var-value>${codename}</var-value>
+					<var-name>query</var-name>
+					<var-value>count(*) = 0 from account where email = :test</var-value>
 				</var>
+				<arg key="account.email"/>
 			</field>
 			<field property="password" depends="required,mask">
 				<arg key="account.password"/>
@@ -35,23 +30,16 @@
 					<var-value>${password}</var-value>
 				</var>
 			</field>
-			<field property="firstName" depends="required">
-				<arg key="account.firstName"/>
-			</field>
-			<field property="lastName" depends="required">
-				<arg key="account.lastName"/>
+			<field property="fullName" depends="required">
+				<arg key="account.fullName"/>
 			</field>
 		</form>
 
 		<form name="AccountLogInForm">
 			<field property="dataAttached" depends="required"/>
 
-			<field property="codename" depends="required,mask">
-				<arg key="account.codename"/>
-				<var>
-					<var-name>mask</var-name>
-					<var-value>${codename}</var-value>
-				</var>
+			<field property="email" depends="required,email">
+				<arg key="account.email"/>
 			</field>
 			<field property="password" depends="required,mask">
 				<arg key="account.password"/>

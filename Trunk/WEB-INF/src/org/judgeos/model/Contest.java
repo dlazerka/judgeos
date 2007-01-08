@@ -2,7 +2,7 @@ package org.judgeos.model;
 
 import java.util.Date;
 import java.io.Serializable;
-
+// todo: consider making id, createdOn final
 public class Contest implements Serializable {
 	private Integer id;
 	private String codename;
@@ -20,7 +20,11 @@ public class Contest implements Serializable {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	/**
+	 * id is final
+	 * @param id
+	 */
+	private void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -84,7 +88,11 @@ public class Contest implements Serializable {
 		return createdOn;
 	}
 
-	public void setCreatedOn(Date createdOn) {
+	/**
+	 * createdOn is final
+	 * @param createdOn
+	 */
+	private void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 }

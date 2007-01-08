@@ -163,32 +163,6 @@
 		           depends="integer"
 		           msg="errors.range"/>
 
-
-		<validator name="floatRange"
-		           classname="org.apache.struts.validator.FieldChecks"
-		           method="validateFloatRange"
-		           methodParams="java.lang.Object,
-                       org.apache.commons.validator.ValidatorAction,
-                       org.apache.commons.validator.Field,
-                       org.apache.struts.action.ActionMessages,
-                       org.apache.commons.validator.Validator,
-                       javax.servlet.http.HttpServletRequest"
-		           depends="float"
-		           msg="errors.range"/>
-
-		<validator name="doubleRange"
-		           classname="org.apache.struts.validator.FieldChecks"
-		           method="validateDoubleRange"
-		           methodParams="java.lang.Object,
-                       org.apache.commons.validator.ValidatorAction,
-                       org.apache.commons.validator.Field,
-                       org.apache.struts.action.ActionMessages,
-                       org.apache.commons.validator.Validator,
-                       javax.servlet.http.HttpServletRequest"
-		           depends="double"
-		           msg="errors.range"/>
-
-
 		<validator name="email"
 		           classname="org.apache.struts.validator.FieldChecks"
 		           method="validateEmail"
@@ -224,6 +198,20 @@
 		           depends=""
 		           msg=""
 		           jsFunction="org.apache.commons.validator.javascript.validateUtilities"/>
+
+		<validator
+			name="query"
+			classname="org.judgeos.controller.validator.Query"
+			method="validateUnique"
+			methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+			depends=""
+			msg="errors.unique"
+			/>
 
 	</global>
 

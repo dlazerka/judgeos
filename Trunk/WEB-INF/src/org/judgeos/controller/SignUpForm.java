@@ -1,37 +1,26 @@
 package org.judgeos.controller;
 
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.validator.ValidatorForm;
-
-import javax.servlet.http.HttpServletRequest;
 
 public class SignUpForm extends ValidatorForm {
 	private static final long serialVersionUID = 1L;
 
-	private String codename;
+	private String email;
 	private String password;
-	private String firstName;
+	private String fullName;
 	private String lastName;
 	private String dataAttached;
-	protected static final String ERROR_KEY = SignUpForm.class.getName() + ".ERROR_KEY";
 
-	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-		ActionErrors errors = super.validate(mapping, request);
-		request.setAttribute(ERROR_KEY, errors);
-		return errors;
-	}
-
-	public void setCodename(String codename) {
-		this.codename = codename;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getCodename() {
-		return codename;
+	public String getEmail() {
+		return email;
 	}
 
 	public String getPassword() {
@@ -46,12 +35,12 @@ public class SignUpForm extends ValidatorForm {
 		return dataAttached;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getLastName() {

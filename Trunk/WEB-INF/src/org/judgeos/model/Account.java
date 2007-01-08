@@ -10,10 +10,9 @@ import java.io.Serializable;
  */
 public class Account implements Serializable {
 	private Integer id;
-	private String codename;
+	private String email;
 	private String password;
-	private String firstName;
-	private String lastName;
+	private String fullName;
 	private Date createdOn;
 
 	public Account() {}
@@ -26,23 +25,23 @@ public class Account implements Serializable {
 	 * id is final
 	 * @param id
 	 */
-	public void setId(Integer id) {
+	private void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getCodename() {
-		return codename;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCodename(String codename) {
-		this.codename = codename;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	/**
 	 * No one needed the password.
 	 * @return password
 	 */
-	public String getPassword() {
+	private String getPassword() {
 		return password;
 	}
 
@@ -50,20 +49,12 @@ public class Account implements Serializable {
 		this.password = password;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public Date getCreatedOn() {
@@ -74,7 +65,7 @@ public class Account implements Serializable {
 	 * createdOn is final
 	 * @param createdOn
 	 */
-	public void setCreatedOn(Date createdOn) {
+	private void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}
 }

@@ -7,7 +7,7 @@
 		<fmt:message key="account.login"/>
 	</tiles:put>
 	<tiles:put name="body" type="string">
-		<html:form action="/account/login">
+		<html:form action="/account/login-submit">
 			<html:hidden property="dataAttached" value="true"/>
 
 			<div align="center">
@@ -21,11 +21,11 @@
 					</tr>
 					<tr>
 						<td class="label">
-							<fmt:message key="account.codename"/>
+							<fmt:message key="account.email"/>
 							*
 						</td>
 						<td>
-							<html:text property="codename"/>
+							<html:text property="email"/>
 						</td>
 						<td class="errorLabel">
 							<html:errors property="codename"/>

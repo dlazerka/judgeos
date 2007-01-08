@@ -23,7 +23,12 @@ public class WelcomeAction extends JudgeosAction {
 	
 	private static final Log log = LogFactory.getLog(WelcomeAction.class);
 
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
+	public ActionForward execute(
+		ActionMapping mapping,
+		ActionForm form,
+		HttpServletRequest request,
+		HttpServletResponse response
+	) throws Exception {
 		super.execute(mapping, form, request, response);
 		
 		List lastContests = fetchContests(LIMIT);

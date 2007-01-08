@@ -34,33 +34,21 @@ td.label {
 	font-weight: bold;
 }
 
-/**
- * HEADER
- */
 a, a:visited {
 	text-decoration: underline;
 	color: #00f;
 }
-
-a.header_logo, a.header_logo:visited {
-	font-weight: bold;
-	font-size: 15pt;
-	text-decoration: none;
-	color: #008;
-}
-
-a.header_logo:hover {
+a:hover {
 	cursor: pointer;
 }
 
-.header_username_label, .header_password_label {
-	font-size: 8pt;
+a.headerLogo, a.headerLogo:visited {
+	font-weight: bold;
+	font-size: 15pt;
+	text-decoration: none;
+	color: #000;
 }
 
-.header_username_input, header_.password_input {
+.underField {
 	font-size: 8pt;
-}
-
-.header_error_label {
-	color: red;
 }

@@ -6,10 +6,11 @@ import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.TimeZone;
+import java.io.Serializable;
 
-public abstract class JudgeosConstants {
+public class JudgeosConstants implements Serializable {
 	public static final Locale defaultLocale = Locale.US;
-	public static final TimeZone defaultTimeZone = TimeZone.getTimeZone("Etc/GMT");
+	public static final TimeZone defaultTimeZone = TimeZone.getTimeZone("Etc/UTC");
 	public static final DateFormat defaultDateTimeFormat;
 	public static final DecimalFormat defaultNumberFormat = new DecimalFormat("0.##;", new DecimalFormatSymbols(defaultLocale));
 
@@ -23,5 +24,31 @@ public abstract class JudgeosConstants {
 		defaultDateTimeFormat.setTimeZone(defaultTimeZone);
 	}
 
-	public static final String guestCodename = "guest";
+	/**
+	 * Email of the convenience guest account.
+	 */
+	public static final String guestEmail = "guest@judgeos.org";
+
+	
+	/* Getters to make possible use as bean */
+
+	public Locale getDefaultLocale() {
+		return defaultLocale;
+	}
+
+	public TimeZone getDefaultTimeZone() {
+		return defaultTimeZone;
+	}
+
+	public DateFormat getDefaultDateTimeFormat() {
+		return defaultDateTimeFormat;
+	}
+
+	public DecimalFormat getDefaultNumberFormat() {
+		return defaultNumberFormat;
+	}
+
+	public String getGuestEmail() {
+		return guestEmail;
+	}
 }

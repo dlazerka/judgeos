@@ -5,36 +5,36 @@
 
 
 <bean:define id="account" name="account" scope="session" type="org.judgeos.model.Account"/>
-
+<bean:define id="judgeosConstants" name="judgeosConstants" scope="session" type="org.judgeos.model.JudgeosConstants"/>
 
 <table width="100%">
 	<tr>
-		<td align="left">
-			<html:link forward="root" styleClass="header_logo">
+		<td align="left"><html:link forward="root" styleClass="headerLogo">
 				<fmt:message key=".logo"/>
 			</html:link>
 		</td>
 		<td align="right">
 			<fmt:message key="top.welcome"/>
-			<b>${account.codename}</b>.
+			<b>${account.email}</b>
 
-			<c:if test="${account.codename eq 'guest'}">
-				<html:link action="/account/login">
-					<fmt:message key="top.login"/>
-				</html:link>
-				<html:link action="/account/signup">
-					<fmt:message key="top.signup"/>
-				</html:link>
-			</c:if>
-
-			<c:if test="${account.codename ne 'guest'}">
-				<html:link action="/account">
-					<fmt:message key="account.profile"/>
-				</html:link>
-				<html:link action="/account/logout">
-					<fmt:message key="top.logout"/>
-				</html:link>
-			</c:if>
+			<c:choose>
+				<c:when test="${account.email eq judgeosConstants.guestEmail}">
+					<html:link action="/account/login">
+						<fmt:message key="top.login"/>
+					</html:link>
+					<html:link action="/account/signup">
+						<fmt:message key="top.signup"/>
+					</html:link>
+				</c:when>
+				<c:otherwise>
+					<html:link action="/account">
+						<fmt:message key="account.profile"/>
+					</html:link>
+					<html:link action="/account/logout">
+						<fmt:message key="top.logout"/>
+					</html:link>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr>
 </table>
