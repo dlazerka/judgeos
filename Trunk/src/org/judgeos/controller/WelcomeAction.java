@@ -47,12 +47,11 @@ public class WelcomeAction extends JudgeosAction {
 		Session session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 
-		session.createCriteria(Contest.class)
+		List contests = session.createCriteria(Contest.class)
+			.addOrder(Order.desc("stop"))
 			.addOrder(Order.desc("start"))
-			.setMaxResults(limit);
-		List contests = session.createQuery(
-			"from Contest as contest left join fetch contest.owner as owner "
-		).list();
+			.setMaxResults(limit)
+			.list();
 		session.close();
 
 		return contests;

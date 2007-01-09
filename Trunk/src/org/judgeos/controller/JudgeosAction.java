@@ -32,7 +32,7 @@ public class JudgeosAction extends Action {
 	 * @param form
 	 * @param request
 	 * @param response
-	 * @return
+	 * @return inputForward mapping (or null, if there isn't any)
 	 * @throws Exception
 	 */
 	public ActionForward execute(
@@ -48,6 +48,7 @@ public class JudgeosAction extends Action {
 			request.getSession().setAttribute(ACCOUNT_ATTRIBUTE, guest);
 		}
 
+		// todo: move to the startup servlet
 		if (null == request.getSession().getAttribute(JUDGEOS_CONSTANTS_ATTRIBUTE)) {
 			request.getSession().setAttribute(JUDGEOS_CONSTANTS_ATTRIBUTE, new JudgeosConstants());
 		}

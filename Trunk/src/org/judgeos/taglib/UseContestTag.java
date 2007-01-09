@@ -17,6 +17,7 @@ import java.sql.SQLException;
 
 /**
  * A single contenst entry.
+ * TODO: remove
  */
 public class UseContestTag extends SimpleTagSupport {
 	private String var;

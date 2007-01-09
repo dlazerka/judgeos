@@ -5,7 +5,8 @@ import java.io.Serializable;
 
 
 /**
- * Represents an registered (signed up) user for the whole system.
+ * Account is a user who deals with the whole project, not the one contest.
+ * <p/>
  * Todo: consider making id, createdOn final.
  */
 public class Account implements Serializable {

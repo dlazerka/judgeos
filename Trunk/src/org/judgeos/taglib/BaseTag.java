@@ -13,7 +13,7 @@ import javax.servlet.jsp.tagext.TagSupport;
 import java.io.IOException;
 
 /**
- * see doStartTag()
+ * TODO: move to <bean name="baseHref" scope="application">
  */
 public class BaseTag extends TagSupport {
 	/**

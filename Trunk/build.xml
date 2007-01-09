@@ -1,24 +1,21 @@
-<project name="judgeos" basedir="." default="compile">
+<project name="judgeos" basedir="." default="cycle">
 	<property file="build.properties"/>
 
 	<path id="classpath">
-		<fileset dir="${path.lib}">
-			<include name="**/*.jar"/>
-		</fileset>
-		<fileset dir="${path.appserver.common}">
-			<include name="**/*.jar"/>
-		</fileset>
+		<fileset dir="${path.lib}" includes="**/*.jar"/>
+		<fileset dir="${path.appserver.common}" includes="**/*.jar"/>
 	</path>
 
 
 	<target name="clean" description="Pre-build tasks.">
 		<delete dir="${path.classes}"/>
-		<delete file="${project.distname}.war"/>
-		<mkdir dir="${path.classes}"/>
+		<delete file="${path.war}"/>
+		<delete dir="${path.dist}"/>
+		<delete dir="${path.build}"/>
 	</target>
 
 
-	<target name="compile" description="Compile classes.">
+	<target name="compile" depends="resources" description="Compile classes.">
 		<javac
 			srcdir="${path.src}"
 			destdir="${path.classes}"
@@ -27,29 +24,36 @@
 	</target>
 
 
-	<target name="resources" depends="compile" description="Copy resource and config files.">
+	<target name="resources" description="Copy resource and config files.">
 		<copy todir="${path.classes}" includeEmptyDirs="no">
-			<fileset dir="${path.src}">
-				<patternset>
-					<exclude name="**/*.java"/>
-				</patternset>
-			</fileset>
-			<fileset dir=".">
-				<filename name="hibernate.cfg.xml"/>
-			</fileset>
+			<fileset dir="${path.src}" excludes="**/*.java"/>
+			<fileset dir="." file="hibernate.cfg.xml"/>
 		</copy>
 	</target>
 
-
-	<target name="deploy" depends="compile,resources" description="Post-compile files tasks."/>
-
-
-	<target name="deploywar" depends="deploy" description="Archive entire project into war-file.">
-		<war webxml="${path.web}/WEB-INF/web.xml" destfile="${path.build}/${project.distname}.war">
-			<fileset dir="${path.web}">
-				<include name="**/*.*"/>
-			</fileset>
+	<target name="war" depends="compile,resources" description="Archive entire project into war-file.">
+		<mkdir dir="${path.build}"/>
+		<war webxml="${path.web}/WEB-INF/web.xml" destfile="${path.war}">
+			<fileset dir="${path.web}" includes="**/*.*"/>
 		</war>
+	</target>
+
+	<target name="javadoc" description="Generate javadocs.">
+		<mkdir dir="${path.javadoc}"/>
+		<javadoc destdir="${path.javadoc}" classpathref="classpath">
+			<fileset dir="${path.src}">
+				<include name="**/*.java"/>
+			</fileset>
+		</javadoc>
+	</target>
+
+	<target name="deploy" depends="war,javadoc" description="Create binary distribution.">
+		<copy todir="${path.dist}">
+			<fileset file="${path.war}"/>
+		</copy>
+		<copy todir="${path.dist}/doc">
+			<fileset dir="${path.doc}" includes="**/*.*"/>
+		</copy>
 	</target>
 
 
@@ -60,7 +64,7 @@
 	</taskdef>
 
 
-	<target name="reload" description="Reload application in Tomcat">
+	<target name="reload" description="Reload application in Tomcat/">
 		<reload
 			url="${tomcat.manager.url}"
 			username="${tomcat.manager.username}"
@@ -69,9 +73,9 @@
 	</target>
 
 
-	<target name="cycle" depends="deploy,reload" description="Development cycle."/>
+	<target name="cycle" depends="compile,reload" description="Development cycle."/>
 
 
-	<target name="all" depends="clean,deploy,deploywar" description="All build tasks."/>
+	<target name="all" depends="clean,deploy" description="Create binary distribution."/>
 
 </project>
