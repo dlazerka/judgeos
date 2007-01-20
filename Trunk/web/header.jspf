@@ -5,7 +5,7 @@
 
 
 <bean:define id="account" name="account" scope="session" type="org.judgeos.model.Account"/>
-<bean:define id="judgeosConstants" name="judgeosConstants" scope="session" type="org.judgeos.model.JudgeosConstants"/>
+<bean:define id="CONSTANTS" name="CONSTANTS" scope="application" type="org.judgeos.model.Constants"/>
 
 <table width="100%">
 	<tr>
@@ -18,7 +18,7 @@
 			<b>${account.email}</b>
 
 			<c:choose>
-				<c:when test="${account.email eq judgeosConstants.guestEmail}">
+				<c:when test="${account.email eq CONSTANTS.guestEmail}">
 					<html:link action="/account/login">
 						<fmt:message key="top.login"/>
 					</html:link>

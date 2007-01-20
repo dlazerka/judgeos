@@ -1,9 +1,8 @@
 package org.judgeos.taglib;
 
 import org.apache.struts.Globals;
-import org.apache.struts.taglib.html.Constants;
 import org.apache.struts.util.MessageResources;
-import org.judgeos.model.JudgeosConstants;
+import org.judgeos.model.Constants;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
@@ -20,13 +19,13 @@ public class FormatDate extends SimpleTagSupport {
 	 * The message resources for this package.
 	 */
 	protected static MessageResources messages =
-		MessageResources.getMessageResources(Constants.Package + ".LocalStrings");
+		MessageResources.getMessageResources(org.apache.struts.taglib.html.Constants.Package + ".LocalStrings");
 
 	private Date value;
 
 	public void doTag() throws JspException {
 
-		String dateString = JudgeosConstants.defaultDateTimeFormat.format(value);
+		String dateString = Constants.defaultDateTimeFormat.format(value);
 
 		JspWriter out = getJspContext().getOut();
 		try {

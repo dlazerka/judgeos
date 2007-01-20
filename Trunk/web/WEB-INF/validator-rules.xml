@@ -199,10 +199,29 @@
 		           msg=""
 		           jsFunction="org.apache.commons.validator.javascript.validateUtilities"/>
 
+
+		<!--
+			Executes query which must return one row with one field of type boolean.
+			@param query - query in HQL
+
+			Example of usage:
+			(here :email name is filled by form bean by org.hibernate.Query.setProperties(formBean) method)
+			<field property="email" depends="required,email,query">
+				<msg key="errors.unique" name="query"/>
+				<var>
+					<var-name>query</var-name>
+					<var-value>
+						select case count(*) when 0 then true else false end
+						from Account
+						where email = :email
+					</var-value>
+				</var>
+			</field>
+		-->
 		<validator
 			name="query"
 			classname="org.judgeos.controller.validator.Query"
-			method="validateUnique"
+			method="validateQuery"
 			methodParams="java.lang.Object,
                        org.apache.commons.validator.ValidatorAction,
                        org.apache.commons.validator.Field,
@@ -210,7 +229,7 @@
                        org.apache.commons.validator.Validator,
                        javax.servlet.http.HttpServletRequest"
 			depends=""
-			msg="errors.unique"
+			msg="errors.unknown"
 			/>
 
 	</global>

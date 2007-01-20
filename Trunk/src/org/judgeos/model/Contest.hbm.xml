@@ -18,6 +18,13 @@
 		<property name="publicParticipate" not-null="true"/>
 		<property name="start" not-null="true" type="timestamp"/>
 		<property name="stop" not-null="true" type="timestamp"/>
-		<property name="createdOn" not-null="true" type="timestamp"/>
+		<property
+			name="createdOn"
+			not-null="true"
+			type="timestamp"
+			generated="insert"
+			insert="false"
+			update="false"
+			/>
 	</class>
 </hibernate-mapping>

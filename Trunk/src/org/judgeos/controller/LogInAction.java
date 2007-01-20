@@ -2,24 +2,24 @@ package org.judgeos.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.struts.Globals;
-import org.apache.struts.action.*;
-import org.judgeos.model.AccountOld;
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.judgeos.model.Account;
+import org.judgeos.model.HibernateUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
 
 /**
  * Process user login.
- * todo move authentication checks to some validator.
  */
 public class LogInAction extends Action {
-	private HttpServletRequest request;
-	private Log log = LogFactory.getFactory().getInstance(LogInForm.class.getName());
+	private Log log = LogFactory.getLog(LogInForm.class);
 
 	public ActionForward execute(
 		ActionMapping mapping,
@@ -28,55 +28,28 @@ public class LogInAction extends Action {
 		HttpServletResponse response
 	) throws Exception
 	{
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.getCurrentSession();
+		// There is no beginTransaction() cause it must have been already started.
+		// todo test it
 
+		Account account = (Account) session.createCriteria(Account.class).
+			add(Restrictions.eq("email", request.getParameter("email"))).
+			add(Restrictions.eq("password", request.getParameter("password"))).
+			uniqueResult();
 
-		this.request = request;
-
-		String codename = request.getParameter("codename");
-		String sql = "SELECT * FROM account WHERE codename = ?";
-
-		DataSource dataSource = getDataSource(request);
-		Connection c = dataSource.getConnection();
-//		Connection c = ConnectionFactory.getConnection();
-		PreparedStatement st = c.prepareStatement(sql);
-		st.setString(1, codename);
-
-		ResultSet rs = st.executeQuery();
-
-		if (rs.next()) {
-			if (rs.getString("password").equals(request.getParameter("password"))) {
-				request.getSession().setAttribute("account", new AccountOld(rs));
-				return mapping.findForward("success");
-			} else {
-				ActionMessage msg = new ActionMessage("errors.account.wrongPassword");
-				this.addErrorMessage("password", msg);
-			}
-		} else {
-			ActionMessage msg = new ActionMessage("errors.account.wrongCodename");
-			this.addErrorMessage("codename", msg);
+		if (account == null) {
+			String msg = "There is no account entry in DB. " +
+				"Maybe transaction was broken " +
+				"(email='"+request.getParameter("email")+"')";
+			log.error(msg);
+			throw new Exception(msg);
 		}
 
-		return mapping.getInputForward();
-	}
+		AuthenticationUtil.logInAs(account, request.getSession());
 
-	/**
-	 * Adds the error message to both errors containers: Global and my.
-	 *
-	 * @param property
-	 * @param msg
-	 */
-	private void addErrorMessage(String property, ActionMessage msg) {
-		for (String key : new String[]{LogInForm.ERROR_KEY, Globals.ERROR_KEY}
-			)
-		{
-			ActionMessages msgs = (ActionMessages) request.getAttribute(key);
-			if (msgs == null) {
-				msgs = new ActionErrors();
-				msgs.add(property, msg);
-				request.setAttribute(key, msgs);
-			} else {
-				msgs.add(property, msg);
-			}
-		}
+		session.close();
+
+		return mapping.findForward("success");
 	}
 }

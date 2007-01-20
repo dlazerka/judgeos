@@ -8,19 +8,13 @@ import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Logging out action. It means removing user's authentication data from her session.
+ */
 public class LogOutAction extends Action {
 
-	/**
-	 * Removes session[account].
-	 *
-	 * @param mapping
-	 * @param form
-	 * @param request
-	 * @param response
-	 * @return null
-	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
-		request.getSession().removeAttribute("account");
+		AuthenticationUtil.logOut(request.getSession());
 		return mapping.findForward("success");
 	}
 }

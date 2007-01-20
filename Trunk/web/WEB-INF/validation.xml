@@ -17,32 +17,30 @@
 			<field property="dataAttached" depends="required"/>
 
 			<field property="email" depends="required,email,query">
+				<msg key="errors.unique" name="query"/>
 				<var>
 					<var-name>query</var-name>
-					<var-value>count(*) = 0 from account where email = :test</var-value>
+					<var-value>
+						select case count(*) when 0 then true else false end
+						from Account
+						where email = :email
+					</var-value>
 				</var>
-				<arg key="account.email"/>
 			</field>
 			<field property="password" depends="required,mask">
-				<arg key="account.password"/>
 				<var>
 					<var-name>mask</var-name>
 					<var-value>${password}</var-value>
 				</var>
 			</field>
-			<field property="fullName" depends="required">
-				<arg key="account.fullName"/>
-			</field>
+			<field property="fullName" depends="required"/>
 		</form>
 
 		<form name="AccountLogInForm">
 			<field property="dataAttached" depends="required"/>
 
-			<field property="email" depends="required,email">
-				<arg key="account.email"/>
-			</field>
+			<field property="email" depends="required,email"/>
 			<field property="password" depends="required,mask">
-				<arg key="account.password"/>
 				<var>
 					<var-name>mask</var-name>
 					<var-value>${password}</var-value>

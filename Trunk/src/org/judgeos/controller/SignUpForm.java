@@ -8,7 +8,6 @@ public class SignUpForm extends ValidatorForm {
 	private String email;
 	private String password;
 	private String fullName;
-	private String lastName;
 	private String dataAttached;
 
 	public void setEmail(String email) {
@@ -41,13 +40,5 @@ public class SignUpForm extends ValidatorForm {
 
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 }

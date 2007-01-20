@@ -1,1 +1,1 @@
-Trick to auto-redirect. Contents of this file will newer be processed.
+Trick to auto-redirect user. Content of this file will never be processed.

@@ -855,6 +855,7 @@
   </component>
   <UsedPathMacros>
     <macro name="CATALINA_HOME" />
+    <macro name="install" />
   </UsedPathMacros>
 </project>
 

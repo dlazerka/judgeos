@@ -36,7 +36,7 @@
 
 	<!-- JSP servlet -->
 	<servlet>
-		<servlet-name>org.judgeos.jsp</servlet-name>
+		<servlet-name>jsp</servlet-name>
 		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
 		<init-param>
 			<param-name>fork</param-name>
@@ -52,22 +52,22 @@
 
 	<!-- JSP -->
 	<servlet-mapping>
-		<servlet-name>org.judgeos.jsp</servlet-name>
+		<servlet-name>jsp</servlet-name>
 		<url-pattern>*.jsp</url-pattern>
 	</servlet-mapping>
 	<!-- JSP Fragments-->
 	<servlet-mapping>
-		<servlet-name>org.judgeos.jsp</servlet-name>
+		<servlet-name>jsp</servlet-name>
 		<url-pattern>*.jspf</url-pattern>
 	</servlet-mapping>
 	<!-- JSPX -->
 	<servlet-mapping>
-		<servlet-name>org.judgeos.jsp</servlet-name>
+		<servlet-name>jsp</servlet-name>
 		<url-pattern>*.jspx</url-pattern>
 	</servlet-mapping>
 	<!-- JSPX Fragments -->
 	<servlet-mapping>
-		<servlet-name>org.judgeos.jsp</servlet-name>
+		<servlet-name>jsp</servlet-name>
 		<url-pattern>*.jspxf</url-pattern>
 	</servlet-mapping>
 
@@ -89,8 +89,8 @@
 
 	<!-- Struts Action Servlet -->
 	<servlet>
-		<servlet-name>org.judgeos.action</servlet-name>
-		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<servlet-name>strutsAction</servlet-name>
+		<servlet-class>org.judgeos.controller.ActionServlet</servlet-class>
 		<init-param>
 			<param-name>config</param-name>
 			<param-value>/WEB-INF/struts-config.xml</param-value>
@@ -107,7 +107,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>org.judgeos.action</servlet-name>
+		<servlet-name>strutsAction</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 

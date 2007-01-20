@@ -2,6 +2,7 @@ package org.judgeos.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
-public class WelcomeAction extends JudgeosAction {
+public class WelcomeAction extends Action {
 	/**
 	 * How much contests should we fetch.
 	 */

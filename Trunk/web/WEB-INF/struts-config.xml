@@ -45,7 +45,7 @@
 			<forward name="display" path="/welcome.jsp"/>
 		</action>
 
-		<action path="/account/signup" input="/account/signup.jsp" type="org.judgeos.controller.JudgeosAction"/>
+		<action path="/account/signup" forward="/account/signup.jsp"/>
 
 		<action
 			path="/account/signup-submit"
@@ -53,13 +53,11 @@
 			name="AccountSignUpForm"
 			scope="request"
 			validate="true"
-			input="/account/signup.jsp"
 			>
-			<forward name="success" path="/account/login.do"/>
-			<forward name="failure" path="/account/signup.do"/>
+			<forward name="success" path="/account/profile.do" redirect="true"/>
 		</action>
 
-		<action path="/account/login" forward="/account/login.do"/>
+		<action path="/account/login" forward="/account/login.jsp"/>
 
 		<action
 			path="/account/login-submit"
@@ -67,10 +65,8 @@
 			name="AccountLogInForm"
 			scope="request"
 			validate="true"
-			input="/account/login.jsp"
 			>
 			<forward name="success" path="/account/profile.do" redirect="true"/>
-			<forward name="failure" path="/account/login.do"/>
 		</action>
 
 		<action
@@ -80,9 +76,9 @@
 			<forward name="success" path="/welcome.do" redirect="true"/>
 		</action>
 
-		<action path="/account" input="/account/profile.jsp" type="org.judgeos.controller.JudgeosAction"/>
+		<action path="/account/profile" forward="/account/profile.jsp"/>
 
-		<action path="/contest" input="/contest/info.jsp" type="org.judgeos.controller.JudgeosAction"/>
+		<action path="/contest" forward="/contest/info.jsp"/>
 
 	</action-mappings>
 

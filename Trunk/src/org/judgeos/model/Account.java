@@ -1,7 +1,11 @@
 package org.judgeos.model;
 
-import java.util.Date;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+
 import java.io.Serializable;
+import java.util.Date;
 
 
 /**
@@ -39,7 +43,7 @@ public class Account implements Serializable {
 	}
 
 	/**
-	 * No one needed the password.
+	 * No one needs the password.
 	 * @return password
 	 */
 	private String getPassword() {
@@ -68,5 +72,22 @@ public class Account implements Serializable {
 	 */
 	private void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
+	}
+
+	/**
+	 * Returns new account instance which considered as "guest" or "anonymous".
+	 * @return account bean
+	 */
+	public static Account getGuestInstance() {
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+
+		Account account = (Account) session.createCriteria(Account.class).
+			add(Restrictions.eq("email", Constants.guestEmail))
+			.uniqueResult();
+		session.close();
+
+		return account;
 	}
 }
