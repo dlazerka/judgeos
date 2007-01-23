@@ -3,8 +3,11 @@ package org.judgeos.model;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateUtil {
 
+/**
+ * Provides helper methods to use Hibernate.
+ */
+public class HibernateUtil {
     private static final SessionFactory sessionFactory;
 
     static {

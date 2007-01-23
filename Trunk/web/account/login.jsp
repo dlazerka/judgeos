@@ -28,7 +28,7 @@
 							<html:text property="email"/>
 						</td>
 						<td class="errorLabel">
-							<html:errors property="codename"/>
+							<html:errors property="email"/>
 						</td>
 					</tr>
 					<tr>

@@ -53,6 +53,7 @@
 			name="AccountSignUpForm"
 			scope="request"
 			validate="true"
+			input="/account/signup.do"
 			>
 			<forward name="success" path="/account/profile.do" redirect="true"/>
 		</action>
@@ -65,6 +66,7 @@
 			name="AccountLogInForm"
 			scope="request"
 			validate="true"
+			input="/account/login.do"
 			>
 			<forward name="success" path="/account/profile.do" redirect="true"/>
 		</action>
