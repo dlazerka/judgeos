@@ -18,42 +18,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
+      <change type="DELETED" beforePath="C:\usr\work\self\judgeos\src\org\judgeos\controller\validator\ValidatorSetupException.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/LogInAction.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/LogInAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/model/Account.hbm.xml" afterPath="$PROJECT_DIR$/src/org/judgeos/model/Account.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/.do" afterPath="$PROJECT_DIR$/web/.do" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/validator/ValidatorSetupException.java" />
-      <change type="DELETED" beforePath="C:\usr\work\self\judgeos\web\WEB-INF\lib\antlr.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\usr\work\self\judgeos\src\org\judgeos\model\JudgeosConstants.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/header.jspf" afterPath="$PROJECT_DIR$/web/header.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/judgeos.iws" afterPath="$PROJECT_DIR$/judgeos.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/ActionServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/welcome.jsp" afterPath="$PROJECT_DIR$/web/welcome.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/judgeos/model/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/log4j-1.2.11.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JudgeOS.iml" afterPath="$PROJECT_DIR$/JudgeOS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/taglib/FormatDate.java" afterPath="$PROJECT_DIR$/src/org/judgeos/taglib/FormatDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/antlr-2.7.6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/model/Contest.hbm.xml" afterPath="$PROJECT_DIR$/src/org/judgeos/model/Contest.hbm.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/validator-rules.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/validator-rules.xml" />
       <change type="DELETED" beforePath="C:\usr\work\self\judgeos\doc\judgeos.pdm" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/AuthenticationUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpForm.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/Test.java" afterPath="$PROJECT_DIR$/src/org/judgeos/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/validation.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/validation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/model/HibernateUtil.java" afterPath="$PROJECT_DIR$/src/org/judgeos/model/HibernateUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/judgeos.ipr" afterPath="$PROJECT_DIR$/judgeos.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/validator/Query.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/validator/Query.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/header.jspf" afterPath="$PROJECT_DIR$/web/header.jspf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/judgeos.iws" afterPath="$PROJECT_DIR$/judgeos.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/model/Account.java" afterPath="$PROJECT_DIR$/src/org/judgeos/model/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java" />
-      <change type="DELETED" beforePath="C:\usr\work\self\judgeos\src\org\judgeos\controller\JudgeosAction.java" afterPath="" />
       <change type="DELETED" beforePath="C:\usr\work\self\judgeos\doc\TODO.TXT" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/WelcomeAction.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/WelcomeAction.java" />
       <change type="DELETED" beforePath="C:\usr\work\self\judgeos\doc\schema.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/validator" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/MessageResources.properties" afterPath="$PROJECT_DIR$/src/org/judgeos/MessageResources.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/LogOutAction.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/LogOutAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JudgeOS.iml" afterPath="$PROJECT_DIR$/JudgeOS.iml" />
       <change type="DELETED" beforePath="C:\usr\work\self\judgeos\doc\judgeos.pdb" afterPath="" />
+      <change type="DELETED" beforePath="C:\usr\work\self\judgeos\src\org\judgeos\controller\validator\Query.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java" afterPath="$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java" />
     </list>
   </component>
@@ -204,7 +189,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$install$/hibernate/hibernate-3.1.3/hibernate-3.1/src/org/hibernate/id/SequenceGenerator.java" line="54" class="org.hibernate.id.SequenceGenerator" package="org.hibernate.id">
+      <breakpoint url="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/validwhen/ValidWhen.java" line="82" class="org.apache.struts.validator.validwhen.ValidWhen" package="org.apache.struts.validator.validwhen">
         <option name="ENABLED" value="true" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="LOG_ENABLED" value="false" />
@@ -217,7 +202,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/org/judgeos/controller/ActionServlet.java" line="42" class="org.judgeos.controller.ActionServlet" package="org.judgeos.controller">
+      <breakpoint url="file://$install$/Struts/commons-validator-1.3.0-src/src/share/org/apache/commons/validator/Form.java" line="282" class="org.apache.commons.validator.Form" package="org.apache.commons.validator">
         <option name="ENABLED" value="true" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="LOG_ENABLED" value="false" />
@@ -320,31 +305,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SignUpAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java">
+      <file leaf-file-name="ValidatorResources.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$install$/Struts/commons-validator-1.3.0-src/src/share/org/apache/commons/validator/ValidatorResources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="671" selection-end="671" vertical-scroll-proportion="0.22201492">
+            <state line="409" column="34" selection-start="14932" selection-end="14932" vertical-scroll-proportion="0.035940804">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/ActionServlet.java">
+      <file leaf-file-name="HibernateUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/judgeos/model/HibernateUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="39" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.58768654">
+            <state line="28" column="43" selection-start="825" selection-end="842" vertical-scroll-proportion="0.69057375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
-          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="validation.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="38" selection-start="2144" selection-end="2144" vertical-scroll-proportion="1.0978473">
+            <state line="47" column="39" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.72540987">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogInForm.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="40" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.034836065">
               <folding />
             </state>
           </provider>
@@ -353,43 +344,82 @@
       <file leaf-file-name="LogInAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
+            <state line="30" column="0" selection-start="883" selection-end="883" vertical-scroll-proportion="0.034836065">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogInForm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java">
+      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/account/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.15858209">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
+      <file leaf-file-name="struts-config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="50" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.6791045">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jspf" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/header.jspf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="55" selection-start="852" selection-end="852" vertical-scroll-proportion="0.39323467">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSaveEventListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$install$/hibernate/hibernate-3.1.3/hibernate-3.1/src/org/hibernate/event/def/AbstractSaveEventListener.java">
+      <file leaf-file-name="signup.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/account/signup.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.032629557">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidatorForm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/ValidatorForm.java">
+      <file leaf-file-name="ActionForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/action/ActionForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="3637" selection-end="3637" vertical-scroll-proportion="0.031716418">
+            <state line="246" column="0" selection-start="8990" selection-end="8990" vertical-scroll-proportion="0.4651163">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynaValidatorForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/DynaValidatorForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="24" selection-start="3218" selection-end="3218" vertical-scroll-proportion="0.035940804">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldChecks.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/FieldChecks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="1898" selection-end="1971" vertical-scroll-proportion="0.035940804">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/config/ActionConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="18" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.035940804">
               <folding />
             </state>
           </provider>
@@ -797,6 +827,62 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="validator" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="validwhen" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="judgeos.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JudgeOS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="apache.struts" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="config" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="judgeos.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JudgeOS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="apache.struts" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="action" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
@@ -980,6 +1066,54 @@
           <option name="myItemId" value="java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="util" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="judgeos.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JudgeOS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="util" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="regex" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="judgeos.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JudgeOS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -1026,6 +1160,24 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="reflect" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="judgeos.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JudgeOS" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="antlr" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1260,17 +1412,24 @@
   </component>
   <component name="RestoreUpdateTree" />
   <component name="RunManager" selected="Tomcat Server./judgeos/">
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -1296,25 +1455,6 @@
       <option name="BASE_DIRECTORY_NAME" value="" />
       <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -1324,6 +1464,18 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <module name="" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="false" name="Test" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="org.judgeos.Test" />
@@ -1716,27 +1868,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1032" height="716" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23076923" order="8" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.071794875" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25588536" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4991453" order="1" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2661208" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43063062" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23541453" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24444444" order="9" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.30810812" order="9" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="5" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="2" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="10" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26153848" order="12" x="23" y="274" width="977" height="159" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21025641" order="8" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4940171" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25225225" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24923392" order="1" x="390" y="142" width="244" height="423" />
       <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285568" order="3" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43247864" order="3" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42051283" order="3" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39918116" order="0" />
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22620267" order="3" />
       <window_info id="Sudoku" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958034" order="3" />
@@ -1844,7 +1996,7 @@
   </component>
   <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.34" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="cglib-2.2_beta1.jar" />
+    <option name="myLastEditedConfigurable" value="antlr-2.7.6.jar" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667,0.5314286" version="1">
     <option name="myLastEditedConfigurable" value="Project Default" />
@@ -1852,108 +2004,110 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/validator-rules.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="60" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.3670103">
+        <state line="200" column="0" selection-start="8694" selection-end="8694" vertical-scroll-proportion="0.78435516">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$install$/hibernate/hibernate-3.1.3/hibernate-3.1/src/org/hibernate/context/ThreadLocalSessionContext.java">
+    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/SignUpForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="32" selection-start="10321" selection-end="10321" vertical-scroll-proportion="0.035051547">
+        <state line="76" column="8" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.44262296">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$install$/Struts/commons-validator-1.3.0-src/src/share/org/apache/commons/validator/ValidatorResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="409" column="34" selection-start="14932" selection-end="14932" vertical-scroll-proportion="0.035940804">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$install$/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr154/src/share/javax/servlet/http/HttpServletRequestWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/org/judgeos/model/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="23" selection-start="6195" selection-end="6195" vertical-scroll-proportion="0.035051547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/ActionServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="39" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.58768654">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/AuthenticationUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="41" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.63419485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogOutAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="76" selection-start="386" selection-end="386" vertical-scroll-proportion="0.16898608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/model/Account.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="628" selection-end="628" vertical-scroll-proportion="0.72200775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/model/Contest.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.9189189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
-      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="38" selection-start="2144" selection-end="2144" vertical-scroll-proportion="1.0978473">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/MessageResources.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.5410448">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/SignUpAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="671" selection-end="671" vertical-scroll-proportion="0.22201492">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="131" selection-end="131" vertical-scroll-proportion="0.15858209">
+        <state line="28" column="43" selection-start="825" selection-end="842" vertical-scroll-proportion="0.69057375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/validation.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="50" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.6791045">
+        <state line="47" column="39" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.72540987">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="883" selection-end="883" vertical-scroll-proportion="0.034836065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/account/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/header.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="55" selection-start="852" selection-end="852" vertical-scroll-proportion="0.39323467">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/account/signup.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/action/ActionForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="0" selection-start="8990" selection-end="8990" vertical-scroll-proportion="0.4651163">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/DynaValidatorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="24" selection-start="3218" selection-end="3218" vertical-scroll-proportion="0.035940804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/validator/FieldChecks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1898" selection-end="1971" vertical-scroll-proportion="0.035940804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$install$/Struts/struts-1.2.8-src/src/share/org/apache/struts/config/ActionConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="18" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.035940804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/judgeos/controller/LogInForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="40" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.034836065">
           <folding />
         </state>
       </provider>

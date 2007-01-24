@@ -8,7 +8,7 @@
 	<global>
 		<constant>
 			<constant-name>password</constant-name>
-			<constant-value>^[\x21-\x79]*$</constant-value>
+			<constant-value>^[\x21-\x7E]*$</constant-value>
 		</constant>
 	</global>
 
@@ -16,36 +16,34 @@
 		<form name="AccountSignUpForm">
 			<field property="dataAttached" depends="required"/>
 
-			<field property="email" depends="required,email,query">
-				<msg key="errors.unique" name="query"/>
-				<var>
-					<var-name>query</var-name>
-					<var-value>
-						select case count(*) when 0 then true else false end
-						from Account
-						where email = :email
-					</var-value>
-				</var>
-			</field>
+			<field property="email" depends="required,email"/>
+
 			<field property="password" depends="required,mask">
 				<var>
 					<var-name>mask</var-name>
 					<var-value>${password}</var-value>
 				</var>
 			</field>
+
 			<field property="fullName" depends="required"/>
+
 		</form>
+
 
 		<form name="AccountLogInForm">
 			<field property="dataAttached" depends="required"/>
 
 			<field property="email" depends="required,email"/>
+
 			<field property="password" depends="required,mask">
 				<var>
 					<var-name>mask</var-name>
 					<var-value>${password}</var-value>
 				</var>
 			</field>
+
 		</form>
+
+
 	</formset>
 </form-validation>

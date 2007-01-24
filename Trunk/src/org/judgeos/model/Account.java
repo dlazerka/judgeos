@@ -79,8 +79,7 @@ public class Account implements Serializable {
 	 * @return account bean
 	 */
 	public static Account getGuestInstance() {
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.getCurrentSession();
+		Session session = HibernateUtil.getCurrentSession();
 		session.beginTransaction();
 
 		Account account = (Account) session.createCriteria(Account.class).

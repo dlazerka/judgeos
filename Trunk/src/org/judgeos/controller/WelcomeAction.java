@@ -44,8 +44,7 @@ public class WelcomeAction extends Action {
 	 * @return contests
 	 */
 	private List fetchContests(final int limit) {
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.getCurrentSession();
+		Session session = HibernateUtil.getCurrentSession();
 		session.beginTransaction();
 
 		List contests = session.createCriteria(Contest.class)

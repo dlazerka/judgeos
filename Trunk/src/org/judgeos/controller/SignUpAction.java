@@ -49,8 +49,7 @@ public class SignUpAction extends Action {
 	private void insertAccount(Account account)
 		throws SQLException, NamingException
 	{
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.getCurrentSession();
+		Session session = HibernateUtil.getCurrentSession();
 		session.beginTransaction();
 
 		session.save(account);

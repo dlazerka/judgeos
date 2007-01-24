@@ -20,6 +20,7 @@
   <component name="CodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
       <value>
+        <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
         <option name="JAVA_INDENT_OPTIONS">
           <value>
             <option name="INDENT_SIZE" value="4" />

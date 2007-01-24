@@ -7,7 +7,6 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.judgeos.model.Account;
 import org.judgeos.model.HibernateUtil;
@@ -28,8 +27,7 @@ public class LogInAction extends Action {
 		HttpServletResponse response
 	) throws Exception
 	{
-		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-		Session session = sessionFactory.getCurrentSession();
+		Session session = HibernateUtil.getCurrentSession();
 		// There is no beginTransaction() cause it must have been already started.
 		// todo test it
 

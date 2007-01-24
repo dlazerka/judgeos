@@ -27,7 +27,7 @@
 					</html:link>
 				</c:when>
 				<c:otherwise>
-					<html:link action="/account">
+					<html:link action="/account/profile">
 						<fmt:message key="account.profile"/>
 					</html:link>
 					<html:link action="/account/logout">
