@@ -16,17 +16,6 @@
 	</tag>
 
 	<tag>
-		<name>useContest</name>
-		<tag-class>org.judgeos.taglib.UseContestTag</tag-class>
-		<body-content>empty</body-content>
-		<attribute>
-			<name>var</name>
-			<required>true</required>
-			<type>java.lang.String</type>
-		</attribute>
-	</tag>
-
-	<tag>
 		<name>formatDate</name>
 		<tag-class>org.judgeos.taglib.FormatDate</tag-class>
 		<body-content>empty</body-content>

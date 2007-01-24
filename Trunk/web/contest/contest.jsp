@@ -1,10 +1,14 @@
 <%@ include file="/taglibs.jspf" %>
 
+<c:if test="${contest != null}">
+	<bean:define id="contest" name="contest" scope="request"/>
+</c:if>
+
 
 <tiles:insert definition="base.dfn">
 	<tiles:put name="title" type="string">
 		<fmt:message key=".title"/>:
-		<fmt:message key="contest.contestInfo"/>
+		<fmt:message key="contest.contestInfo" />
 	</tiles:put>
 	<tiles:put name="head" type="string">
 		<style type="text/css">
@@ -22,7 +26,6 @@
 		</style>
 	</tiles:put>
 	<tiles:put name="body" type="string">
-		<judgeos:useContest var="contest"/>
 		<div align="center">
 			<table class="contestInfo">
 				<tr>
@@ -47,10 +50,7 @@
 						:
 					</td>
 					<td class="value">
-						<fmt:formatDate value="${contest.start}" type="both"
-						                timeZone="UTC"
-						                pattern="yyyy-MM-dd HH:mm:ss zzz"
-							/>
+						<judgeos:formatDate value="${contest.start}"/>
 					</td>
 				</tr>
 				<tr>
@@ -59,10 +59,16 @@
 						:
 					</td>
 					<td class="value">
-						<fmt:formatDate value="${contest.stop}" type="both"
-						                timeZone="UTC"
-						                pattern="yyyy-MM-dd HH:mm:ss zzz"
-							/>
+						<c:choose>
+							<c:when test="${contest.stop != null}">
+								<judgeos:formatDate value="${contest.stop}"/>
+							</c:when>
+							<c:otherwise>
+								&lt;
+								<fmt:message key="contest.stillRunning"/>
+								&gt;
+							</c:otherwise>
+						</c:choose>
 					</td>
 				</tr>
 				<tr>
@@ -70,9 +76,15 @@
 						Created By:
 					</td>
 					<td class="value">
-						<html:link action="/account?codename=${contest.ownerCodename}">
-							<c:out value="${contest.ownerFirstName}"/>
-							<c:out value="${contest.ownerLastName}"/>
+						<html:link action="/account/profile?id=${contest.owner.id}">
+							<c:out value="${contest.owner.fullName}"/>
+						</html:link>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="font-size: 15pt;text-align:center;">
+						<html:link action="/contest/particicipate?id=${contest.id}">
+							<fmt:message key="contest.participate"/>
 						</html:link>
 					</td>
 				</tr>

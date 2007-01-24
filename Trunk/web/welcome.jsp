@@ -72,7 +72,7 @@
 							<c:forEach items="${lastContests}" var="contest">
 								<tr>
 									<td class="name">
-										<html:link href="contest/info.jsp?codename=${contest.codename}"
+										<html:link action="/contest/?id=${contest.id}"
 												   styleClass="name"
 											>
 											<c:out value="${contest.name}"/>
@@ -86,7 +86,9 @@
 									<td>
 										<c:choose>
 											<c:when test="${contest.stop==null}">
-												&lt;present&gt;
+												&lt;
+												<fmt:message key="contest.stillRunning"/>
+												&gt;
 											</c:when>
 											<c:otherwise>
 												<judgeos:formatDate value="${contest.stop}"/>

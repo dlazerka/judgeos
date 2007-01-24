@@ -41,8 +41,9 @@
 
 		<action path="/" forward="/welcome.do"/>
 
+
 		<action path="/welcome" type="org.judgeos.controller.WelcomeAction">
-			<forward name="display" path="/welcome.jsp"/>
+			<forward name="success" path="/welcome.jsp"/>
 		</action>
 
 		<action path="/account/signup" forward="/account/signup.jsp"/>
@@ -78,9 +79,14 @@
 			<forward name="success" path="/welcome.do" redirect="true"/>
 		</action>
 
-		<action path="/account/profile" forward="/account/profile.jsp"/>
+		<action path="/account/profile" forward="/underConstruction.jsp"/>
 
-		<action path="/contest" forward="/contest/info.jsp"/>
+		<action path="/contest/" type="org.judgeos.controller.ContestAction">
+			<forward name="success" path="/contest/contest.jsp"/>
+			<forward name="notFoundContest" path="/notFound.jsp"/>
+		</action>
+
+		<action path="/contest/particicipate" forward="/underConstruction.jsp"/>
 
 	</action-mappings>
 

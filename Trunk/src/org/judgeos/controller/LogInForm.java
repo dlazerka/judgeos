@@ -7,6 +7,7 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.validator.ValidatorForm;
 import org.hibernate.Session;
+import org.hibernate.Query;
 import org.judgeos.model.HibernateUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -71,7 +72,7 @@ public class LogInForm extends ValidatorForm {
 			"from Account\n" +
 			"where email = :email";
 
-		org.hibernate.Query query = session.createQuery(queryString);
+		Query query = session.createQuery(queryString);
 
 		query.setString("email", getEmail());
 		query.setString("password", getPassword());

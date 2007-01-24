@@ -24,12 +24,16 @@ public class FormatDate extends SimpleTagSupport {
 	private Date value;
 
 	public void doTag() throws JspException {
-
-		String dateString = Constants.defaultDateTimeFormat.format(value);
-
 		JspWriter out = getJspContext().getOut();
+
 		try {
-			out.write(dateString);
+			if (value == null) {
+				out.write("null");
+			}
+			else {
+				String dateString = Constants.defaultDateTimeFormat.format(value);
+				out.write(dateString);
+			}
 		} catch (IOException e) {
 			getJspContext().setAttribute(Globals.EXCEPTION_KEY, e, PageContext.REQUEST_SCOPE);
 			throw new JspException(messages.getMessage("common.io", e.toString()));

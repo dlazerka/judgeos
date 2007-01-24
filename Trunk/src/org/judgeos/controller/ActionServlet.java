@@ -4,6 +4,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.judgeos.model.Account;
 import org.judgeos.model.Constants;
+import org.judgeos.model.HibernateUtil;
+import org.hibernate.Session;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -39,11 +41,17 @@ public class ActionServlet extends org.apache.struts.action.ActionServlet {
 	protected void process(HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException
 	{
-		HttpSession session = request.getSession();
-		if ( ! AuthenticationUtil.isAuthenticated(session)) {
-			AuthenticationUtil.logInAs(Account.getGuestInstance(), session);
+		HttpSession httpSession = request.getSession();
+		if ( ! AuthenticationUtil.isAuthenticated(httpSession)) {
+			AuthenticationUtil.logInAs(Account.getGuestInstance(), httpSession);
 		}
 
 		super.process(request, response);
+
+		Session hibSession = HibernateUtil.getCurrentSession();
+		if (hibSession.isOpen()) {
+			hibSession.close();
+		}
+
 	}
 }

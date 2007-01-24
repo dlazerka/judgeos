@@ -7,7 +7,6 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Order;
 import org.judgeos.model.Contest;
 import org.judgeos.model.HibernateUtil;
@@ -30,12 +29,10 @@ public class WelcomeAction extends Action {
 		HttpServletRequest request,
 		HttpServletResponse response
 	) throws Exception {
-		super.execute(mapping, form, request, response);
-		
 		List lastContests = fetchContests(LIMIT);
 		request.setAttribute("lastContests", lastContests);
 
-		return mapping.findForward("display");
+		return mapping.findForward("success");
 	}
 
 	/**
