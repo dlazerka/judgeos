@@ -6,9 +6,9 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.hibernate.Session;
 import org.judgeos.model.Contest;
 import org.judgeos.model.HibernateUtil;
+import org.hibernate.Session;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,7 +33,9 @@ public class ContestAction extends Action {
 				return mapping.findForward("notFoundContest");
 			}
 
-			Contest contest = fetchContest(contestId);
+			Session session = HibernateUtil.getCurrentSession();
+			session.beginTransaction();
+			Contest contest = (Contest) session.get(Contest.class, contestId);
 
 			if (contest == null) {
 				doNotFoundContest(request.getParameter(CONTEST_ID_PARAM_NAME), response);
@@ -54,18 +56,5 @@ public class ContestAction extends Action {
 	) throws IOException
 	{
 		response.sendError(404, String.valueOf(contestId));
-	}
-
-	/**
-	 * Fetchs a contest by it's id.
-	 *
-	 * @param contestId which contest to fetch
-	 * @return contest or null if cannot find
-	 */
-	private Contest fetchContest(Integer contestId) {
-		Session session = HibernateUtil.getCurrentSession();
-		session.beginTransaction();
-
-		return (Contest) session.get(Contest.class, contestId);
 	}
 }

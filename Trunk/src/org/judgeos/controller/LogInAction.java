@@ -39,7 +39,7 @@ public class LogInAction extends Action {
 		if (account == null) {
 			String msg = "There is no account entry in DB. " +
 				"Maybe transaction was broken " +
-				"(email='"+request.getParameter("email")+"')";
+				"(email='" + request.getParameter("email") + "')";
 			log.error(msg);
 			throw new Exception(msg);
 		}
@@ -47,6 +47,10 @@ public class LogInAction extends Action {
 		AuthenticationUtil.logInAs(account, request.getSession());
 
 		session.close();
+		
+		if (!MustReturnStackUtil.empty(request.getSession())) {
+			return MustReturnStackUtil.pop(request.getSession());
+		}
 
 		return mapping.findForward("success");
 	}

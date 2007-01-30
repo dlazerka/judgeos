@@ -53,6 +53,7 @@
         <option name="DOWHILE_BRACE_FORCE" value="3" />
         <option name="WHILE_BRACE_FORCE" value="3" />
         <option name="FOR_BRACE_FORCE" value="3" />
+        <option name="SERVLET_CLASS_SUFFIX" value="Servlet" />
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />

@@ -6,13 +6,14 @@
 <hibernate-mapping>
 	<class name="org.judgeos.model.Contest" table="contest">
 		<id name="id">
-			<generator class="native"/>
+			<generator class="native">
+				<param name="sequence">contest_id_seq</param>
+			</generator>
 		</id>
-		<property name="codename" not-null="true" unique="true"/>
 		<property name="name" not-null="true"/>
 		<property name="description" not-null="true"/>
 
-		<many-to-one name="owner" class="org.judgeos.model.Account"/>
+		<many-to-one name="owner" class="org.judgeos.model.Account" not-null="true" />
 		<!--property name="owner" not-null="true" type="org.judgeos.model.Account"/-->
 
 		<property name="publicParticipate" not-null="true"/>

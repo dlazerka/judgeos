@@ -4,6 +4,7 @@
 	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
+	<!-- todo: unique indexes-->
 
 	<session-factory>
 
@@ -37,6 +38,8 @@
 
 		<mapping resource="org/judgeos/model/Account.hbm.xml"/>
 		<mapping resource="org/judgeos/model/Contest.hbm.xml"/>
+		<mapping resource="org/judgeos/model/ContestMember.hbm.xml"/>
+		<mapping resource="org/judgeos/model/ContestMemberRole.hbm.xml"/>
 
 	</session-factory>
 

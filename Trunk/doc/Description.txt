@@ -1,0 +1,3 @@
+There are two ways to participate in a contest:
+ 1. If public participate is allowed then only on behalf of an judgeos account.
+ 2. If public participate is not allowed then only by passing pre-defined password.

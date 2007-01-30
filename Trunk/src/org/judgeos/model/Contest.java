@@ -1,11 +1,9 @@
 package org.judgeos.model;
 
-import java.util.Date;
 import java.io.Serializable;
-// todo: consider making id, createdOn final
+import java.util.Date;
 public class Contest implements Serializable {
 	private Integer id;
-	private String codename;
 	private String name;
 	private String description;
 	private Account owner;
@@ -20,20 +18,8 @@ public class Contest implements Serializable {
 		return id;
 	}
 
-	/**
-	 * id is final
-	 * @param id
-	 */
 	private void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getCodename() {
-		return codename;
-	}
-
-	public void setCodename(String codename) {
-		this.codename = codename;
 	}
 
 	public String getName() {
@@ -88,10 +74,6 @@ public class Contest implements Serializable {
 		return createdOn;
 	}
 
-	/**
-	 * createdOn is final
-	 * @param createdOn
-	 */
 	private void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
 	}

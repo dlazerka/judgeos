@@ -14,7 +14,7 @@
 			<form-property name="dataAttached" type="java.lang.String"/>
 			<form-property name="firstName" type="java.lang.String"/>
 			<form-property name="lastName" type="java.lang.String"/>
-			<form-property name="codename" type="java.lang.String"/>
+			<form-property name="email" type="java.lang.String"/>
 			<form-property name="password" type="java.lang.String"/>
 		</form-bean>
 		<form-bean
@@ -22,7 +22,13 @@
 			type="org.judgeos.controller.LogInForm"
 			>
 			<form-property name="dataAttached" type="java.lang.String"/>
-			<form-property name="codename" type="java.lang.String"/>
+			<form-property name="email" type="java.lang.String"/>
+			<form-property name="password" type="java.lang.String"/>
+		</form-bean>
+		<form-bean
+			name="ParticipateForm"
+			type="org.judgeos.controller.ParticipateForm"
+			>
 			<form-property name="password" type="java.lang.String"/>
 		</form-bean>
 	</form-beans>
@@ -86,7 +92,21 @@
 			<forward name="notFoundContest" path="/notFound.jsp"/>
 		</action>
 
-		<action path="/contest/particicipate" forward="/underConstruction.jsp"/>
+		<action
+			path="/contest/participate"
+			type="org.judgeos.controller.ParticipateAction"
+			name="ParticipateForm"
+			scope="request"
+			validate="true"
+			input="/contest/.do"
+			>
+			<forward name="success" path="/contest/current.do" redirect="true"/>
+		</action>
+
+		<action path="/contest/current" type="org.judgeos.controller.ContestCurrentAction">
+			<forward name="success" path="/contest/current.jsp"/>
+			<forward name="isNotContestMember" path="/.do"/>
+		</action>
 
 	</action-mappings>
 
@@ -100,13 +120,6 @@
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
 		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
 		<set-property property="moduleAware" value="true"/>
-	</plug-in>
-
-	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
-		<set-property
-			property="pathnames"
-			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
-			/>
 	</plug-in>
 
 </struts-config>

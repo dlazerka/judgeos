@@ -8,7 +8,6 @@
 	</tiles:put>
 	<tiles:put name="body" type="string">
 		<html:form action="/account/login-submit">
-			<html:hidden property="dataAttached" value="true"/>
 
 			<div align="center">
 				<table style="width: auto;">

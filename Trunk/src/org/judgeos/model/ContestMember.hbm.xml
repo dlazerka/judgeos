@@ -4,15 +4,18 @@
 	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="org.judgeos.model.Account" table="account">
+	<class name="org.judgeos.model.ContestMember" table="contestMember">
 		<id name="id">
 			<generator class="native">
-				<param name="sequence">account_id_seq</param>
+				<param name="sequence">contestMember_id_seq</param>
 			</generator>
 		</id>
-		<property name="email" not-null="true"/>
+
+		<many-to-one name="contest" class="org.judgeos.model.Contest"/>
+		<property name="name" not-null="true"/>
 		<property name="password"/>
-		<property name="fullName" not-null="true"/>
+		<many-to-one name="role" class="org.judgeos.model.ContestMemberRole" not-null="true"/>
+		<many-to-one name="responsibleAccount" class="org.judgeos.model.Account" not-null="true"/>
 		<property
 			name="createdOn"
 			not-null="true"

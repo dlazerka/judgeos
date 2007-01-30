@@ -1,8 +1,6 @@
 <%@ include file="/taglibs.jspf" %>
 
-<c:if test="${contest != null}">
-	<bean:define id="contest" name="contest" scope="request"/>
-</c:if>
+<bean:define id="contest" name="contest" scope="request"/>
 
 
 <tiles:insert definition="base.dfn">
@@ -82,13 +80,40 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="font-size: 15pt;text-align:center;">
-						<html:link action="/contest/particicipate?id=${contest.id}">
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<th colspan="2">
+						<h3>
 							<fmt:message key="contest.participate"/>
-						</html:link>
-					</td>
+						</h3>
+					</th>
+				</tr>
+				<tr>
+					<html:form action="/contest/participate?id=${contest.id}}">
+						<c:choose>
+							<c:when test="${contest.publicParticipate}">
+									<td style="text-align: center;" colspan="2">
+										<html:link action="/contest/participate?id=${contest.id}">
+											<fmt:message key="contest.useExistingAccount"/>
+										</html:link>
+									</td>
+								</tr>
+							</c:when>
+							<c:otherwise>
+									<tr>
+										<td class="label">
+											<fmt:message key="contest.memberPassword"/>:
+										</td>
+										<td class="value">
+											<html:password property="password"/>
+										</td>
+							</c:otherwise>
+						</c:choose>
+					</html:form>
 				</tr>
 			</table>
+
 		</div>
 	</tiles:put>
 </tiles:insert>
