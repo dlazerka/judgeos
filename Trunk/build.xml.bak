@@ -1,12 +1,10 @@
 <project name="judgeos" basedir="." default="cycle">
 	<property file="build.properties"/>
 
-<path id="classpath">
-	<pathelement path="${path.src}"/>
-	<fileset dir="${path.lib}" includes="**/*.jar"/>
-	<fileset dir="${path.gwt}" includes="**/*.jar"/>
-	<fileset dir="${path.appserver.common}" includes="**/*.jar"/>
-</path>
+	<path id="classpath">
+		<fileset dir="${path.lib}" includes="**/*.jar"/>
+		<fileset dir="${path.appserver.common}" includes="**/*.jar"/>
+	</path>
 
 
 	<target name="clean" description="Pre-build tasks.">
@@ -17,7 +15,7 @@
 	</target>
 
 
-	<target name="compile.classes" description="Compile java sources.">
+	<target name="compile.classes" depends="resources" description="Compile java sources.">
 		<javac
 			srcdir="${path.src}"
 			destdir="${path.classes}"
@@ -30,6 +28,9 @@
 		<!-- java -cp "%~dp0/src;%~dp0/web/WEB-INF/lib/gwt-user.jar;C:/usr/install/Development/Java/tools/Google Web Toolkit/gwt-windows-1.3.3/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel -->
 		<!-- Forks cause GWT does not accept AntClassLoader2 as class loader -->
 		<java classpathref="classpath" classname="com.google.gwt.dev.GWTCompiler" fork="true">
+			<classpath>
+				<dirset dir="${path.src}"/>
+			</classpath>
 			<arg value="-out"/>
 			<arg path="${path.web.gwt}"/>
 			<arg value="-style"/>
@@ -38,7 +39,7 @@
 		</java>
 	</target>
 
-	<target name="compile" depends="compile.classes, compile.gwt" description="Compile."/>
+	<target name="compile" depends="compile.classes,compile.gwt" description="Compile."/>
 
 	<target name="resources" description="Copy resource and config files.">
 		<copy todir="${path.classes}" includeEmptyDirs="no">
@@ -88,8 +89,9 @@
 			path="/${project.distname}"/>
 	</target>
 
-	<!--GWT compilation goes after reload because "reload" task buzzes -->
-	<target name="cycle" depends="resources,compile.classes,reload,compile.gwt" description="Development cycle."/>
+
+	<target name="cycle" depends="compile,reload" description="Development cycle."/>
+
 
 	<target name="all" depends="clean,deploy" description="Create binary distribution."/>
 

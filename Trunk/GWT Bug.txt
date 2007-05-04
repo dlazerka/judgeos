@@ -1,0 +1,27 @@
+What is ".gwt-cache" directory for? I didn't find the answer in docs.
+
+I'm compiling Java->JavaScript by Ant:
+<java !!!fork="true"!!! classpathref="classpath" classname="com.google.gwt.dev.GWTCompiler">
+	<classpath>
+		<dirset dir="${path.src}"/>
+	</classpath>
+	<arg value="-out"/>
+	<arg path="${path.web.gwt}"/>
+	<arg value="com.example.gwt.ControlPanel"/>
+</java>
+But if fork="false" I get:
+java.lang.ClassCastException: org.apache.tools.ant.loader.AntClassLoader2
+	at com.google.gwt.dev.util.FileOracleFactory.<init>(FileOracleFactory.java:373)
+	at com.google.gwt.dev.cfg.ModuleDef.<init>(ModuleDef.java:105)
+	at com.google.gwt.dev.cfg.ModuleDefLoader.load(ModuleDefLoader.java:201)
+	at com.google.gwt.dev.cfg.ModuleDefLoader.loadFromClassPath(ModuleDefLoader.java:81)
+	at com.google.gwt.dev.GWTCompiler.run(GWTCompiler.java:687)
+	at com.google.gwt.dev.GWTCompiler.main(GWTCompiler.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:202)
+
+I've discovered that there is an attempt to cast AntClassLoader2 to URLLoader.
+Of course I can use fork="true", but maybe there is a workaround of it?

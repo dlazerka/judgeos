@@ -111,6 +111,16 @@
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 
+	<!-- GWT Services -->
+	<servlet>
+		<servlet-name>GwtTestService</servlet-name>
+		<servlet-class>org.judgeos.controller.gwt.TestServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GwtTestService</servlet-name>
+		<url-pattern>/gwt/TestService</url-pattern>
+	</servlet-mapping>
+
 
 	<!-- for <fmt:*> tags from JSTL -->
 	<context-param>
@@ -149,7 +159,7 @@
 
 	<!-- Extend session timeout -->
 	<session-config>
-	    <session-timeout>120</session-timeout>
+	    <session-timeout>1200</session-timeout>
 	</session-config>
 
 </web-app>

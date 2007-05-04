@@ -55,6 +55,6 @@ public class ContestAction extends Action {
 		Object contestId, HttpServletResponse response
 	) throws IOException
 	{
-		response.sendError(404, String.valueOf(contestId));
+		response.sendError(HttpServletResponse.SC_NOT_FOUND, String.valueOf(contestId));
 	}
 }

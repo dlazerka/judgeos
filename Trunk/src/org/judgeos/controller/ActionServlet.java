@@ -2,10 +2,10 @@ package org.judgeos.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.hibernate.Session;
 import org.judgeos.model.Account;
 import org.judgeos.model.Constants;
 import org.judgeos.model.HibernateUtil;
-import org.hibernate.Session;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -33,6 +33,7 @@ public class ActionServlet extends org.apache.struts.action.ActionServlet {
 
 	/**
 	 * If user isn't authenticated, login his as guest.
+	 *
 	 * @param request
 	 * @param response
 	 * @throws IOException
@@ -42,16 +43,17 @@ public class ActionServlet extends org.apache.struts.action.ActionServlet {
 		throws IOException, ServletException
 	{
 		HttpSession httpSession = request.getSession();
-		if ( ! AuthenticationUtil.isAuthenticated(httpSession)) {
+		if (!AuthenticationUtil.isAuthenticated(httpSession)) {
 			AuthenticationUtil.logInAs(Account.getGuestInstance(), httpSession);
 		}
 
 		super.process(request, response);
 
 		Session hibSession = HibernateUtil.getCurrentSession();
-		if (hibSession.isOpen()) {
-			hibSession.close();
+		synchronized (hibSession) {
+			if (hibSession.isOpen()) {
+				hibSession.close();
+			}
 		}
-
 	}
 }
