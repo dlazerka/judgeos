@@ -1,1 +1,1 @@
-java -cp "%~dp0/src;%~dp0/web/WEB-INF/lib/gwt-user.jar;C:/usr/install/Development/Java/tools/Google Web Toolkit/gwt-windows-1.3.3/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel
+java -cp "%~dp0src;%~dp0gwt/gwt-user.jar;%~dp0gwt/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel

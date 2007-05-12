@@ -19,6 +19,7 @@ public class AuthenticationUtil {
 	 */
 	private static final String ATTRIBUTE_SESSION_ACCOUNT = "account";
 	private static final String ATTRIBUTE_SESSION_CONTESTMEMBER = "contestMember";
+	private static final String ATTRIBUTE_COOKIE_ACCOUNT_EMAIL = "accountEmail";
 
 	/**
 	 * Checks whether a user with given <code>session</code> is authenticated or not.
@@ -82,5 +83,9 @@ public class AuthenticationUtil {
 	 */
 	public static ContestMember getContestMemberAs(HttpSession httpSession) {
 		return (ContestMember) httpSession.getAttribute(ATTRIBUTE_SESSION_CONTESTMEMBER);
+	}
+
+	public static String getCookieNameEmail() {
+		return ATTRIBUTE_COOKIE_ACCOUNT_EMAIL;
 	}
 }

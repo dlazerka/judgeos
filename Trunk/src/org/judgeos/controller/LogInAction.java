@@ -13,6 +13,7 @@ import org.judgeos.model.HibernateUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
 
 /**
  * Process user login.
@@ -47,7 +48,13 @@ public class LogInAction extends Action {
 		AuthenticationUtil.logInAs(account, request.getSession());
 
 		session.close();
-		
+
+		// Add email to the cookie to remember last logined email.
+		Cookie cookie = new Cookie(AuthenticationUtil.getCookieNameEmail(), request.getParameter("email"));
+		cookie.setMaxAge(Integer.MAX_VALUE);
+		cookie.setPath("/");
+		response.addCookie(cookie);
+
 		if (!MustReturnStackUtil.empty(request.getSession())) {
 			return MustReturnStackUtil.pop(request.getSession());
 		}

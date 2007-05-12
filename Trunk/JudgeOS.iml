@@ -210,31 +210,22 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/gwt-servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/gwt/gwt-user.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/web/WEB-INF/lib/gwt-servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/gwt/gwt-user.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/gwt/gwt-user.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/gwt/gwt-dev-windows.jar!/" />
+          <root url="jar://$CATALINA_HOME$/common/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/gwt/gwt-dev-windows.jar!/" />
+          <root url="file://$JAVA_TOOLS_SRC$/tomcat/jakarta-tomcat-5.5.9-src/jakarta-servletapi-5/jsr154/src/share" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -259,7 +250,7 @@
     <containerElement type="library" level="module">
       <attribute name="method" value="0" />
       <attribute name="URI" value="&lt;N/A&gt;" />
-      <url>jar://$MODULE_DIR$/gwt/gwt-dev-windows.jar!/</url>
+      <url>jar://$CATALINA_HOME$/common/lib/servlet-api.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="0" />
@@ -320,11 +311,6 @@
       <attribute name="method" value="0" />
       <attribute name="URI" value="/WEB-INF/lib/dom4j-1.6.1.jar" />
       <url>jar://$MODULE_DIR$/web/WEB-INF/lib/dom4j-1.6.1.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="0" />
-      <attribute name="URI" value="/WEB-INF/lib/gwt-servlet.jar" />
-      <url>jar://$MODULE_DIR$/web/WEB-INF/lib/gwt-servlet.jar!/</url>
     </containerElement>
     <containerElement type="library" level="module">
       <attribute name="method" value="0" />

@@ -50,7 +50,7 @@ public class ActionServlet extends org.apache.struts.action.ActionServlet {
 		super.process(request, response);
 
 		Session hibSession = HibernateUtil.getCurrentSession();
-		synchronized (hibSession) {
+		synchronized (hibSession) {// todo consider moving to an filter
 			if (hibSession.isOpen()) {
 				hibSession.close();
 			}

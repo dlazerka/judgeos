@@ -4,3 +4,6 @@
 .gwt-TabPanelBottom {
 	border-top: 1px black solid;
 }
+.gwt-TabBar .gwt-TabBarItem {
+	color: orange;
+}
