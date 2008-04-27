@@ -38,8 +38,8 @@
 
 		<mapping resource="org/judgeos/model/Account.hbm.xml"/>
 		<mapping resource="org/judgeos/model/Contest.hbm.xml"/>
-		<mapping resource="org/judgeos/model/ContestMember.hbm.xml"/>
-		<mapping resource="org/judgeos/model/ContestMemberRole.hbm.xml"/>
+		<mapping resource="org/judgeos/model/Member.hbm.xml"/>
+		<mapping resource="org/judgeos/model/MemberRole.hbm.xml"/>
 
 	</session-factory>
 

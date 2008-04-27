@@ -11,7 +11,7 @@ import org.judgeos.controller.validator.RequiredValidator;
 import org.judgeos.controller.validator.TextField;
 import org.judgeos.model.Constants;
 import org.judgeos.model.Contest;
-import org.judgeos.model.ContestMember;
+import org.judgeos.model.Member;
 import org.judgeos.model.HibernateUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,9 +31,9 @@ public class ParticipateForm extends ActionForm {
 	protected transient Contest fetchedContest;
 
 	/**
-	 * A ContestMember that is fetched during form validation. Will be used in action to improve performance.
+	 * A Member that is fetched during form validation. Will be used in action to improve performance.
 	 */
-	protected transient ContestMember fetchedContestMember;
+	protected transient Member fetchedContestMember;
 
 	public void setPassword(String password) {
 		this.password.setValue(password);
@@ -74,7 +74,7 @@ public class ParticipateForm extends ActionForm {
 			password.validate(errors);
 
 			if (!errors.get("password").hasNext()) {
-				fetchedContestMember = (ContestMember) session.createCriteria(ContestMember.class)
+				fetchedContestMember = (Member) session.createCriteria(Member.class)
 					.add(Restrictions.eq("contest", fetchedContest))
 					.add(Restrictions.eq("password", getPassword()))
 					.uniqueResult();
@@ -119,7 +119,7 @@ public class ParticipateForm extends ActionForm {
 
 		String queryString =
 			"select case password when :password then true else false end\n" +
-				"from ContestMember\n" +
+				"from Member\n" +
 				"where email = :email";
 
 		Query query = session.createQuery(queryString);

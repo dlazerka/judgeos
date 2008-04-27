@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.judgeos.model.Member" table="member">
+		<id name="id">
+			<generator class="native">
+				<param name="sequence">member_id_seq</param>
+			</generator>
+		</id>
+
+		<many-to-one name="contest" class="org.judgeos.model.Contest"/>
+		<property name="name" not-null="true"/>
+		<property name="password"/>
+		<many-to-one name="role" class="org.judgeos.model.MemberRole" not-null="true"/>
+		<many-to-one name="responsibleAccount" class="org.judgeos.model.Account" not-null="true"/>
+		<property
+			name="createdOn"
+			not-null="true"
+			type="timestamp"
+			generated="insert"
+			insert="false"
+			update="false"
+			/>
+	</class>
+</hibernate-mapping>

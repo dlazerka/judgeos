@@ -1,0 +1,1 @@
+java -cp "%~dp0../src;%~dp0../gwt/gwt-user.jar;%~dp0../gwt/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0../web/gwt" %* org.judgeos.gwt.ControlPanel

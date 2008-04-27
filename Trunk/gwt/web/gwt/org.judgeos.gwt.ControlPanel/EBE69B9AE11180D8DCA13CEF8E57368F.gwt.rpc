@@ -1,0 +1,12 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+java.lang.String, true
+java.util.ArrayList, true
+java.util.Date, true
+java.util.HashMap, true
+org.judgeos.gwt.client.model.Account, true
+org.judgeos.gwt.client.model.Contest, true
+org.judgeos.gwt.client.model.Member, true
+org.judgeos.gwt.client.model.MemberProblemStatus, true
+org.judgeos.gwt.client.model.MemberRole, true
+org.judgeos.gwt.client.model.Problem, true
+org.judgeos.gwt.client.model.Results, true

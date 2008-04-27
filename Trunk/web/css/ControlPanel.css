@@ -1,9 +1,24 @@
 .gwt-TabPanel {
 	border: 1px black dashed;
 }
+
 .gwt-TabPanelBottom {
 	border-top: 1px black solid;
 }
+
 .gwt-TabBar .gwt-TabBarItem {
 	color: orange;
+}
+
+.judgeos-Message {
+	text-align: center;
+	font-weight: bold;
+	background-color: orange;
+}
+
+.judgeos-ErrorDialog {
+	background-color: white;
+	border: 4px outset;
+	background-color: white;
+	width: 50%;
 }

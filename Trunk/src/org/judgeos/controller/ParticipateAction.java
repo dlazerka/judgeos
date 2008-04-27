@@ -31,7 +31,7 @@ public class ParticipateAction extends Action {
 		ParticipateForm participateForm = (ParticipateForm) form;
 		Contest contest = participateForm.fetchedContest;
 
-		ContestMember contestMember;
+		Member contestMember;
 		if (contest.getPublicParticipate()) {
 			if (AuthenticationUtil.isGuestAccount(request.getSession())) {
 				ActionForward returnForward = new ActionForward(
@@ -44,18 +44,18 @@ public class ParticipateAction extends Action {
 
 			Account account = AuthenticationUtil.getAuthenticatedAs(request.getSession());
 
-			contestMember = (ContestMember) session.createCriteria(ContestMember.class)
+			contestMember = (Member) session.createCriteria(Member.class)
 				.add(Restrictions.eq("contest", contest))
 				.add(Restrictions.eq("responsibleAccount", account))
 				.uniqueResult();
 
 			if (contestMember == null) {
-				contestMember = new ContestMember();
+				contestMember = new Member();
 				contestMember.setContest(contest);
 				contestMember.setName(account.getFullName());
 				contestMember.setPassword(null);
 				contestMember.setResponsibleAccount(account);
-				contestMember.setRole(ContestMemberRole.getParticipantRole());
+				contestMember.setRole(MemberRole.getParticipantRole());
 				session.save(contestMember);
 				session.getTransaction().commit();
 

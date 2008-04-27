@@ -1,1 +1,1 @@
-start java -cp "%~dp0../src;%~dp0gwt-user.jar;%~dp0gwt-dev-windows.jar" com.google.gwt.dev.GWTShell -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel/ControlPanel.html
+start javaw -cp "%~dp0../src;%~dp0gwt-user.jar;%~dp0gwt-dev-windows.jar" com.google.gwt.dev.GWTShell -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel/ControlPanel.html

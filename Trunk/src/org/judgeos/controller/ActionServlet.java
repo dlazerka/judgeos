@@ -1,7 +1,5 @@
 package org.judgeos.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.hibernate.Session;
 import org.judgeos.model.Account;
 import org.judgeos.model.Constants;
@@ -15,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class ActionServlet extends org.apache.struts.action.ActionServlet {
-	protected static Log log = LogFactory.getLog(ActionServlet.class);
+//	protected static Log log = LogFactory.getLog(ActionServlet.class);
 
 	/**
 	 * Among super actions puts Constants instance to the servlet context.

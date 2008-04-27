@@ -113,12 +113,12 @@
 
 	<!-- GWT Services -->
 	<servlet>
-		<servlet-name>GwtTestService</servlet-name>
-		<servlet-class>org.judgeos.controller.gwt.TestServiceImpl</servlet-class>
+		<servlet-name>GwtJudgeosService</servlet-name>
+		<servlet-class>org.judgeos.controller.gwt.JudgeosServiceImpl</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>GwtTestService</servlet-name>
-		<url-pattern>/gwt/TestService</url-pattern>
+		<servlet-name>GwtJudgeosService</servlet-name>
+		<url-pattern>/gwt/JudgeosService</url-pattern>
 	</servlet-mapping>
 
 

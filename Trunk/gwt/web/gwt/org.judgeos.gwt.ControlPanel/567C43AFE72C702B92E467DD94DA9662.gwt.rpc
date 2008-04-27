@@ -1,0 +1,4 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+java.lang.String, true
+org.judgeos.gwt.client.model.ContestMemberResult, true
+[Lorg.judgeos.gwt.client.model.ContestMemberResult;, true

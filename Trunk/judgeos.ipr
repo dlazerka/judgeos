@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" relativePaths="false">
+<project relativePaths="false" version="4">
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
     <buildFile url="file://$PROJECT_DIR$/build.xml">
@@ -8,6 +8,7 @@
       <customJdkName value="" />
       <maximumHeapSize value="128" />
       <properties />
+      <executeOn event="beforeRun" target="cycle" runConfigurationType="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" runConfigurationName="/judgeos/" />
     </buildFile>
   </component>
   <component name="BuildJarProjectSettings">
@@ -39,6 +40,8 @@
         <option name="METHOD_BRACE_STYLE" value="5" />
         <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
         <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
+        <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
+        <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
         <option name="CALL_PARAMETERS_WRAP" value="1" />
         <option name="CALL_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true" />
         <option name="CALL_PARAMETERS_RPAREN_ON_NEXT_LINE" value="true" />
@@ -54,6 +57,18 @@
         <option name="WHILE_BRACE_FORCE" value="3" />
         <option name="FOR_BRACE_FORCE" value="3" />
         <option name="SERVLET_CLASS_SUFFIX" value="Servlet" />
+        <JavaeeCodeStyleSettings>
+          <option name="SERVLET_CLASS_SUFFIX" value="Servlet" />
+        </JavaeeCodeStyleSettings>
+        <ADDITIONAL_INDENT_OPTIONS fileType="js">
+          <option name="INDENT_SIZE" value="4" />
+          <option name="CONTINUATION_INDENT_SIZE" value="8" />
+          <option name="TAB_SIZE" value="4" />
+          <option name="USE_TAB_CHARACTER" value="false" />
+          <option name="SMART_TABS" value="false" />
+          <option name="LABEL_INDENT_SIZE" value="0" />
+          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
+        </ADDITIONAL_INDENT_OPTIONS>
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
@@ -94,11 +109,13 @@
       <option name="DATBASE_USERNAME" value="judgeos" />
       <option name="ENCODED_DATABASE_PASSWORD" value="dfc0dfdfdfcedfcddfcfdfc5dfd9" />
       <option name="DEFAULT_SCHEMA_NAME" value="" />
+      <option name="TABLE_PATTERN" />
       <option name="NAME" value="jdbc/judgeos" />
       <TABLE_DATA>
         <option name="NAME" value="account" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -158,6 +175,7 @@
         <option name="NAME" value="contest" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -244,6 +262,7 @@
         <option name="NAME" value="contestmember" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -321,6 +340,7 @@
         <option name="NAME" value="contestmember2account" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="contestmember" />
           <option name="JDBC_TYPE" value="1111" />
@@ -344,6 +364,7 @@
         <option name="NAME" value="contestmemberrole" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -367,6 +388,7 @@
         <option name="NAME" value="judgeosrole" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -390,6 +412,7 @@
         <option name="NAME" value="judgeosrole2account" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="judgeosrole" />
           <option name="JDBC_TYPE" value="1111" />
@@ -413,6 +436,7 @@
         <option name="NAME" value="judgeossetting" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -445,6 +469,7 @@
         <option name="NAME" value="problem" />
         <option name="SCHEMA" />
         <option name="CATALOG" />
+        <option name="TYPE" />
         <FIELD_ELEMENT>
           <option name="NAME" value="id" />
           <option name="JDBC_TYPE" value="1111" />
@@ -515,7 +540,9 @@
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
   </component>
-  <component name="DependencyValidationManager" />
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
   <component name="EclipseCompilerSettings">
     <option name="DEBUGGING_INFO" value="true" />
     <option name="GENERATE_NO_WARNINGS" value="true" />
@@ -531,14 +558,28 @@
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
   <component name="EntryPointsManager">
-    <entry_points />
+    <entry_points version="2.0" />
   </component>
   <component name="ExportToHTMLSettings">
     <option name="PRINT_LINE_NUMBERS" value="false" />
     <option name="OPEN_IN_BROWSER" value="false" />
     <option name="OUTPUT_DIRECTORY" />
   </component>
-  <component name="GUI Designer component loader factory" />
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="web">
+        <modules>
+          <module name="JudgeOS">
+            <files>
+              <file url="file://$PROJECT_DIR$/gwt/tomcat/conf/web.xml" />
+              <file url="file://$PROJECT_DIR$/gwt/tomcat/webapps/ROOT/WEB-INF/web.xml" />
+              <file url="file://$PROJECT_DIR$/web/WEB-INF/web.xml" />
+            </files>
+          </module>
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
   <component name="IdProvider" IDEtalkID="68E2DB79DA263DAA0215C49FF3D798E5" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />
@@ -548,26 +589,9 @@
       <profile version="1.0" is_locked="false">
         <option name="myName" value="Project Default" />
         <option name="myLocal" value="false" />
-        <used_levels>
-          <error>
-            <option name="myName" value="ERROR" />
-            <option name="myVal" value="400" />
-          </error>
-          <warning>
-            <option name="myName" value="WARNING" />
-            <option name="myVal" value="300" />
-          </warning>
-          <information>
-            <option name="myName" value="INFO" />
-            <option name="myVal" value="200" />
-          </information>
-          <server>
-            <option name="myName" value="SERVER PROBLEM" />
-            <option name="myVal" value="100" />
-          </server>
-        </used_levels>
       </profile>
     </profiles>
+    <list size="0" />
   </component>
   <component name="JavacSettings">
     <option name="DEBUGGING_INFO" value="true" />
@@ -728,13 +752,20 @@
       </item>
     </group>
   </component>
+  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JudgeOS.iml" filepath="$PROJECT_DIR$/JudgeOS.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" />
-  <component name="ProjectRunConfigurationManager" />
+  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK" />
+  <component name="ResourceManagerContainer">
+    <option name="myResourceBundles">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+  </component>
   <component name="RmicSettings">
     <option name="IS_EANABLED" value="false" />
     <option name="DEBUGGING_INFO" value="true" />
@@ -742,14 +773,15 @@
     <option name="GENERATE_IIOP_STUBS" value="false" />
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
-  <component name="StarteamVcsAdapter" />
   <component name="StrutspluginConfiguration">
     <option name="strutsAvailable" value="true" />
     <option name="propertiesSupport" value="false" />
     <option name="strutsIcons" value="false" />
     <option name="dispatchActionDefaultNames" value="create,delete,prepare,save,refresh,update" />
   </component>
-  <component name="VssVcs" />
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="svn" />
+  </component>
   <component name="com.intellij.jsf.UserDefinedFacesConfigs">
     <option name="USER_DEFINED_CONFIGS">
       <value>
@@ -757,14 +789,25 @@
       </value>
     </option>
   </component>
-  <component name="libraryTable" />
+  <component name="libraryTable">
+    <library name="GWT">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/gwt" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/gwt/gwt-user.jar!/" />
+        <root url="jar://$PROJECT_DIR$/gwt/gwt-dev-windows.jar!/" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/gwt" recursive="false" />
+    </library>
+  </component>
   <component name="uidesigner-configuration">
     <option name="INSTRUMENT_CLASSES" value="true" />
     <option name="COPY_FORMS_RUNTIME_TO_OUTPUT" value="true" />
     <option name="DEFAULT_LAYOUT_MANAGER" value="GridLayoutManager" />
   </component>
   <UsedPathMacros>
-    <macro name="CATALINA_HOME" />
     <macro name="JAVA_TOOLS_SRC" />
   </UsedPathMacros>
 </project>

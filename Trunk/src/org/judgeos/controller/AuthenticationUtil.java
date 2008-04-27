@@ -1,7 +1,7 @@
 package org.judgeos.controller;
 
 import org.judgeos.model.Account;
-import org.judgeos.model.ContestMember;
+import org.judgeos.model.Member;
 import org.judgeos.model.Constants;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -72,7 +72,7 @@ public class AuthenticationUtil {
 	 * @param contestMember
 	 * @param httpSession
 	 */
-	public static void becomeContestMemberAs(ContestMember contestMember, HttpSession httpSession) {
+	public static void becomeContestMemberAs(Member contestMember, HttpSession httpSession) {
 		httpSession.setAttribute(ATTRIBUTE_SESSION_CONTESTMEMBER, contestMember);
 	}
 
@@ -81,8 +81,8 @@ public class AuthenticationUtil {
 	 * @param httpSession
 	 * @return currentrly auth contestMember or null if there no such one
 	 */
-	public static ContestMember getContestMemberAs(HttpSession httpSession) {
-		return (ContestMember) httpSession.getAttribute(ATTRIBUTE_SESSION_CONTESTMEMBER);
+	public static Member getMemberAs(HttpSession httpSession) {
+		return (Member) httpSession.getAttribute(ATTRIBUTE_SESSION_CONTESTMEMBER);
 	}
 
 	public static String getCookieNameEmail() {

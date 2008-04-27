@@ -1,3 +1,6 @@
 1. Copy "/WEB-INF/lib/postgresql-8.1-404.jdbc3.jar" file to "<TOMCAT_HOME>/common/endorsed/".
 2. Create DB user "judgeos" with password "judgeos".
 3. Create database "judgeos", and execute /schema.sql here.
+4. Install ant
+5. Set path to appserver in build.properties.
+6. Adjust role and password in build.properties for tomcat manager role.

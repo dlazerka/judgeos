@@ -5,7 +5,7 @@
 	<pathelement path="${path.src}"/>
 	<fileset dir="${path.lib}" includes="**/*.jar"/>
 	<fileset dir="${path.gwt}" includes="**/*.jar"/>
-	<fileset dir="${path.appserver.common}" includes="**/*.jar"/>
+	<fileset dir="${path.appserver.lib}" includes="**/*.jar"/>
 </path>
 
 
@@ -28,8 +28,8 @@
 
 	<target name="compile.gwt" description="Compile GWT java sources to javascripts.">
 		<!-- java -cp "%~dp0/src;%~dp0/web/WEB-INF/lib/gwt-user.jar;C:/usr/install/Development/Java/tools/Google Web Toolkit/gwt-windows-1.3.3/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "%~dp0/web/gwt" %* org.judgeos.gwt.ControlPanel -->
-		<!-- Forks cause GWT does not accept AntClassLoader2 as class loader -->
-		<java classpathref="classpath" classname="com.google.gwt.dev.GWTCompiler" fork="true">
+		<!-- Forks because GWT does not accept AntClassLoader2 as a class loader -->
+		<java classpathref="classpath" classname="com.google.gwt.dev.GWTCompiler" fork="true" dir="${path.gwt}">
 			<arg value="-out"/>
 			<arg path="${path.web.gwt}"/>
 			<arg value="-style"/>
@@ -48,7 +48,7 @@
 	</target>
 
 	<target name="war" depends="compile,resources" description="Archive entire project into war-file.">
-		<mkdir dir="${path.build}"/>
+		<mkdir dir="${path.build}"/><!-- todo check meaning of different dist and build-->
 		<war webxml="${path.web}/WEB-INF/web.xml" destfile="${path.war}">
 			<fileset dir="${path.web}" includes="**/*.*"/>
 		</war>
@@ -68,14 +68,14 @@
 			<fileset file="${path.war}"/>
 		</copy>
 		<copy todir="${path.dist}/doc">
-			<fileset dir="${path.doc}" includes="**/*.*"/>
+			<fileset dir="${path.javadoc}" includes="**/*.*"/>
 		</copy>
 	</target>
 
 
 	<taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
 		<classpath>
-			<path location="${path.appserver}/server/lib/catalina-ant.jar"/>
+			<path location="${path.appserver.lib}/catalina-ant.jar"/>
 		</classpath>
 	</taskdef>
 

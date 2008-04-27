@@ -1,0 +1,2 @@
+* rewrite hibernate descriptions as annotations
+* in production mode remove ControlPanel.html

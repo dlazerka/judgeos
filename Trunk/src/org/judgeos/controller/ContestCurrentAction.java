@@ -6,7 +6,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.judgeos.model.ContestMember;
+import org.judgeos.model.Member;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +21,7 @@ public class ContestCurrentAction extends Action {
 		HttpServletResponse response
 	) throws Exception
 	{
-		ContestMember contestMember = AuthenticationUtil.getContestMemberAs(request.getSession());
+		Member contestMember = AuthenticationUtil.getMemberAs(request.getSession());
 		if (contestMember == null) {
 			return mapping.findForward("isNotContestMember");
 		}
